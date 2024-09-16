@@ -16,7 +16,7 @@
     "test": "test"
   },
   "scripts": {
-    "start": "index-server.js",
+    "start": "node index-server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
