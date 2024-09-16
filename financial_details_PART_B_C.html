@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITR Form</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/htmlincludejs"></script>
+    <link href="public/img/JJTax-logo.png" rel="icon" type="image/png">
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="public/css/style_new.css?v=1.1.6">
+    <link rel="stylesheet" href="public/css/navbar.css">
+    <link href="public/css/financial_details.css" rel="stylesheet">
+    <link href="public/css/current_tab_indicator.css" rel="stylesheet">
+    <link rel="stylesheet" href="public/css/ticker.css">
+    <link rel="stylesheet" href="public/css/common.css">
+    <link rel="stylesheet" href="public/css/itr_book_call.css">
+    <style>
+        .form-control {
+            width: 90%;
+            padding: 10px;
+            margin: 0px 0;
+            box-sizing: border-box;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-control:focus {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            border-color: #66afe9;
+            outline: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <include src="includes/header.html"></include>
+    <div class="ticker-wrap">
+        <ul class="ticker" id="tickers"></ul>
+    </div>
+
+    <div
+        style="background: linear-gradient(180deg, rgba(17, 103, 175, 0.77) 0, rgba(17, 103, 175, 0.77) 277px, white 277px);padding-top: 8px;">
+
+        <div id="overlayText" style="text-align: center;"><strong id="responsiveText" style="color: white;">Self file
+                ITR within 15
+                minutes </strong></div>
+        <div class="container " style="background: #F4F6FC; max-width: 80%;padding-top: 1%;border-top-left-radius: 2%;
+        border-top-right-radius: 2%">
+            <include src="includes/current_tab_indicator.html"></include>
+            <h5 class="text-center mt-3" style="font-weight: 600;">Income Details</h5>
+            <p class="text-center" style="width: 80%;margin: auto;font-size: 14px;"><strong>Disclamer:</strong> Please
+                fill in correct details. Kindly note we are not responsible for any wrong information provided by the
+                user. We recommend to get in touch with our tax experts for further assistance.</p>
+
+
+            <div class="row mt-4"
+                style="background: #FFFFFF; margin: auto;width: 95%;border-radius: 1%;padding-left: 2%;padding-right: 2%;">
+                <div class="col-md-12" style="padding-top: 2%;">
+                    <h5>Part B: Income From House Property</h5>
+
+                    <form>
+                        <div class="form-row align-items-center salary-section">
+                            <div class="col-md-4">
+                                <label for="houseIncome">Do you have income from house property?</label>
+                            </div>
+                            <div class="col-md-4">
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="houseIncome" id="incomeYes"
+                                        value="yes" required>
+                                    <label class="form-check-label" for="incomeYes">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="houseIncome" id="incomeNo"
+                                        value="no" required>
+                                    <label class="form-check-label" for="incomeNo">No</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="housePropertyFields" style="display: none;">
+                            <!-- <div class="form-row align-items-center">
+                                <div class="col-md-4">
+                                    <label for="city">Do you reside in Delhi, Kolkata, Chennai or Mumbai?</label>
+                                </div>
+                                <div class="col-md-4">
+
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="city" id="cityYes"
+                                            value="yes" required>
+                                        <label class="form-check-label" for="cityYes">Yes</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="city" id="cityNo" value="no"
+                                            required>
+                                        <label class="form-check-label" for="cityNo">No</label>
+                                    </div>
+                                </div>
+                            </div> -->
+                            <div class="form-row align-items-center mt-2" style="padding-bottom: 0px;">
+                                <div class="col-md-4">
+                                    <label for="annua-rental-income">Annual Rental Income</label>
+                                </div>
+                                <div class="col-md-5">
+
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="number" class="form-control" id="annua-rental-income"
+                                        name="annua-rental-income" required style="text-align: right;"
+                                        oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                                </div>
+                            </div>
+
+                            <div class="form-row align-items-center mt-2">
+                                <div class="col-md-4">
+                                    <label for="municipalTaxes">Less: Municipal Taxes</label>
+                                </div>
+                                <div class="col-md-5">
+
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="number" class="form-control" id="municipalTaxes" name="municipalTaxes"
+                                        required style="text-align: right;"
+                                        oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-row align-items-center mt-2">
+                                <div class="col-md-4">
+                                    <label for="grossAnnualValue">Gross Annual Value</label>
+                                </div>
+                                <div class="col-md-5">
+
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="number" class="form-control" id="grossAnnualValue"
+                                        name="grossAnnualValue" required style="text-align: right;"
+                                        oninput="this.value = this.value.replace(/[^0-9]/g, '');" readonly>
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-row align-items-center mt-2">
+                                <div class="col-md-4">
+                                    <label for="standardDeduction">Less: Standard Deduction @ 30%</label>
+                                </div>
+                                <div class="col-md-5">
+
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="number" class="form-control" id="standardDeduction"
+                                        name="standardDeduction" required style="text-align: right;"
+                                        oninput="this.value = this.value.replace(/[^0-9]/g, '');" readonly>
+                                </div>
+                            </div>
+
+
+                            <div class="mt-2">
+                                <p style="display: block;">Less: Interest on Home Loan</p>
+                            </div>
+                            <div class="form-row align-items-center mt-2">
+                                <div class="col-md-4" style="padding-left: 38px;">
+                                    <label for="selfOccupiedVacant">Self occupied/Vacant</label>
+                                </div>
+                                <div class="col-md-5">
+
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="number" class="form-control" id="selfOccupiedVacant"
+                                        name="selfOccupiedVacant" required style="text-align: right;"
+                                        oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                                </div>
+                            </div>
+
+
+                            <div class="form-row align-items-center mt-2">
+                                <div class="col-md-4" style="padding-left: 38px;">
+                                    <label for="letOut">Let Out</label>
+                                </div>
+                                <div class="col-md-5">
+
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="number" class="form-control" id="letOut" name="letOut" required
+                                        style="text-align: right;"
+                                        oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                                </div>
+                            </div>
+
+
+
+                            <div class="form-row align-items-center mt-2">
+                                <div class="col-md-4">
+                                    <label for="netAnnualValue">Net Annual Value(Old/New Regime)</label>
+                                </div>
+                                <div class="col-md-5">
+
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="text" class="form-control" id="netAnnualValue" name="netAnnualValue"
+                                        required style="text-align: right;"
+                                        oninput="this.value = this.value.replace(/[^0-9]/g, '');" readonly>
+                                </div>
+                            </div>
+                            <div class="form-row mt-2">
+                                <div class="form-group col-md-3">
+                                    <button type="button" class="btn btn-secondary btn-block" id="addHousePropertyBtn"
+                                        style="background: linear-gradient(180deg, rgba(17, 103, 175, 0.7) 33.5%, #1167AF 100%);width: 90%;">
+                                        ADD House Property
+                                    </button>
+                                </div>
+                                <div class="form-group col-md-9">
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <h5>Part C: Income from Other Sources</h5>
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-4">
+                                <label for="savingsBankInterest">Savings Bank Interest</label>
+                            </div>
+                            <div class="col-md-5">
+
+                            </div>
+
+
+                            <div class="col-md-3">
+                                <input type="number" class="form-control" id="savingsBankInterest"
+                                    name="savingsBankInterest" required style="text-align: right;"
+                                    oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-4">
+                                <label for="fixedDepositInterest">Fixed Deposit Interest</label>
+                            </div>
+                            <div class="col-md-5">
+
+                            </div>
+                            <div class="col-md-3">
+                                <input type="number" class="form-control" id="fixedDepositInterest"
+                                    name="fixedDepositInterest" required style="text-align: right;"
+                                    oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-4">
+                                <label for="dividend">Dividend</label>
+                            </div>
+                            <div class="col-md-5">
+
+                            </div>
+                            <div class="col-md-3">
+                                <input type="number" class="form-control" id="dividend" name="dividend" required
+                                    style="text-align: right;"
+                                    oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                            </div>
+                        </div>
+
+
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-4">
+                                <label for="agricultralIncome">Agricultural Income</label>
+                            </div>
+                            <div class="col-md-5">
+
+                            </div>
+                            <div class="col-md-3">
+                                <input type="number" class="form-control" id="agricultralIncome" name="agricultralIncome"
+                                    required style="text-align: right;"
+                                    oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                            </div>
+                        </div>
+
+
+
+                        <div class="form-row align-items-center mt-2">
+                            <div class="form-group col-md-4">
+                                <label for="anyOtherIncome">other Income(If any)</label>
+                                <input type="text" class="form-control" id="anyOtherIncome" name="anyOtherIncome"
+                                    style="width: 90%;" required>
+                            </div>
+                            <div class="col-md-5">
+
+                            </div>
+                            <div class="col-md-3">
+                                <input type="number" class="form-control" id="otherIncomeValue" name="otherIncomeValue"
+                                    required style="text-align: right; margin-top: 5px;"
+                                    oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                            </div>
+                        </div>
+
+
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-4">
+                                <label for="totalIncome">Total Income</label>
+                            </div>
+                            <div class="col-md-5">
+
+                            </div>
+                            <div class="col-md-3">
+                                <input type="number" class="form-control" id="totalIncome" name="totalIncome" required
+                                    style="text-align: right;"
+                                    oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                            </div>
+                        </div>
+
+                        <div class="form-row mt-2">
+                            <div class="form-group col-md-3">
+                                <a href="financial_details_PART_A.html">
+                                    <button type="button" class="btn btn-secondary btn-block"
+                                        style="background: linear-gradient(180deg, rgba(17, 103, 175, 0.7) 33.5%, #1167AF 100%);width:90%">
+                                        &lt;&lt; Back
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="form-group col-md-6">
+
+                            </div>
+                            <div class="form-group col-md-3">
+
+                                <button type="button" class="btn btn-primary btn-block" onclick="saveData(this)"
+                                    style="background: linear-gradient(180deg, rgba(17, 103, 175, 0.7) 33.5%, #1167AF 100%);width:90%">
+                                    Continue &raquo;
+                                </button>
+
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="housePropertyModal" tabindex="-1" role="dialog"
+        aria-labelledby="housePraopertyModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content" style="border-radius: 10px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);">
+                <div class="modal-header"
+                    style="background: linear-gradient(90deg, #1167AF, #17A2B8); border-top-left-radius: 10px; border-top-right-radius: 10px;">
+                    <h5 class="modal-title text-white" id="housePropertyModalLabel">Important Notice</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true" class="text-white">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body"
+                    style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 16px; color: #333;">
+                    This Form 16 is not for you. Please contact to tax expert.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <include src="includes/ITR_book_call.html"></include>
+    <script src="datas/dynamic-contents.js"></script>
+    <script src="public/js/ticker.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            console.log("hello jitu")
+            $('.btn-secondary').on('click', function () {
+                $('#housePropertyModal').modal('show');
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            const incomeYesRadio = document.getElementById('incomeYes');
+            const incomeNoRadio = document.getElementById('incomeNo');
+            const housePropertyFields = document.getElementById('housePropertyFields');
+            let userData = JSON.parse(sessionStorage.getItem('userData'));
+            incomeYesRadio.addEventListener('change', function () {
+                if (incomeYesRadio.checked) {
+                    housePropertyFields.style.display = 'block';
+                    userData.IncomeFromHouseProperty = 'true';
+                    console.log(userData)
+                    sessionStorage.setItem('userData', JSON.stringify(userData));
+                }
+            });
+
+            incomeNoRadio.addEventListener('change', function () {
+                if (incomeNoRadio.checked) {
+                    housePropertyFields.style.display = 'none';
+                    userData.IncomeFromHouseProperty = 'false';
+                    console.log(userData);
+                    sessionStorage.setItem('userData', JSON.stringify(userData));
+                }
+            });
+
+            // sessionStorage.setItem('userData',JSON.stringify(userData));
+            // console.log(JSON.parse(sessionStorage.getItem('userData')));
+        });
+    </script>
+    <script>
+
+    </script>
+
+
+    <script>
+        $(document).ready(function () {
+            function changeButtonClass() {
+                var $uploadForm16Btn = $('#financialDetails');
+                $uploadForm16Btn.removeClass('btn-outline-primary');
+                $uploadForm16Btn.addClass('btn-primary');
+            }
+
+            setTimeout(changeButtonClass, 1000);
+            const housePropertyFields = document.getElementById('housePropertyFields');
+            let userData = JSON.parse(sessionStorage.getItem('userData'));
+            // console.log("incomeFromHouseProperty", userData.IncomeFromHouseProperty);
+            console.log(userData);
+
+            if (userData.IncomeFromHouseProperty == "true") {
+                housePropertyFields.style.display = 'block';
+                document.getElementById('incomeYes').checked = true;
+                console.log("this is userData", JSON.parse(sessionStorage.getItem('userData')))
+            } else if (userData.IncomeFromHouseProperty == "false") {
+                housePropertyFields.style.display = 'none';
+                document.getElementById('incomeNo').checked = true;
+            }
+            // if(userData.doYouResideInCity=="true"){
+            //     document.getElementById('cityYes').checked = true;
+            // }
+            // else if(userData.doYouResideInCity=="false"){
+            //     document.getElementById('cityNo').checked=true;
+            // }
+            $('#savingsBankInterest').val(userData.savingsBankInterest);
+            $('#fixedDepositInterest').val(userData.fixedDepositInterest);
+            $('#dividend').val(userData.dividend);
+            $('#agricultralIncome').val(userData.agricultralIncome);
+            $('#anyOtherIncome').val(userData.anyOtherIncome);
+            $('#otherIncomeValue').val(userData.otherIncomeValue);
+            $('#totalIncome').val(userData.totalIncome);
+            $('#annua-rental-income').val(userData.annualRentalIncome);
+            $('#municipalTaxes').val(userData.municipalTaxes);
+            $('#grossAnnualValue').val(userData.grossAnnualValue);
+            $('#standardDeduction').val((userData.standardDeduction30));
+            $('#selfOccupiedVacant').val(userData.selfOccupiedVacant);
+            $('#letOut').val(userData.letOut);
+            $('#netAnnualValue').val(userData.netAnnualValue);
+
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            function autoCalculation() {
+                const annualRentalIncome = parseFloat($('#annua-rental-income').val()) || 0;
+                const municipalTaxes = parseFloat($('#municipalTaxes').val()) || 0;
+                const grossAnnualValue = annualRentalIncome - municipalTaxes;
+                let homeLoanInterestOld=0;
+                let homeLoanInterestNew=0;
+                $('#grossAnnualValue').val(grossAnnualValue.toFixed(2));
+                const standardDeduction = grossAnnualValue * 0.3;
+                $('#standardDeduction').val(standardDeduction.toFixed(2));
+                const selfOccupiedVacant = parseFloat($('#selfOccupiedVacant').val()) || 0;
+                const letOut = parseFloat($('#letOut').val()) || 0;
+                if (selfOccupiedVacant != 0 && letOut != 0) {
+                    homeLoanInterestOld = Math.max(selfOccupiedVacant, letOut)
+                    if (homeLoanInterestOld > 200000) {
+                        homeLoanInterestOld= 200000;
+                    } else {
+                        homeLoanInterestOld=homeLoanInterestOld;
+                    }
+                } else if (selfOccupiedVacant != 0) {
+                    if (selfOccupiedVacant > 200000) {
+                        homeLoanInterestOld = 200000;
+                    } else {
+                        homeLoanInterestOld=selfOccupiedVacant ;
+                    }
+                } else if (letOut != 0) {
+                    if (letOut > 200000) {
+                        homeLoanInterestOld = 200000;
+                    } else {
+                        homeLoanInterestOld=letOut;
+                    }
+                }
+                if(letOut != 0){
+                    if (letOut > 200000) {
+                        homeLoanInterestNew = 200000;
+                    } else {
+                        homeLoanInterestNew=letOut;
+                    }
+                }
+                // const netAnnualValue = grossAnnualValue - standardDeduction - selfOccupiedVacant - letOut;
+                const netAnnualValueOld = grossAnnualValue - standardDeduction - homeLoanInterestOld;
+                const netAnnualValueNew = grossAnnualValue - standardDeduction - homeLoanInterestNew;
+                $('#netAnnualValue').val(`${netAnnualValueOld.toFixed(2)} / ${netAnnualValueNew.toFixed(2)}`);
+
+                const savingsBankInterest = parseFloat($('#savingsBankInterest').val()) || 0;
+                const fixedDepositInterest = parseFloat($('#fixedDepositInterest').val()) || 0;
+                const dividend = parseFloat($('#dividend').val()) || 0;
+                const agricultralIncome = parseFloat($('#agricultralIncome').val()) || 0;
+                const anyOtherIncome = $('#anyOtherIncome').val();
+                const otherIncomeValue = parseFloat($('#otherIncomeValue').val()) || 0;
+                const totalIncome = savingsBankInterest + fixedDepositInterest + dividend + agricultralIncome + otherIncomeValue;
+                $('#totalIncome').val(totalIncome.toFixed(2));
+                let userData = JSON.parse(sessionStorage.getItem('userData'));
+                userData.netAnnualValueOld = netAnnualValueOld;
+                userData.netAnnualValueNew = netAnnualValueNew;
+                sessionStorage.setItem('userData', JSON.stringify(userData));
+            }
+
+            $(document).on('input', '#annua-rental-income, #municipalTaxes,#selfOccupiedVacant,#letOut,#savingsBankInterest,#fixedDepositInterest,#dividend,#agricultralIncome,#otherIncomeValue', function () {
+                $(this).val($(this).val().replace(/[^0-9.]/g, ''));
+                autoCalculation();
+            });
+        });
+    </script>
+
+    <script>
+        function checkValidInput(id) {
+            let value = parseFloat(document.getElementById(id).value);
+            if (!isNaN(value)) {
+                return value;
+            }
+            return 0;
+        }
+        function saveData() {
+            const userData = JSON.parse(sessionStorage.getItem('userData'))  ;
+            userData.savingsBankInterest = checkValidInput('savingsBankInterest');
+            userData.fixedDepositInterest = checkValidInput('fixedDepositInterest');
+            userData.dividend = checkValidInput('dividend');
+            userData.agricultralIncome = checkValidInput('agricultralIncome');
+            userData.anyOtherIncome = document.getElementById('anyOtherIncome').value;
+            userData.otherIncomeValue = checkValidInput('otherIncomeValue');
+            userData.totalIncome = checkValidInput('totalIncome');
+            userData.annualRentalIncome = checkValidInput('annua-rental-income');
+            userData.municipalTaxes = checkValidInput('municipalTaxes');
+            userData.grossAnnualValue = checkValidInput('grossAnnualValue');
+            userData.standardDeduction30 = checkValidInput('standardDeduction');
+            userData.selfOccupiedVacant = checkValidInput('selfOccupiedVacant');
+            userData.letOut = checkValidInput('letOut');
+            // userData.netAnnualValue = checkValidInput('netAnnualValue');
+            userData.otherIncomeValue = checkValidInput('otherIncomeValue');
+            console.log(userData.otherIncomeValue);
+            userData.anyOtherIncome = document.getElementById('anyOtherIncome').value;
+            console.log(userData.anyOtherIncome);
+            // if(document.getElementById('cityYes').checked == true){
+            //     userData.doYouResideInCity='true'
+            // }
+            // else if(document.getElementById('cityNo').checked == true){
+            //     userData.doYouResideInCity='false'
+            // }
+            sessionStorage.setItem('userData', JSON.stringify(userData));
+            window.location.href = 'financial_details_part_D.html'
+        }
+    </script>
+</body>
+
+</html>

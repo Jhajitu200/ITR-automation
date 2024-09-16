@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITR Form</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/htmlincludejs"></script>
+
+
+    <link href="public/img/new_logo.png" rel="icon" type="image/png">
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="public/css/style_new.css?v=1.1.6">
+    <link rel="stylesheet" href="public/css/navbar.css">
+    <link rel="stylesheet" href="public/css/ticker.css">
+    <link rel="stylesheet" href="public/css/common.css">
+    <link rel="stylesheet" href="public/css/upload.css">
+    <link rel="stylesheet" href="public/css/itr_book_call.css">
+    <link href="public/css/current_tab_indicator.css" rel="stylesheet">
+    <style>
+        .close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 0.75rem 1.25rem;
+            color: inherit;
+        }
+    </style>
+
+</head>
+
+<body>
+    <include src="includes/header.html"></include>
+    <div class="ticker-wrap">
+        <ul class="ticker" id="tickers"></ul>
+    </div>
+    <div id="loading">
+        <p>Thaks for your pataince we are fetching data from you form 16 PART B</p>
+        <!-- <img src="public/dist/images/loader.gif" alt="Girl in a jacket" width="100" height="20"> -->
+        <div class="spinner"></div>
+    </div>
+    <div id="content"
+        style="background: linear-gradient(180deg, rgba(17, 103, 175, 0.77) 0, rgba(17, 103, 175, 0.77) 277px, white 277px); padding-top: 8px;">
+        <div id="overlayText" style="text-align: center;">
+            <strong id="responsiveText" style="color: white;">Self file ITR within 15 minutes </strong>
+        </div>
+        <div class="container "
+            style="background: #F4F6FC; width: 74%; padding-top: 1%; border-top-left-radius: 2%; border-top-right-radius: 2%;">
+
+            <include src="includes/current_tab_indicator.html"></include>
+            <div class="row mt-4" style="background: #FFFFFF; width: 90%; margin: auto; width: 90;border-radius: 10px;">
+                <div class="col-md-12" style="margin-top: 2%;">
+                    <div class="heading" style="text-align: center; margin-bottom: 2%;">
+                        <b class="center-text">UPLOAD FORM 16</b>
+                    </div>
+                    <div class="info" id="info"
+                        style="text-align: center;    background: #E6F4F799;padding-top: 2%;padding-bottom: 2%;width: 85%;margin: auto;border-radius: 10px;">
+                        <p class="text-center" style="width: 100%; margin: auto; font-size: 14px; ">
+                            The smartest approach to online tax filing is to upload your Form 16, and your ITR will be
+                            prepared automatically. However, you can also proceed without uploading Form 16.
+                        </p>
+                    </div>
+                    <div class="container">
+                        <div class="form-row justify-content-center" style="margin-top: 2%;">
+                            <div class="form-group col-md-4">
+                                <label for="fileInput" class="btn btn-secondary btn-block btn-upload"
+                                    style="background: linear-gradient(180deg, rgba(17, 103, 175, 0.7) 33.5%, #1167AF 100%);"
+                                    ID="btnUpload">
+                                    <input type="file" id="fileInput" name="fileInput" accept="application/pdf"
+                                        style="display: none;">
+                                </label>
+                            </div>
+                            <!-- <div class="form-group col-md-4">
+                                <a href="persional_details_1.html">
+                                    <label for="continue-without-form" class="btn btn-secondary btn-block btn-upload"
+                                        style="background: linear-gradient(180deg, rgba(17, 103, 175, 0.7) 33.5%, #1167AF 100%);">
+                                        Continue without form 16
+                                    </label>
+                                </a>
+                            </div> -->
+                        </div>
+                    </div>
+                    <div class="form-row justify-content-between" style="margin-top: 8%;">
+                        <div class="form-group col-md-3">
+                            <button type="button" class="btn btn-secondary btn-block"
+                                style="background: linear-gradient(180deg, rgba(17, 103, 175, 0.7) 33.5%, #1167AF 100%);">
+                                &lt;&lt; Back
+                            </button>
+                        </div>
+
+                        <div class="form-group col-md-4">
+                            <label for="continue-without-form" class="btn btn-secondary btn-block btn-upload"
+                                id="continue"
+                                style="background: linear-gradient(180deg, rgba(17, 103, 175, 0.7) 33.5%, #1167AF 100%);width:80%;text-align: center;" 
+                                onclick="check()">
+
+                            </label>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.7.570/pdf.min.js"></script>
+
+
+    <include src="includes/ITR_book_call.html"></include>
+    <!-- <script src="public/js/userData.js"></script> -->
+    <script src="datas/dynamic-contents.js"></script>
+    <script src="public/js/ticker.js"></script>
+    <!-- <script src="public/js/userData.js"></script> -->
+    <script src="public/js/data_extractionformB.js"></script>
+    <script src="public/js/data_extractionformA.js"></script>
+    <script src="public/js/handleformB_middleware.js"></script>
+    <script src="public/js/confirmationmessage.js"></script>
+    <script src="public/js/success_message.js"></script>
+    <script src="public/js/type_check_middleware.js"></script>
+    <script src="public/js/file_reader_middleware.js"></script>
+    <script>
+        $(document).ready(function () {
+            function changeButtonClass() {
+                var $uploadForm16Btn = $('#uploadForm16');
+                $uploadForm16Btn.removeClass('btn-outline-primary');
+                $uploadForm16Btn.addClass('btn-primary');
+            }
+            setTimeout(changeButtonClass, 1000);
+        });
+
+    </script>
+    <script>
+        function check() {
+            if (!sessionStorage.getItem('formTypeA') && !sessionStorage.getItem('formTypeB')) {
+                window.location.href = 'persional_details_1.html';
+            }
+            else if (!sessionStorage.getItem('formTypeA') && sessionStorage.getItem('formTypeB')) {
+                alert('please upload form 16 PART A')
+            } else if (sessionStorage.getItem('formTypeA') && !sessionStorage.getItem('formTypeB')) {
+                alert('please upload form 16 PART B')
+            } else if (sessionStorage.getItem('formTypeA') && sessionStorage.getItem('formTypeB')) {
+                window.location.href = 'persional_details_1.html';
+            }
+        }
+    </script>
+    <script>
+        $(document).ready(function () {
+            if (!sessionStorage.getItem('formTypeA') && !sessionStorage.getItem('formTypeB')) {
+                uploadButton('UPLOAD FORM 16', 'false');
+                document.getElementById('continue').innerHTML = " Continue without form 16";
+
+            }
+            else if (!sessionStorage.getItem('formTypeA') && sessionStorage.getItem('formTypeB')) {
+                uploadButton('UPLOAD FORM 16 A', 'flase')
+                document.getElementById('continue').innerHTML = " Continue >>";
+
+            } else if (sessionStorage.getItem('formTypeA') && !sessionStorage.getItem('formTypeB')) {
+                uploadButton('UPLOAD FORM 16 B', 'flase')
+                document.getElementById('continue').innerHTML = " Continue >>";
+
+            } else if (sessionStorage.getItem('formTypeA') && sessionStorage.getItem('formTypeB')) {
+                let label = document.getElementById('btnUpload');
+                label.style.display = 'none';
+                document.getElementById('continue').innerHTML = " Continue >>";
+
+            }
+        });
+    </script>
+
+    <script>
+        function uploadButton(message, check) {
+            console.log(" i am in the upload button")
+            if (check == 'true') {
+                window.location.reload();
+            }
+
+            var label = document.getElementById('btnUpload');
+            console.log(label);
+            label.childNodes.forEach(function (node) {
+                if (node.nodeType === Node.TEXT_NODE) {
+                    node.textContent = '';
+                }
+            });
+            var newText = document.createTextNode(message);
+            label.insertBefore(newText, label.querySelector('input'));
+        }
+    </script>
+    <script>
+        $(document).ready(function () {
+            if (sessionStorage.getItem('formTypeA')) {
+                successMessageShow("Form 16 Part A.pdf", "A")
+            }
+            if (sessionStorage.getItem('formTypeB')) {
+                successMessageShow("Form 16 Part b.pdf", "B")
+            }
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+
+            const userData = {
+                firstName: "",
+                middleName: "",
+                lastName: "",
+                panNumber: "",
+                aadharNumber: "",
+                mobileNumber: "",
+                houseNumber: "",
+                state: "",
+                district: "",
+                pinCode: "",
+                email: "",
+                financialYear: "",
+                assessmentYear: "",
+                taxPayerStatus: "",
+                citizenStatus: "",
+                age: 0,
+                basicSalary: "",
+                dearnessAllowance: "",
+                hra: "",
+                otherPerquisites: "",
+                grossSalary: "",
+                exemptionForHRA: "",
+                professionalTax: "",
+                grossTaxableIncome: "",
+                standardDeduction: '50000',
+                standardDeduction30: '',
+                netSalary: "",
+                IncomeFromHouseProperty: "",
+                doYouResideInCity: "",
+                annualRentalIncome: "",
+                municipalTaxes: "",
+                grossAnnualValue: "",
+                standardDeduction: "",
+                interestonHomeLoan: "",
+                selfoccupiedVacant: "",
+                letOut: "",
+                netAnnualValue: "",
+                savingsBankInterest: "",
+                fixedDepositInterest: "",
+                dividend: "",
+                agricultralIncome: "",
+                anyOtherIncome: "",
+                otherIncomeValue: "",
+                totalIncome: "",
+                c80LIC: "",
+                ccd80NPS: "",
+                d80: {
+                    forSelfFamilyChildren: {
+                        seniorCitizen: "",
+                        nonSeniorCitizen: ""
+                    },
+                    forParents: {
+                        seniorCitizen: 0.00,
+                        nonSeniorCitizen: 0.00,
+                    },
+                    preventiveHealthCheckup: "",
+                },
+                TTA80: "",
+                TTB80: "",
+                OtherDeductions: "",
+                cch80: "",
+                e80: "",
+                oldTaxRegime: {
+                    GrossTotalIncome: "",
+                    TotalDeductions: "",
+                    totalIncome: "",
+                    taxAmount: "",
+                    RebateUnderSection87A: "",
+                    healthEducationCess: "",
+                    netTaxPayable: "",
+                },
+                newTaxRegime: {
+                    GrossTotalIncome: "",
+                    TotalDeductions: "",
+                    totalIncome: "",
+                    taxAmount: "",
+                    RebateUnderSection87A: "",
+                    healthEducationCess: "",
+                    netTaxPayable: "",
+                },
+
+            }
+            sessionStorage.setItem('userData', JSON.stringify(userData));
+
+        });
+    </script>
+</body>
+
+</html>

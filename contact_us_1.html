@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITR Form</title>
+ 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+
+        .containerForm {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+            padding: 20px;
+            max-width: 100%;
+            box-sizing: border-box;
+            margin-left: 5%;
+            margin-right: 8%;
+        }
+
+         .contact-form {
+            width: 100%;
+            max-width: 25%;
+            height: 60vh;
+            padding: 30px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(180deg, #E6F4F7 0%, rgba(230, 244, 247, 0.5) 100%);
+            margin-right: 50px;
+            box-sizing: border-box;
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        } 
+
+        .contact-form h1 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+         .form-group {
+            margin-bottom: 5px;
+            width: 100%;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 3px;
+            font-size: 12px;
+        } 
+
+         .form-group input,
+         .form-group select {
+            width: 100%;
+            padding: 4px;
+            box-sizing: border-box;
+            font-size: 12px;
+        }
+
+        .requestCallback {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 8px 10px;
+            font-size: 12px;
+            cursor: pointer;
+            border-radius: 4px;
+            width: 70%; 
+            text-align: center;
+            margin-top: 10px; 
+        }
+
+         button:hover {
+            background-color: #0056b3;
+        } 
+
+        .contact-form p {
+            font-size: 12px;
+            text-align: center;
+            margin-top: 10px; 
+        }
+
+         .contact-info-container {
+            width: 100%;
+            max-width: 55%;
+            padding: 0px;
+            background-color: #e9ecef;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+            box-sizing: border-box;
+            border-radius: 8px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 60vh;
+        } 
+
+        .contact-info {
+            padding: 20px 0px 0px 20px;
+            background: linear-gradient(180deg, #1167AF 0%, #6BAAD5 100%);
+            border-radius: 8px;
+            color: #fff;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contact-info p {
+            margin: 0 0 20px;
+            font-size: 20px;
+        }
+
+        .contact-info .label {
+            font-weight: 700;
+            margin-right: 20px;
+        }
+
+        .contact-info .value {
+            font-weight: 400;
+            display: inline;
+        }
+
+        .contact-info .address {
+            display: flex;
+        }
+
+        .contact-info .address .label {
+            display: inline-block;
+            vertical-align: top;
+            margin-right: 20px;
+        }
+
+        .contact-info .address .value {
+            display: inline-block;
+            padding-left: 5px;
+            text-indent: -5px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+                margin-left: 0;
+                margin-right: 0;
+            }
+
+            .contact-form,
+            .contact-info-container {
+                width: 100%;
+                max-width: 100%;
+                margin-right: 0;
+                margin-bottom: 20px;
+                height: auto; 
+            }
+
+            .contact-form h1,
+            .contact-info-container h1 {
+                font-size: 18px; 
+            }
+
+            .form-group label,
+            .form-group input,
+            .form-group select,
+            button,
+            .contact-info p {
+                font-size: 14px;
+                font-weight: 600;
+            }
+
+            .contact-info {
+                padding: 20px;
+            }
+        }
+
+         .map-container {
+            width: 100%;
+            height: 150px;
+            overflow: hidden;
+            position: relative;
+            box-sizing: border-box;
+            margin-top: 20px; 
+        } 
+
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+</head>
+
+<body>
+        <include src="includes/header.html"></include>
+        <div class="ticker-wrap">
+            <ul class="ticker" id="tickers"></ul>
+        </div>
+    <div class="containerForm">
+        <form class="contact-form"  >
+            <h1><b>Get in Touch</b></h1>
+            <div class="form-group">
+                <label for="name" style="font-weight: 600;">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your name here" required>
+            </div>
+            <div class="form-group">
+                <label for="mobile" style="font-weight: 600;">Mobile Number:</label>
+                <input type="tel" id="mobile" name="mobile" placeholder="Mobile number" required>
+            </div>
+            <div class="form-group">
+                <label for="email" style="font-weight: 600;">Email:</label>
+                <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+            </div>
+            <div class="form-group">
+                <label for="service" style="font-weight: 600;">Service:</label>
+                <select id="service" name="service" required>
+                    <option value="" disabled selected>Select a service</option>
+                    <option value="consulting">Consulting</option>
+                    <option value="development">Development</option>
+                </select>
+            </div>
+            <button type="submit" class="requestCallback">Request Callback</button>
+            <p>1.5 Million+ Happy Users | Book a call with CA</p>
+        </form>
+        <div class="contact-info-container">
+            <h1>Let's Get in Touch</h1>
+            <div class="contact-info">
+                <p><span class="label" style="margin-right: 42px;">Email:</span> <span class="value">contact@jjfintax.com</span></p>
+                <p><span class="label">Contact:</span> <span class="value">+91-9310854724</span></p>
+                <p class="address"><span class="label">Address:</span> <span class="value">208, Tower B, Spaze Buziness Park, Sector 66, Gurgaon - 122102, Haryana, India</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7002.094527607844!2d77.05102997583186!3d28.43102360300861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d33a0bc30e7fd%3A0x31b2a57b1c88b5d3!2sSpaze%20i-Tech%20Park!5e0!3m2!1sen!2sin!4v1624647958828!5m2!1sen!2sin&maptype=satellite" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('.contact-form');
+        
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+        
+                const formData = new FormData(form);
+                
+                fetch('process_form.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.text())
+                .then(result => {
+                    alert(result);
+                    form.reset(); 
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('An error occurred. Please try again.');
+                });
+            });
+        });
+        </script>
+    
+
+</body>
+
+</html>

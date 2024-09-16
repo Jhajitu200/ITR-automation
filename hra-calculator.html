@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="en" class="has-navbar-fixed-top">
+  <head>
+    <!-- <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+         })(window,document,'script','dataLayer','GTM-N42Z47F');
+    </script> -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>House Rent Allowance Calculator | Online HRA Calculator | JJ Tax</title>
+    <meta name="description" content="How to calculate HRA, how to calculate total amount of HRA, how to calculate HRA for metro cities, how to calculate taxable HRA, how to calculate exemption in HRA, how to calculate total HRA received, House Rent Allowance Calculator, online HRA calculator, calculate HRA online, easy steps to calculate HRA, calculate HRA in easy way, calculation of taxable HRA, calculation of HRA, HRA calculator, calculate HRA">
+    <meta name="keywords" content="hra calculator, hra calculator cleartax, calculate house rent allowance, calculate house rent exemption,    calculate hra benefit, calculate hra deduction, calculate hra exemption amount, calculate hra exemption formula, how to calculate total HRA received, House Rent Allowance Calculatorx, House Rent Allowance Calculator, online HRA calculator, calculate HRA online, easy steps to calculate HRA, calculate HRA in easy way, calculation of taxable HRA, calculation of HRA, HRA calculator, calculate HRA">
+    <link href="./public/img/new_logo.png" rel="icon" type="image/png">
+    <link rel="stylesheet" href="./public/css/bootstrap.min.css">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League Spartan:wght@300;400;500;600;700;800&display=swap"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="./public/css/scrmob.css">
+    <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="stylesheet" href="./public/css/style_new.css?v=1.1.4">
+    <link rel="stylesheet" href="./public/css/navbar.css">
+    
+    <script src="./public/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js"></script>
+    <script src="./public/js/main.js"></script>
+    <script src="./public/js/common.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+</script>
+<script src="https://unpkg.com/htmlincludejs"></script>
+<!-- Social Tags -->
+<meta property="og:title" content="Online HRA calculator by JJ Tax">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jjfintax.com">
+<meta property="og:image" content="./public/images/SEO-calculator.png">
+<meta property="og:description" content="HRA Calculator: Optimize Tax Benefits on Rental Expenses and chat with our experts to get personalized solution for all your queries.">
+<meta property="og:site_name" content="@jjtax">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@jjtax">
+<meta name="twitter:title" content="Online HRA calculator by JJ Tax">
+<meta name="twitter:description" content="HRA Calculator: Optimize Tax Benefits on Rental Expenses and chat with our experts to get personalized solution for all your queries.">
+<meta name="twitter:creator" content="@jjtax">
+<meta name="twitter:url" content="https://jjfintax.com">
+<meta name="twitter:image" content="./public/images/SEO-calculator.png">
+<!-- Google tag (gtag.js) -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-V1TQR97GVP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-V1TQR97GVP');
+</script> 
+    <script>
+      function disbtn() {
+        document.getElementById("submit_btn").disabled = true;
+        document.getElementById("submit_btn").innerHTML = "Submitting ...";
+      }
+      function calculateHRA () {
+        let inputBasicSalary = $("#inputBasicSalary").val();
+        let inputDearnessAllowance = $("#inputDearnessAllowance").val();
+        let inputHRA = $("#inputHRA").val();
+        let inputRentPaid = $("#inputRentPaid").val();
+
+        // $("#inputBasicSalary").val(toIndianCurrency(inputBasicSalary));
+        // let inputDearnessAllowance = $("#inputDearnessAllowance").val();
+        // let inputHRA = $("#inputHRA").val();
+        // let inputRentPaid = $("#inputRentPaid").val();
+
+        let isMetroCity = $('input[name="isMetroCity"]:checked').val();
+        let exemptedHRA = 0;
+        let taxableHRA = 0;
+        let rentPaidOver10PerOfSalary = parseInt(parseInt(inputRentPaid) - (parseInt(parseInt(inputBasicSalary) + parseInt(inputDearnessAllowance))/100)*10);
+
+        if(isMetroCity == 'yes')
+        {
+          exemptedHRA = parseInt((parseInt(inputBasicSalary) + parseInt(inputDearnessAllowance))/100) * 50;
+        }else{
+          exemptedHRA = parseInt((parseInt(inputBasicSalary) + parseInt(inputDearnessAllowance))/100) * 40;
+        }
+        
+        let finalRes = Math.min(exemptedHRA, inputHRA, rentPaidOver10PerOfSalary);
+
+        if(finalRes < 0)
+        {
+          finalRes = 0;
+        }
+
+        $("#HRA_Received").html('<span>'+toIndianCurrency(parseInt(inputHRA))+'</span>')
+        $("#Exempted_HRA").html('<span>'+toIndianCurrency(finalRes)+'</span>')
+        if(inputHRA!=''){
+        taxableHRA = parseInt(parseInt(inputHRA) - finalRes)
+        }
+        $("#Taxable_HRA").html('<span>'+toIndianCurrency(taxableHRA)+'</span>')        
+        
+      }
+
+      $(document).ready(function(){
+        $(".on-change-selector").blur(calculateHRA).keyup(calculateHRA)
+          .keypress(calculateHRA)
+          .change(calculateHRA);
+      })
+    </script>  
+     <!-- Meta Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1155842502283697');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1155842502283697&ev=PageView&noscript=1"
+  /></noscript>
+<!-- End Meta Pixel Code -->  
+    </head>
+    <body>
+        <!-- <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N42Z47F"
+                height="0" width="0" style="display:none;visibility:hidden">
+            </iframe>
+        </noscript> -->
+      <include src="includes/header.html"></include>
+        <div class="ticker-wrapper-h">
+            <div class="heading">JJ Tax News</div>
+            <ul class="news-ticker-h" id="news-ticker-h"></ul>
+        </div>
+         
+          <div class="clc-banner-wrapper">
+            <div class="row pt-50 mr-0">
+              <div class="offset-md-2 col-md-8">
+                  <h1 class="page-heading">HRA Calculator</h1>
+                  <div class="hra-calculator-container">
+                    <form>
+                      <div class="form-group row">
+                        <label for="inputBasicSalary" class="col-sm-8 col-form-label">Basic salary (p.a)</label>
+                        <div class="col-sm-4 d-flex">
+                          <span class="currency-symbol">₹</span>
+                          <input type="text" class="form-control on-change-selector text-right-align input-bg" id="inputBasicSalary" value="0" >
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputDearnessAllowance" class="col-sm-8 col-form-label">Dearness allowance (p.a)</label>
+                        <div class="col-sm-4 d-flex">
+                          <span class="currency-symbol">₹</span>
+                          <input type="text" class="form-control on-change-selector text-right-align input-bg" id="inputDearnessAllowance" value="0">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputHRA" class="col-sm-8 col-form-label">HRA received (p.a)</label>
+                        <div class="col-sm-4 d-flex">
+                          <span class="currency-symbol">₹</span>
+                          <input type="text" class="form-control on-change-selector text-right-align input-bg" id="inputHRA" value="0">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputRentPaid" class="col-sm-8 col-form-label">Total rent paid (p.a)</label>
+                        <div class="col-sm-4 d-flex">
+                          <span class="currency-symbol">₹</span>
+                          <input type="text" class="form-control on-change-selector text-right-align input-bg" id="inputRentPaid" value="0">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="isMetroCity" class="col-sm-8 col-form-label">Are you working in a metro city? <br/>
+                        <small>(Delhi, Mumbai, Chennai and Kolkata)</small></label>
+                        <div class="col-sm-4">
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input on-change-selector" type="radio" name="isMetroCity" id="inlineRadio1" checked value="yes">
+                            <label class="form-check-label" for="inlineRadio1">Yes</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input on-change-selector" type="radio" name="isMetroCity" id="inlineRadio2" value="no">
+                            <label class="form-check-label" for="inlineRadio2">No</label>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                    <div class="row hra-calculator-container-bottom">
+                      <div class="col-md-4">
+                        <h3>HRA Received</h3>
+                        <div id="HRA_Received"><span>₹<span>0</span></span></div>
+                      </div>
+                      <div class="col-md-4">
+                        <h3>Exempted HRA</h3>
+                        <div id="Exempted_HRA"><span>₹<span>0</span></span></div>
+                      </div>
+                      <div class="col-md-4">
+                        <h3>Taxable HRA</h3>
+                        <div id="Taxable_HRA"><span>₹<span>0</span></span></div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <include src="includes/statistics.html"></include>
+      
+      <include src="includes/footer.html"></include>
+          <script src="datas/dynamic-contents.js"></script>
+    <script>
+      $(document).ready(function () { 
+        var wrapper = $('#news-ticker-h').empty();
+        $.each(tickers, function (i, f) {
+          $('#news-ticker-h').append('<li>' + f.key + '</li>');
+        })
+      });       
+    </script>
+    </body>
+  </html>

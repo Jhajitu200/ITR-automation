@@ -1,0 +1,685 @@
+<!doctype html>
+<html lang="en" class="has-navbar-fixed-top">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>One Stop Solution for all your Tax needs | JJ Tax</title>
+    <link href="../public/img/new_logo.png" rel="icon" type="image/png">
+    <link rel="stylesheet" href="./public/css/bootstrap.min.css">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League Spartan:wght@300;400;500;600;700;800&display=swap"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="./public/css/scrmob.css">
+    <script src="./public/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js"></script>
+    <script src="./public/js/main.js"></script>
+    <script>
+    </script>
+    <script>
+      function disbtn() {
+        document.getElementById("submit_btn").disabled = true;
+        document.getElementById("submit_btn").innerHTML = "Submitting ...";
+      }
+    </script>    
+    <style>
+        .abt {
+            border-radius: 1000px;
+            max-width: 65%;
+            cursor: pointer;
+            opacity: 0.9;
+        }
+
+        .abt:hover {
+            opacity: 1;
+
+        }        
+        @media all and (min-width: 992px) {
+	.navbar .nav-item .dropdown-menu{ display: none; }
+	.navbar .nav-item:hover .dropdown-menu{ display: block; }
+	.navbar .nav-item .dropdown-menu{ margin-top:0; }
+    }	
+           /* Logo Display */
+           .logo-display 
+        {
+          top: 13px;
+          left: 150px;
+          width: 200px;
+          height: 50px;
+        }
+        .ticker-wrapper-h
+        {
+	        display: flex;	
+	        position: relative;
+	        overflow: hidden;
+          background-color: #6AA9D5;
+        }
+        .ticker-wrapper-h .heading
+        {
+	        background-color: #1167AF;
+	        color: #fff;
+	        padding: 5px 10px;
+	        flex: 0 0 auto;
+	        z-index: 1000;
+        }
+        .ticker-wrapper-h .heading:after
+        {
+	        content: "";
+	        position: absolute;
+	        top: 0;
+	        border-left: 20px solid #1167AF;
+	        border-top: 17px solid transparent;
+	        border-bottom: 15px solid transparent;
+        }
+        .news-ticker-h
+        {
+	        display: flex;
+	        margin:0;
+	        padding: 0;
+	        padding-left: 90%;
+	        z-index: 999;
+          animation-iteration-count: infinite;
+	        animation-timing-function: linear;
+	        animation-name: tic-h;
+	        animation-duration: 550s;
+	      }
+        .news-ticker-h:hover 
+        { 
+	        animation-play-state: paused; 
+        }
+        .news-ticker-h li
+        {
+	        display: flex;
+	        width: 100%;
+	        align-items: center;
+	        white-space: nowrap;
+	        padding-left: 20px;
+        }
+        .news-ticker-h li a
+        {
+        	color: #212529;
+	        text-decoration: none;
+          font-family: var(--font-league-spartan);
+          color: #fff;
+        }
+        @keyframes tic-h 
+        {
+	        0%
+           {
+		          -webkit-transform: translate3d(0, 0, 0);
+		          transform: translate3d(0, 0, 0);
+		          visibility: visible;
+	         }
+	        100% 
+          {
+		        -webkit-transform: translate3d(-100%, 0, 0);
+		        transform: translate3d(-100%, 0, 0);
+	        }
+        }        
+        a:link 
+        { 
+          text-decoration: none; 
+        }
+
+        .menu:link 
+        { 
+          text-decoration: none; color:#ffffff; 
+        }
+
+        a:visited 
+        { 
+          text-decoration: none; 
+        }
+
+        .active-link { text-decoration: none;color:#ffffff; }
+
+        a:hover 
+        {
+          text-decoration: none;
+          color:#6aa9d5;
+        }
+    </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container-fluid">
+              <a href="index.html"><img class="logo-display navbar-brand img-fluid" src="../public/img/logo-amazon.png" alt="JJTax" ></a>
+                <div class="menu-display">
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#contactmodal">Get In Touch</a>
+                      </li>
+                    </ul>          
+                  </div>
+                </div>
+            </div>
+        </nav>
+        <div class="sticky-icon is-hidden-mobile">
+          <a href="https://www.linkedin.com/in/jj-fintax/" class="social-media-color"><i class="fab fa-linkedin"> </i> LinkedIN </a>
+          <a href="https://www.instagram.com/jjfintax/" class="social-media-color"><i class="fab fa-instagram"></i> Instagram </a>
+          <a href="https://www.facebook.com/JJ-Tax-102265144737511" class="social-media-color"><i class="fab fa-facebook-f"> </i> Facebook </a>
+          <a href="https://www.youtube.com/channel/UC8BrcQ7nxa148InUkm-E-GA" class="social-media-color"><i class="fab fa-youtube"></i> Youtube </a>
+          <a href="https://twitter.com/JJTaxApp" class="social-media-color"><i class="fab fa-twitter"> </i> Twitter </a>
+          <a href="https://open.spotify.com/show/1LoGRoGWHHBo8MHm3q365E" class="social-media-color"><i class="fab fa-spotify"> </i> Spotify </a>
+        </div>
+        <div class="ticker-wrapper-h">
+            <div class="heading">JJ Tax News</div>
+                  <ul class="news-ticker-h" id="news-ticker-h"></ul>
+                </div>
+              <!--/div>
+            </div>
+          </div-->
+          <div class="modal fade" id="contactmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5">Get In Touch</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                      Mobile No : +91-9310854724
+                     </div>
+                    <div class="mb-3">
+                      EMail ID : contact@jjfintax.com
+                    </div>
+                    <div class="mb-3">
+                      Address : 234, Tower B-2, Spaze I Tech Park, <br>
+                      Sohna Road, Sector 49, Gurgaon - 122018, Haryana, India
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="jambuModal" aria-labelledby="jambuLabel" tabindex="-1" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="jambuLabel">About CA J.Jambukeswaran</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" align="center">
+                  <img src="../public/img/jambu.png" alt="Jambu" style="border-radius: 100px;max-width: 90px;border: #18253f;border-style: solid;">
+                  <div align="justify" style="padding-top: 10px;">
+                    He is the Founder of the Company. An FCA with more than 30 years of experience in the field of Taxation, accounts and Investment advisory services. He is a First generation Promoter and CEO of one of the leading CA Firms in Gurgaon. He is an enthusiastic cricketer and holds the record for most wickets in T-20 cricket in corporate cricket in India.
+                  </div>
+                  <div class="has-text-centered" style="padding-top:1rem">
+                    <a href="https://www.linkedin.com/in/ca-jambukeswaran-jambukeswaran-8b94385/" target="_blank" class="footer-link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" class="feather feather-linkedin">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                </svg></a>
+                </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="rashiModal" aria-labelledby="rashiLabel" tabindex="-1" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="rashiLabel">About CA Rashi Bajpai</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" align="center">
+                  <img src="../public/img/rashi.png" alt="Rashi" style="border-radius: 100px;max-width: 90px;border: #18253f;border-style: solid;">
+                  <div align="justify" style="padding-top: 10px;">
+                    She joined the company in 2021 and has more than 4 years of experience in the field of taxation of related services. She is a symbol of Women Empowerment and has been instrumental in developing the team to take us into the future. She is instrumental in handling the operations of the company and keep everyone motivated and create a bright future for the company.
+                  </div>
+                  <div class="has-text-centered" style="padding-top:1rem">
+                      <a href="https://www.linkedin.com/in/ca-rashi-bajpai-31152619/" target="_blank" class="footer-link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" class="feather feather-linkedin">
+                      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                      <rect x="2" y="9" width="4" height="12"></rect>
+                      <circle cx="4" cy="4" r="2"></circle>
+                    </svg></a>
+                 </div>
+                </div>
+              </div>
+            </div>
+          </div>          
+          <div class="modal fade" id="leeshaModal" aria-labelledby="leeshaLabel" tabindex="-1" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="leeshaLabel">About Leesha Arya</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" align="center">
+                  <img src="../public/img/leesha.png" alt="Leesha" style="border-radius: 100px;max-width: 90px;border: #18253f;border-style: solid;">
+                  <div align="justify" style="padding-top: 10px;">
+                    She is the Co-founder of the Company and holds B.Com (H) degree from Delhi University. A CA Final aspirant with a young & dynamic personality who wants to bring a change in the way Taxation has been viewed in the eyes of the millennials. She has more than 4 years’ experience in the field of Taxation and Finance.
+                  </div>
+                  <div class="has-text-centered" style="padding-top:1rem">
+                    <a href="https://www.linkedin.com/in/leesha-arya-752318200/" target="_blank" class="footer-link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" class="feather feather-linkedin">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                    </svg></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="mehakModal" aria-labelledby="mehakLabel" tabindex="-1" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="mehakLabel">About Mehak Malik</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" align="center">
+                  <img src="../public/img/mehak.png" alt="Mehak" style="border-radius: 100px;max-width: 90px;border: #18253f;border-style: solid;">
+                  <div align="justify" style="padding-top: 10px;">
+                    She is the Co-founder of the Company and holds a B.Com degree from the University of Delhi. A CA Final aspirant having more than 3 years’ experience in the field of Taxation. She is also the CEO of JoJo Edtech Pvt Ltd.
+                  </div>
+                  <div class="has-text-centered" style="padding-top:1rem">
+                      <a href="https://www.linkedin.com/in/mehak-malik-8110b9215/" target="_blank" class="footer-link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" class="feather feather-linkedin">
+                      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                      <rect x="2" y="9" width="4" height="12"></rect>
+                      <circle cx="4" cy="4" r="2"></circle>
+                    </svg></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="komalModal" aria-labelledby="komalLabel" tabindex="-1" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="komalLabel">About Komal Kwatra</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" align="center">
+                  <img src="../public/img/komal.png" alt="Komal" style="border-radius: 100px;max-width: 90px;border: #18253f;border-style: solid;">
+                  <div align="justify" style="padding-top: 10px;">
+                    CA with more than 5 years of experience in the field of taxation, compliance, audit, due diligence & product management. She is a vivid reader and loves sports. An articulate speaker and a self starter with the drive and enthusiasm to succeed.
+                  </div>
+                  <div class="has-text-centered" style="padding-top:1rem">
+                      <a href="https://www.linkedin.com/in/ca-komal-kwatra-99269510a/" target="_blank" class="footer-link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                      viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" class="feather feather-linkedin">
+                      <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                      <rect x="2" y="9" width="4" height="12"></rect>
+                      <circle cx="4" cy="4" r="2"></circle>
+                    </svg></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>   
+          <div class="modal fade" id="vartaModal" aria-labelledby="vartaLabel" tabindex="-1" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5" id="vartaLabel">About Varta Khandenwal</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" align="center">
+                  <img src="../public/img/varta.png" alt="Komal" style="border-radius: 100px;max-width: 90px;border: #18253f;border-style: solid;">
+                  <div align="justify" style="padding-top: 10px;">
+                    She's a Company Secretary, LLB and Master's degree in Commerce and heads the department of Compliance, Legal and Regulatory matters. She's better recognized for her commitment in rendering timely services and for her instant solutions/advice.
+                  </div>
+                  <div class="has-text-centered" style="padding-top:1rem">
+                    <a href="https://www.linkedin.com/in/cs-varta-khandelwal-1ab01bb5/" target="_blank" class="footer-link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" class="feather feather-linkedin">
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                    <rect x="2" y="9" width="4" height="12"></rect>
+                    <circle cx="4" cy="4" r="2"></circle>
+                    </svg></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>                                                                                
+          <div class="container">
+            <br>
+            <br>
+            <div class="row display:flex">
+              <div class="col-sm-6  d-flex justify-content-center">
+                <div align="justify" style="font-family: 'Inter', League Spartan;font-size: 14px;color: #053757"><b>
+                    <p>JJ Fintax Solutions Pvt. Ltd. is an Indian company launched in 2019, providing a wide array of solutions in Direct Taxation, Goods & Service Tax, Accounting and allied services through a chat-based app.<br><br>
+                    JJ Tax delivers a comprehensive approach to complex tax problems. Our ambit of tax services is relevant for individuals, firms and corporates and range from tax compliance, to tax planning, accounting and payroll, wills drafting and execution.<br><br>
+                    We are a team of Chartered Accountants, MBA(s), Company Secretaries and Financial Management experts who possess profound knowledge and committed to deliver quality and expert services to match the client’s requirements. We continuously work to improve the client’s experience with JJ Tax and develop new solutions to address the issues faced by taxpayers.</b></p><br>
+                </div>     
+              </div>
+              <div class="col-sm-6  d-flex justify-content-center" style="padding-top: 25px;">
+                <div class="d-flex align-items-center justify-content-center" style="background-color:#ffffff;height:210px;">
+                  <div style="font-family: 'Inter', League Spartan;font-size: 20px;color: #000000">
+                    <iframe width="630" height="290"
+                      src="https://www.youtube.com/embed/FcTQsBXtdik">
+                    </iframe>
+                 </div>
+                </div> 
+              </div>
+            </div>
+            <div class="row display:flex">
+                <b style="align-items: center;font-family: 'Inter', League Spartan;font-size: 30px;color: #053757"><div align="center">Meet the Team<br><br></div></b>
+                          <div class="col-sm-2" align="center" data-bs-toggle="modal" data-bs-target="#jambuModal">
+                              <div align="center"><img class="abt" src="../public/img/jambu.png" alt="Jambukeswaran"></div>
+                              <div style="font-size: 0.75rem;" align="center"><strong>CA J. Jambukeswaran</strong></div>
+                              <div style="font-size: 0.75rem;" align="center">Founder & Director</div>
+                          </div>
+                          <div class="col-sm-2" data-bs-toggle="modal" data-bs-target="#rashiModal">
+                            <div align="center"><img class="abt" src="../public/img/rashi.png" alt="Rashi Bajpai"></div>
+                              <div style="font-size: 0.75rem;" align="center"><strong>CA Rashi Bajpai</strong></div>
+                              <div style="font-size: 0.75rem;" align="center">Co-Founder & CEO</div>
+                          </div>
+                          <div class="col-sm-2" data-bs-toggle="modal" data-bs-target="#leeshaModal">
+                            <div align="center"><img class="abt" src="../public/img/leesha.png" alt="Leesha Arya"></div>
+                              <div style="font-size: 0.75rem;" align="center"><strong>Leesha Arya</strong></div>
+                              <div style="font-size: 0.75rem;" align="center">Co-Founder & COO</div>
+                          </div>
+                          <div class="col-sm-2" data-bs-toggle="modal" data-bs-target="#mehakModal">
+                            <div align="center"><img class="abt" src="../public/img/mehak.png" alt="Mehak Malik"></div>
+                              <div style="font-size: 0.75rem;" align="center"><strong>Mehak Malik</strong></div>
+                              <div style="font-size: 0.75rem;" align="center">Co-Founder & Director</div>
+                          </div>
+                         <div class="col-sm-2" data-bs-toggle="modal" data-bs-target="#komalModal">
+                          <div align="center">
+                              <img class="abt" src="../public/img/komal.png" alt="Komal Kwatra"></div>
+                              <div style="font-size: 0.75rem;" align="center"><strong>CA Komal Kwatra</strong></div>
+                              <div style="font-size: 0.75rem;" align="center">Chief Financial Officer</div>
+                        </div>
+                      <div class="col-sm-2" data-bs-toggle="modal" data-bs-target="#vartaModal">
+                              <div align="center"><img class="abt" src="../public/img/varta.png" alt="Varta Khandelwal"></div>
+                              <div style="font-size: 0.75rem;" align="center"><strong>Varta Khandelwal</strong></div>
+                              <div style="font-size: 0.75rem;" align="center">Company Secretary</div>
+                      </div>
+              </div>
+              <div class="row display:flex">
+                <b style="align-items: center;font-family: 'Inter', League Spartan;font-size: 20px;color: #1167AF"><div align="center">Our mission is to be a globally acclaimed organization and become a synonym for tax <br> and allied services. We aim to simplify taxes for masses and make taxes less taxing.</div></b>
+              </div>
+          </div>    
+          <br>
+          <br>
+         <div class="w-100 grad_2">
+          <div class="container">
+          <div class="row display:flex">
+            <div class="col-sm-12" style="text-align: center;">
+              <br>
+            <br>
+              <b style="text-align: center;font-family: 'Inter', League Spartan;font-size: 32px;color: #1167AF;"> Why Us </b>     
+              <br>
+              <br>
+            </div>
+          </div>
+         </div>
+         <div class="container grad_2" >
+          <div class="row display:flex">
+            <!--div class="col-sm-12"-->
+              <div class="col-sm-2  d-flex justify-content-center">
+                <!--div class="card text-dark bg-white text-center mb-3 is-size-5 is-size-5-mobile" style="max-width: 15rem; height: 10rem;">
+                  <div class="card-header" style="text-align: center;font-family: 'Inter', League Spartan;font-size: 20px;color: #053575;" >Chat Based</div>
+                    <div class="card-body" style="align-items: center;"-->
+                      <div class="box4 bandw">
+                       <img src="../public/img/chat_based.png"/>
+                         <div class="box-content justify-content-center">
+                           <div class="description" style="text-align:justify;display:flex;align-items:center;height:120px;">
+                              <b>The future is chat based and we want to bring that experience to your finger tips for all your tax-related concerns.</b>
+                            </div>
+                      </div>
+                    </div>                    
+                  </div>
+                <!--/div>
+              </div-->
+              <div class="col-sm-2 d-flex justify-content-center">
+                <!--div class="card text-dark bg-white text-center mb-3 is-size-5 is-size-5-mobile" style="max-width: 15rem; height: 10rem;">
+                  <div class="card-header" style="text-align: center;font-family: 'Inter', League Spartan;font-size: 20px;color: #053575;" >Tax Saving</div>
+                    <div class="card-body" style="align-items: center;"-->
+                      <div class="box4 bandw">
+                       <img class="tax-saving" alt="tax saving" src="../public/img/tax_saving.png"/>
+                         <div class="box-content">
+                           <div class="description" style="text-align:justify;display:flex;align-items:center;height:120px;">
+                               <b>Worried about meeting financial goals, plan your taxes with tax experts and maximise your refunds.</b>
+                            </div>
+                      </div>
+                    </div>                    
+                  </div>
+                <!--/div>
+              </div-->              
+              <div class="col-sm-2 d-flex justify-content-center">
+                <!--div class="card text-dark bg-white text-center mb-3 is-size-5 is-size-5-mobile" style="max-width: 15rem; height: 10rem;">
+                  <div class="card-header" style="text-align: center;font-family: 'Inter', League Spartan;font-size: 20px;color: #053575;" >Secure</div>
+                    <div class="card-body" style="align-items: center;"-->
+                      <div class="box4 bandw">
+                       <img class="secure" alt="secure" src="../public/img/secure.png"/>
+                         <div class="box-content">
+                           <div class="description" style="text-align:justify;display:flex;align-items:center;height:120px;">
+                              <b>Security is at the core of JJTax.  We built our own "Secure Digital Cabinet" which you can store all your downloads and documents with ease.</b>
+                            </div>
+                      </div>
+                    </div>                    
+                  </div>
+                <!--/div>
+              </div-->              
+              <div class="col-sm-2 d-flex justify-content-center">
+                <!--div class="card text-dark bg-white text-center mb-3 is-size-5 is-size-5-mobile" style="max-width: 15rem; height: 10rem;">
+                  <div class="card-header" style="text-align: center;font-family: 'Inter', League Spartan;font-size: 20px;color: #053575;" >Accurate Filing</div>
+                    <div class="card-body" style="align-items: center;"-->
+                      <div class="box4 bandw">
+                       <img class="secure" alt="accurate filing" src="../public/img/accurate_filing.png"/>
+                         <div class="box-content">
+                           <div class="description" style="text-align:justify;display:flex;align-items:center;height:120px;">
+                              <b>Our experts max Tax filing process simple and stress-free for you and strive for 100% accuracy.</b>
+                            </div>
+                      </div>
+                    </div>                    
+                  </div>
+                <!--/div>
+              </div-->                            
+              <div class="col-sm-2 d-flex justify-content-center">
+                <!--div class="card text-dark bg-white text-center mb-3 is-size-5 is-size-5-mobile" style="max-width: 15rem; height: 10rem;">
+                  <div class="card-header" style="text-align: center;font-family: 'Inter', League Spartan;font-size: 20px;color: #053575;" >CA Assistance</div>
+                    <div class="card-body" style="align-items: center;"-->
+                      <div class="box4 bandw">
+                       <img class="secure" alt="ca assistance" src="../public/img/ca_assistance.png"/>
+                         <div class="box-content">
+                           <div class="description" style="text-align:justify;display:flex;align-items:center;height:120px;">
+                              <b>The best way to solve all your tax queries, Chat with our experts and get personalised CA Assistance.</b>
+                            </div>
+                      </div>
+                    </div>                    
+                  </div>
+                <!--/div>
+              </div-->
+              <div class="col-sm-2 d-flex justify-content-center">
+                <!--div class="card text-dark bg-white text-center mb-3 is-size-5 is-size-5-mobile" style="max-width: 15rem; height: 10rem;">
+                  <div class="card-header" style="text-align: center;font-family: 'Inter', League Spartan;font-size: 20px;color: #053575;" >Affordable</div>
+                    <div class="card-body" style="align-items: center;"-->
+                      <div class="box4 bandw">
+                       <img class="secure" alt="affordable" src="../public/img/affordable.png"/>
+                         <div class="box-content">
+                           <div class="description" style="text-align:justify;display:flex;align-items:center;height:120px;">
+                              <b>We believe in providing tax sanity to every one and that's the reason we kept the prices competitive and ensured that we have a suitable plan for everyone.</b>
+                            </div>
+                      </div>
+                    </div>                    
+                  </div>
+                <!--/div>
+              </div-->                                                                      
+            </div>
+          </div>
+        </div>
+        <div class="w-100 grad_2" style="padding-top: 2rem;" >
+          <div class="container">
+            <div class="row display:flex">
+              <div class="col-sm-2">
+                &nbsp;
+              </div>
+              <div class="col-sm-2" align="center">
+                <img src="../public/img/lakh.png"/><br>
+                <div align="center">1.5 M + </div>
+                <div align="center">Happy Users</div>
+              </div>
+              <!--div class="line-div1"></div-->
+              <div class="col-sm-4" align="center">
+                <img src="../public/img/query.png"/><br>
+                <div align="center">25 Lakh+</div>
+                <div align="center">Query Resolved</div>
+              </div>
+              <!--div class="line-div2"></div-->
+              <div class="col-sm-2" align="center">
+                <img src="../public/img/decade.png"/><br>
+                <div align="center">4 Decade+</div>
+                <div align="center">Experience</div>
+                <br>
+                <br>                                         
+              </div>
+              <div class="col-sm-2">
+                &nbsp;
+              </div>
+            </div>
+         </div>
+        </div>
+        <div class="container" style="margin-top: 2rem;">
+          <div class="row display:flex">
+            <div class="col-sm-12" style="text-align: center;">
+              <b style="text-align: center;font-family: 'Inter', League Spartan;font-size: 32px;color: #1167AF; text-shadow: 2px 2px #000000;"> Our Core Mantras </b>     
+            </div>
+          </div>
+        </div>
+        <div style="padding-top: 1.5rem;">        
+          <div class="container grad_2" class="grad_2">
+            <div class="row display:flex">
+                <div class="col" align="center">
+                  <br><br>
+               <img src="../public/img/done_fast.png"><br>
+               <div align="center">
+                <font style="text-align: center;font-family: 'Inter', League Spartan;font-size: 15px;color: #053757;"><b>Done Fast Done Right</b></font><br>
+                <font style="text-align: center;font-family: 'Inter', League Spartan;font-size: 12px;color: #6AA9D5;">
+                We have a panel of <br>
+                expert professionals<br>
+                who solve queries on <br>
+                real time basis.
+              </font>
+              </div>
+                </div>
+              <div class="col" align="center">
+                <br><br>
+                <img src="../public/img/phone.png"><br>
+                <div align="center">
+                 <font style="text-align: center;font-family: 'Inter', League Spartan;font-size: 15px;color: #053757;"><b>Help On Your Fingertips</b></font><br>
+                 <font style="text-align: center;font-family: 'Inter', League Spartan;font-size: 12px;color: #6AA9D5;">
+                  Queries are solved through <br> chat and all your need to do <br> is send a message to us <br> from your mobile.
+               </font>
+                </div>
+               </div>
+               <div class="col" align="center">
+                <br><br>
+                <img src="../public/img/no_worries.png"><br>
+                <div align="center">
+                 <font style="text-align: center;font-family: 'Inter', League Spartan;font-size: 15px;color: #053757;"><b>No More Worries</b></font><br>
+                 <font style="text-align: center;font-family: 'Inter', League Spartan;font-size: 12px;color: #6AA9D5;">
+                  Our expert panel sends you <br> notifications from time to time <br> so that you don't miss out on <br> any important deadlines.
+               </font>
+                </div>
+               </div>
+               <div class="col" align="center">
+                <br><br>
+                <img src="../public/img/downloads.png"><br>
+                <div align="center">
+                 <font style="text-align: center;font-family: 'Inter', League Spartan;font-size: 15px;color: #053757;"><b>Downloads On The Go</b></font><br>
+                 <font style="text-align: center;font-family: 'Inter', League Spartan;font-size: 12px;color: #6AA9D5;">
+                  The App has a personal file <br> cabinet which holds all your <br> important documents and you <br> can download the same anytime.
+               </font>
+                </div>
+               </div>
+               <div class="col" align="center">
+                <br><br>
+                <img src="../public/img/forever.png"><br>
+                <div align="center">
+                 <font style="text-align: center;font-family: 'Inter', League Spartan;font-size: 15px;color: #053757;"><b>Let Your Wealth Live Forever</b></font><br>
+                 <font style="text-align: center;font-family: 'Inter', League Spartan;font-size: 12px;color: #6AA9D5;">
+                  We help in drafting Wills and <br> also act as executor so that your <br> wealth is passed on to your heirs <br> in a seamless manner.
+               </font>
+                </div>
+               </div>
+          </div>
+          <br><br>
+        </div>
+    </div>  
+    <br><br>
+    <div class="container is-hidden-mobile" align="center">
+      <div class="row d-flex justify-content-center" style="background-color:#6BAAD5;width:1136px;height: 350px;border-radius: 10px;">
+          <div class="col-md-6" style="padding-top:19px">
+            <br>
+            <font style="font-family: 'Inter', League Spartan;font-size: 20px;color: #ffffff;text-align: left;"><b>Download our app now to chat with our experts.</b></font><br>
+            <font style="text-align: center;font-family: 'Inter', League Spartan;font-size: 15px;color: #c3e7ff;"><b>Loved by 1.5 M +  individuals and businesses across India.</b></font>
+            <div style="padding-top:8rem">
+                <a href="https://play.google.com/store/apps/details?id=com.jjtax.app"><img src="../public/img/playstore.png" width="129px" height="52.5px" alt="JJ Tax APP/Play Store"></a>
+                <a href="https://jjtax.onelink.me/LXJ6/a8575660"><img src="../public/img/appstore.png" width="133.5px" height="52.5px" alt="JJ Tax APP/App Store"> </a>
+            </div>    
+          </div>
+          <div align="left" class="col-md-6" style="padding-top: 27px;">
+              <div align="left">
+                <img src="../public/img/quote_left.png" width="25px;" height="25px;" style="margin-top:18px;">
+              </div>
+             <div style="padding-left: 24px; margin-top: -22px;text-align: justify;">
+              <font style="font-family: 'Inter', League Spartan;font-size: 15px;color: #f4f4f4;">
+                <b>
+                  JJ Tax is Tax partner of Methods Apparel Consultancy India Pvt Ltd. They have a simple UI and manage our taxes and compliances. From our GST to ITR they handle it all so that we can focus on business expansion.
+                </b>  
+            </font>
+            </div>
+            <div style="width: 5rem;height: 5rem;border-radius: 50%;align-items: center;justify-content: center; display: flex; padding-left: 15px;" >
+                <img class="abt" style="border: 1px solid #ffffff;" src='../public/img/sunaina.jpeg'>
+            </div>   
+            <div style="padding-left:90px;margin-top: -60px;">
+              <font style="text-align: center;font-family: 'Inter', League Spartan;font-size: 15px;color: #c3e7ff;font-weight: bold;" >
+                Sunaina Khanna<br>MD at Methods Apparel Consultancy
+              </font>
+              <br><br>
+            </div>
+            <div align="left" style="padding-left: 30px;">
+            <div class="badge badge-background-1 align-middle border border-info p-2 mb-2" align="right" style="width:246.18px; height:33.54px;">
+              <font style="text-align: center;font-family: 'Inter', League Spartan;font-size: 15px;color: #6BAAD5;font-weight: bold;" >Get in Touch</font>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+   </div>
+  </div>
+ </div>
+</div>
+</div>
+<!--Footer-->
+<div style="padding-top: 2.5rem;"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 border">
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 text-start">
+                    © <span id="copy">2022</span> JJ Fintax,&nbsp;<a href="privpolicy.html">Privacy Policy</a>                
+                </div>
+                <div class="col-sm-6 text-end">
+                    <a href="aboutus.html">About Us</a>
+                        &nbsp;
+                    <a href="cancel.html">Cancellation Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

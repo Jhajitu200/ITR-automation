@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITR Form</title>
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <script src="https://unpkg.com/htmlincludejs"></script>
+    <link href="public/img/JJTax-logo.png" rel="icon" type="image/png">
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/style_new.css?v=1.1.6">
+    <link rel="stylesheet" href="public/css/navbar.css">
+    <link href="public/css/financial_details.css" rel="stylesheet">
+    <link href="public/css/current_tab_indicator.css" rel="stylesheet">
+    <link rel="stylesheet" href="public/css/ticker.css">
+    <link rel="stylesheet" href="public/css/common.css">
+    <link rel="stylesheet" href="public/css/itr_book_call.css">
+    <style>
+        option{
+            font-size: clamp(10px,1vw,10px);
+            display: flex;
+            flex-wrap: wrap;
+        }
+    </style>
+     <style>
+        .form-control {
+            width: 90%;
+            padding: 10px;
+            margin: 0px 0;
+            box-sizing: border-box;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .form-control:focus {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            border-color: #66afe9;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <include src="includes/header.html"></include>
+    <div class="ticker-wrap">
+        <ul class="ticker" id="tickers"></ul>
+    </div>
+    <div style="background: linear-gradient(180deg, rgba(17, 103, 175, 0.77) 0, rgba(17, 103, 175, 0.77) 277px, white 277px);padding-top: 8px;">
+        <div id="overlayText" style="text-align: center;"><strong id="responsiveText" style="color: white;">Self file
+            ITR within 15
+            minutes </strong></div>
+        <div class="container " style="background: #F4F6FC; max-width: 80%;padding-top: 1%;border-top-left-radius: 2%;
+        border-top-right-radius: 2%;">
+            <include src="includes/current_tab_indicator.html"></include>
+            <h5 class="text-center mt-3" style="font-weight: 600;">Income Details</h5>
+            <p class="text-center" style="width: 80%;margin: auto;font-size: 14px;"><strong>Disclamer:</strong> Please
+                fill in correct details. Kindly note we are not responsible for any wrong information provided by the
+                user. We recommend to get in touch with our tax experts for further assistance.</p>
+            <div class="row mt-4" style="background: #FFFFFF; margin: auto;width: 95%;border-radius: 1%; padding-left: 2%;padding-right: 2%;padding-top: 2%;">
+                <div class="col-md-12" style="padding-top: 2%;">
+                    <h5>Part D: Deductions</h5>
+                    <form >
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-6">
+                                <label for="80-c-LIC">80C : LIC, principal repayment on house loan</label>
+                            </div>
+                            <div class="col-md-3"></div>
+                            <div class="col-md-3">
+                                <input type="number" class="form-control" id="80-c-LIC" name="80-c-LIC" required  style="text-align: right;"
+                                oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                            </div>
+                        </div>
+
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-6">
+                                <label for="80CCD2-NPS">80CCD(2): Employee contribution to NPS</label>
+                            </div>
+                            <div class="col-md-3"></div>
+                            <div class="col-md-3">
+                                <input type="number" class="form-control" id="80CCD2-NPS" name="80CCD2-NPS" required  style="text-align: right;"
+                                oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                            </div>
+                        </div>
+
+                        <div class="mt-2">
+                            <p style="display: block;">80D: Medical & Health Insurance Premium</p>
+                        </div>
+
+                        <div class="form-row align-items-center mt-2" >
+                            <div class="col-md-6" style="padding-left: 40px;">
+                                <label for="selfFamilyChildren">For Self, Family & Children</label>
+                            </div>
+                            
+                            <div class="col-md-3">
+                                <select class="form-control custom-select" id="citizenStatusSelfFamilyChildren" name="citizenStatus" required>
+                                    <option value="senior">Senior Citizen</option>
+                                    <option value="non-senior">Non-Senior Citizen</option>
+                                </select>
+                            </div>
+                            
+                                    <div class="col-md-3">
+                                        <input type="number" class="form-control" id="selfFamilyChildren" name="selfFamilyChildren" required  style="text-align: right;"
+                                oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                                    </div>
+                                </div>
+
+
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-6" style="padding-left: 40px;">
+                                <label for="forParents">For Parents</label>
+                            </div>
+                            
+                            <div class="col-md-3">
+                                <select class="form-control custom-select" id="citizenStatusforParents" name="citizenStatus" required>
+                                    <option value="senior">Senior Citizen</option>
+                                    <option value="non-senior">Non-Senior Citizen</option>
+                                </select>
+                            </div>
+                            
+                                    <div class="col-md-3">
+                                        <input type="number" class="form-control" id="forParents" name="forParents" required  style="text-align: right;"
+                                oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                                    </div>
+
+                        </div>
+
+                        <div class="form-row align-items-center mt-2" >
+                            <div class="col-md-6" style="padding-left: 40px;">
+                                <label for="preventiveHealthCheckUp">Preventive health checkup</label>
+                            </div>
+                            
+                                    <div class="col-md-3"></div>
+                                    <div class="col-md-3">
+                                        <input type="number" class="form-control mb-2" id="preventiveHealthCheckUp" name="preventiveHealthCheckUp" style="text-align: right;" required>
+                                    </div>
+
+                        </div>
+
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-6">
+                                <label for="80TTA">80TTA: Saving Bank Interest</label>
+                            </div>
+                            <div class="col-md-3"></div>
+                            <div class="col-md-3">
+                                <input type="number" class="form-control" id="80TTA" name="80TTA" style="text-align: right;" required readonly>
+                            </div>
+                        </div>
+
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-6">
+                                <label for="80TTB">80TTB: Interest on SB/FD for senior citizens only</label>
+                            </div>
+                            <div class="col-md-3"></div>
+                            <div class="col-md-3">
+                                <input type="number" class="form-control" id="80TTB" name="80TTB" required readonly>
+                            </div>
+                        </div>
+
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-6">
+                                <label for="otherDeduction">Other Deductions</label>
+                            </div>
+                            <div class="col-md-3"></div>
+                            <div class="col-md-3">
+                                <input type="number" class="form-control" id="otherDeduction" name="otherDeduction" style="text-align: right;"  required>
+                            </div>
+                        </div>
+
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-6">
+                                <label for="80CCH">80CCH: All contributions to Agniveer Corpus Fund</label>
+                            </div>
+                            <div class="col-md-3"></div>
+                            <div class="col-md-3">
+                                <input type="number" class="form-control" id="80CCH" name="80CCH" style="text-align: right;" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-6">
+                                <label for="80E">80E: Interest on education loan</label>
+                            </div>
+                            <div class="col-md-3"></div>
+                            <div class="col-md-3">
+                                <input type="number" class="form-control" id="80E" name="80E" style="text-align: right;" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row mt-2">
+                            <div class="form-group col-md-3">
+                                <button type="button" class="btn btn-secondary btn-block" id="addDeductionButton"
+                                    style="background: linear-gradient(180deg, rgba(17, 103, 175, 0.7) 33.5%, #1167AF 100%);">
+                                    ADD DEDUCTION
+                                </button>
+                            </div>
+                            <div class="form-group col-md-9">
+                                
+                            </div>
+                        </div>
+
+                        <div class="form-row mt-2">
+                            <div class="form-group col-md-3">
+                                
+                                <button type="button" class="btn btn-secondary btn-block" id="back" onclick="saveState(this)"
+                                    style="background: linear-gradient(180deg, rgba(17, 103, 175, 0.7) 33.5%, #1167AF 100%);">
+                                    &lt;&lt; Back
+                                </button>
+                            </div>
+                            <div class="form-group col-md-6">
+                                
+                            </div>
+                            <div class="form-group col-md-3">
+                            
+                                    <button type="button" class="btn btn-primary btn-block" onclick ="saveState(this)" id="continue"
+                                        style="background: linear-gradient(180deg, rgba(17, 103, 175, 0.7) 33.5%, #1167AF 100%);width:90%">
+                                        Continue &raquo;
+                                    </button>
+                            
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <include src="includes/ITR_book_call.html"></include>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="datas/dynamic-contents.js"></script>
+    <script src="public/js/ticker.js"></script>
+    <script src="public/js/financial_details_D.js"></script>
+    <script src="public/js/data_filling.js"></script>
+    
+    
+    <script>
+        $(document).ready(function () {
+            function changeButtonClass() {
+                var $uploadForm16Btn = $('#financialDetails');
+                $uploadForm16Btn.removeClass('btn-outline-primary');
+                $uploadForm16Btn.addClass('btn-primary');
+            }
+
+            setTimeout(changeButtonClass, 1000);
+        });
+
+    </script>
+</body>
+
+</html>

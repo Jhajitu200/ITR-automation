@@ -1,0 +1,295 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Quicksand&display=swap');
+
+.inc-head-txt-tl {
+  background-color: #1167AF;
+  padding: 40px;
+  text-align: center;
+  color: #fff;
+}
+.inc-head-txt-tl h1{
+  color: #fff;
+  font-size: 38px;
+  font-weight: 600;
+}
+.inc-head-txt-tl h1 span{
+  color: #000;
+  font-weight: 800;
+}
+.inc-form-container {
+  padding: 25px 0;
+}
+.inc-form-qest {
+  padding: 15px 5px;
+  border: 1px solid #1167AF;
+  border-radius: 3px;
+  margin-bottom: 6px;
+}
+
+.inc-form-qest [class*="col-"]{
+  margin-bottom: 0;
+}
+.inc-form-qest .inc-frm-q-l {
+  font-size: 18px;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+}
+.inc-form-qest .inc-frm-q-l span{
+  font-size: 20px;
+  font-weight: 700;
+}
+.inc-form-qest [type=radio]:checked, .inc-form-qest [type=radio]:not(:checked) {
+  position: absolute;
+  left: -9999px;
+}
+.inc-form-qest [type=radio]:checked+label, .inc-form-qest [type=radio]:not(:checked)+label {
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+  line-height: 24px;
+  display: inline-block;
+  color: #666;
+  font-size: 16px;
+  margin-right: 15px;
+  margin-bottom: 0;
+}
+.inc-form-qest [type=radio]:checked+label:before, .inc-form-qest [type=radio]:not(:checked)+label:before {
+  content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 22px;
+    height: 22px;
+    border: 2px solid #cbcbcb;
+    border-radius: 100%;
+    background: #fff;
+}
+.inc-form-qest [type=radio]:checked+label:after, .inc-form-qest [type=radio]:not(:checked)+label:after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: #1167AF;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  border-radius: 100%;
+  transition: all .2s ease;
+}
+.inc-form-qest [type=radio]:checked+label:before {
+  border-color: #1167AF!important;
+}
+.inc-form-qest [type=radio]:not(:checked)+label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+.inc-form-qest [type=radio]:checked+label:before, .inc-form-qest [type=radio]:not(:checked)+label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #cbcbcb;
+  border-radius: 100%;
+  background: #fff;
+}
+.submit-btn-inc {
+  padding: 12px 0;
+  text-align: right;
+}
+.inc-btn-sbt {
+  background-color: #1167AF;
+  padding: 8px 25px;
+  margin-right: -10px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.bg-light-blue {
+  background-color: #EBF5FB;
+}
+.inc-forn-in-sec {
+  padding: 25px;
+  border-radius: 10px;
+  background-color: #fff;
+}
+.bg-prime-light {
+  background-color: #AED6F1;
+  border-radius: 5px;
+}
+
+.form-16 .upload-area input[type=file] {
+  background-color: #ddd;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+.form-16 .upload_panel .upload_btn, .form-16 .upload_panel2 .upload_btn {
+  background: #fff;
+  text-transform: uppercase;
+  position: relative;
+  box-sizing: border-box;
+  width: 300px;
+  border: solid 2px;
+  border-color: #1167AF;
+  font-size: 15px;
+  box-shadow: none;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: .75rem 2.5rem;
+  color: #1167AF;
+  font-weight: 600;
+  border-radius: 6px;
+}
+.btn-jj-primary {
+  background: #1167AF;
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  box-shadow: none;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: .9rem 2.5rem;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 6px;
+}
+.btn-jj-primary:hover {
+  background: #2E86C1;
+  color: #fff;
+}
+.form-in-tl  {
+  font-weight: 700;
+}
+.up-txt {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+/* .inc-step-tab{
+  padding: .1rem 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  background: #cdd9df;
+}
+.inc-step-tab .inc-step-tab-Bar {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overflow: -moz-scrollbars-none;
+  overflow: -ms-scrollbars-none;
+  overflow: -webkit-scrollbars-none;
+  overflow: scrollbars-none;
+  scrollbar-width: none;
+  position: relative;
+  align-items: center;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+.inc-step-tab .inc-step-tab-Bar.inc-tab-menu {
+  box-sizing: border-box;
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  overflow-y: scroll;
+}
+.inc-step-tab .inc-step-tab-Bar li {
+  list-style-type: none!important;
+  width: auto!important;
+  padding: .5rem .2rem;
+}
+.inc-step-tab .inc-step-tab-Bar li a {
+  font-size: 13px;
+  position: relative;
+  color: #111;
+  text-decoration: none;
+  background: #fff;
+  border-radius: 20px;
+  padding: .2rem .8rem;
+} */
+
+
+
+.inc-tabs {
+	padding: .3rem 0;
+	background: #AEB6BF;
+}
+
+.inc-tabs .incProgressBar {
+	display: flex;
+	overflow-x: auto;
+	-ms-overflow-style: none;
+	overflow: -moz-scrollbars-none; position: relative;
+	align-items: center;
+	margin-bottom: 0;
+	padding-left: 0;
+}
+
+.inc-tabs .incProgressBar li {
+	list-style-type: none!important;
+	width: auto!important;
+	padding: .5rem .2rem;
+}
+
+.inc-tabs .incProgressBar li a {
+	font-size: 13px;
+	position: relative;
+	color: var(--global-color);
+	text-decoration: none;
+	background: #fff;
+	border-radius: 20px;
+	padding: .4rem 1rem;
+}
+
+.inc-tabs .incProgressBar li.active a:after {
+	content: '';
+	width: 100%;
+	height: 100%;
+	background-size: 12px 12px;
+	position: absolute;
+	left: 0;
+	background: url(../../img/new-theme/diy-flow/active-arrow.svg) 10px 6px no-repeat;
+}
+
+.inc-tabs .incProgressBar li.active a {
+	padding-left: 1.7rem;
+	color: var(--green);
+	font-weight: 500;
+}
+
+.inc-tabs .incProgressBar li.current a {
+	background-color: #d5f3de;
+}
+
+.inc-tabs .incProgressBar.extra_menu {
+	box-sizing: border-box;
+	white-space: nowrap;
+	overflow-x: auto;
+	overflow-y: hidden;
+	-webkit-overflow-scrolling: touch;
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	overflow-y: scroll;
+}
+
+.inc-tabs .incProgressBar::-webkit-scrollbar {
+	display: none;
+}
+.custom_radio {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.custom_radio span {
+  margin-right: 1rem;
+}

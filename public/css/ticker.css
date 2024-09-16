@@ -1,0 +1,19 @@
+
+
+.ticker-wrap {
+    width: 100%;
+    overflow: hidden;
+    background: #6AA9D5;
+    color: white;
+}
+
+.ticker {
+    list-style-type: none;
+    padding-left: 0;
+    white-space: nowrap;
+}
+
+.ticker li {
+    display: inline-block;
+    padding: 0 10px;
+}

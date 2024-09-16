@@ -1,0 +1,799 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITR Form</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/htmlincludejs"></script>
+    <!-- <link rel="canonical" href="https://jjfintax.com"> -->
+    <link href="public/img/JJTax-logo.png" rel="icon" type="image/png">
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="public/css/style_new.css?v=1.1.6">
+    <link rel="stylesheet" href="public/css/navbar.css">
+    <link rel="stylesheet" href="public/css/ticker.css">
+    <link rel="stylesheet" href="public/css/common.css">
+    <link rel="stylesheet" href="public/css/itr_book_call.css">
+    <style>
+        .form-control {
+            width: 90%;
+            padding: 10px;
+            margin: 0px 0;
+            box-sizing: border-box;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-control:focus {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            border-color: #66afe9;
+            outline: none;
+        }
+    </style>
+   
+</head>
+
+<body>
+    <include src="includes/header.html"></include>
+    <div class="ticker-wrap">
+        <ul class="ticker" id="tickers"></ul>
+    </div>
+
+    <div
+        style="background: linear-gradient(180deg, rgba(17, 103, 175, 0.77) 0, rgba(17, 103, 175, 0.77) 277px, white 277px); padding-top: 8px;">
+        <div id="overlayText" style="text-align: center;"><strong id="responsiveText" style="color: white;">Self file
+                ITR within 15 minutes</strong></div>
+        <div class="container " style="background: #F4F6FC; max-width: 80%;padding-top: 1%;border-top-left-radius: 10px;
+        border-top-right-radius: 10px;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ccc;
+            border-radius: 8px;margin-top: 10px;
+
+        ">
+            <h5 class="text-center mt-3" style="font-weight: 600;">Preview</h5>
+            <p class="text-center" style="width: 70%;margin: auto;font-size: 14px;"><strong>Disclamer:</strong>Check
+                your details to proceed further. Kindly note we are not responsible for any wrong information provided
+                by the user. We recommend to get in touch with our tax experts for further assistance.</p>
+            <div class="form-row mt-2" style="width:80%;margin: auto;">
+                <div class="form-group col-md-3">
+                    <a href="comparativeview.html">
+                    <button type="button" class="btn btn-secondary btn-block"
+                        style="background: linear-gradient(180deg, rgba(17, 103, 175, 0.7) 33.5%, #1167AF 100%);">
+                        <!-- &lt;&lt; Back -->
+                        &lt;&lt BACK
+                    </button>
+                </a>
+                </div>
+                <div class="form-group col-md-6">
+                    <!-- Placeholder for content if needed -->
+                </div>
+                <div class="form-group col-md-3">
+                    <button type="button" class="btn btn-primary btn-block"
+                        style="background: linear-gradient(180deg, rgba(17, 103, 175, 0.7) 33.5%, #1167AF 100%);">
+                        <!-- Continue &raquo; -->
+                        Download Json >>
+                    </button>
+                </div>
+            </div>
+            <!-- <h5 style="text-align: center;">Please fill in your details. We will keep them confidential.
+            </h5> -->
+            <div class="row mt-4" style="background: #FFFFFF; width: 90%;margin: auto;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #fff;" >
+                <div class="col-md-12">
+                    <!-- <h5>Part D: Deductions</h5> -->
+                    <!-- Personal details form -->
+                    <form style="padding-top: 10px;">
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-4">
+                                <label for="name">Name*</label>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="name" name="name" readonly>
+                            </div>
+                        </div>
+
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-4">
+                                <label for="mobileNumber">Mobile Number</label>
+                            </div>
+                            <div class="col-md-4">
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="mobileNumber" name="mobileNumber" readonly>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-4">
+                                <label for="email">Email Id</label>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="email" name="email" readonly>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-4">
+                                <label for="panNumber">PAN Number*</label>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="panNumber" name="panNumber" readonly>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-4">
+                                <label for="aadharNumber">Aadhaar Number*</label>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="aadharNumber" name="aadharNumber" readonly>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-4">
+                                <label for="basicSalary">Address</label>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="basicsalary" name="lastName" readonly>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-4">
+                                <label for="age">Age as on 01/04/2023</label>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="age" name="age" readonly>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-4">
+                                <label for="basicSalary">Financial Year</label>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="basicsalary" name="lastName" readonly>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-4">
+                                <label for="basicSalary">Assessment Year</label>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="basicsalary" name="lastName" readonly>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-4">
+                                <label for="basicSalary">Residential Status*</label>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="basicsalary" name="lastName" readonly>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-4">
+                                <label for="basicSalary">Tax Payer Status</label>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="basicsalary" name="lastName" readonly>
+                            </div>
+                        </div>
+                        <div class="mt-2">
+                            <h5><b>Part A: Income From Salary</b></h5>
+                            <p style="display: block;">Basic Salary</p>
+                        </div>
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-4">
+                                <label for="da">Dearness Allowance (DA)</label>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="da" name="da" readonly>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-4">
+                                <label for="hra">House Rent Allowance (HRA)</label>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="hra" name="hra" readonly>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-4">
+                                <label for="basicSalary">Other Perquisites</label>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="basicsalary" name="lastName" readonly>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-4">
+                                <label for="grossSalary"><b>Gross Salary</b></label>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="grossSalary" name="grossSalary" readonly>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-4">
+                                <label for="exemptionForHRA"><b>Less:</b> Exemption for HRA</label>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="exemptionForHRA" name="exemptionForHRA"
+                                    readonly>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-4">
+                                <label for="professionalTax"><b>Less:</b> Professional Tax</label>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="professionalTax" name="professionalTax"
+                                    readonly>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-4">
+                                <label for="grossTaxableIncome"><b>Gross Taxable Income</b></label>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="grossTaxableIncome" name="grossTaxableIncome"
+                                    readonly>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-4">
+                                <label for="standardDeduction"><b>Less:</b> Standard Deduction @ 30%</label>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="standardDeduction" name="standardDeduction"
+                                    readonly>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2" style="margin-bottom: 15px;">
+                            <div class="col-md-4">
+                                <label for="netSalary"><b>Net Salary</b></label>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="netSalary" name="netSalary" readonly>
+                            </div>
+                        </div>
+                        
+                        <h5><b>Part B: Income From House Property</b></h5>
+                        <div class="form-row align-items-center">
+                            <div class="col-md-4">
+                                <label for="houseIncome">Do you have income from house property?</label>
+                            </div>
+                            <div class="col-md-2">
+                                <!-- Optional spacing or other elements can be placed here if needed -->
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="houseIncome" id="houseIncomeYes"
+                                        value="yes" required>
+                                    <label class="form-check-label" for="incomeYes">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="houseIncome" id="houseIncomeNo"
+                                        value="no" required>
+                                    <label class="form-check-label" for="incomeNo">No</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center">
+                            <div class="col-md-4">
+                                <label for="city">Do you reside in Delhi, Kolkata, Chennai or Mumbai?</label>
+                            </div>
+                            <div class="col-md-2">
+                                <!-- Optional spacing or other elements can be placed here if needed -->
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="city" id="cityYes" value="yes"
+                                        required>
+                                    <label class="form-check-label" for="incomeYes">Yes</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="city" id="cityNo" value="no"
+                                        required>
+                                    <label class="form-check-label" for="incomeNo">No</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-4">
+                                <label for="annualRentalIncome">Annual Rental Income</label>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="annualRentalIncome"
+                                    name="annualRentalIncome" required>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-4">
+                                <label for="municipalTaxes">Less: Municipal Taxes</label>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="municipalTaxes" name="municipalTaxes"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-4">
+                                <label for="grossAnnualValue">Gross Annual Value</label>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="grossAnnualValue" name="grossAnnualValue"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-4">
+                                <label for="standardDeduction">Less: Standard Deduction @ 30%</label>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="standardDeduction" name="standardDeduction"
+                                    required>
+                            </div>
+                        </div>
+                        <div class="mt-2">
+                            <p style="display: block;">Less: Interest on Home Loan</p>
+                        </div>
+                        <div class="form-row align-items-center mt-2">
+
+                            <div class="col-md-4">
+                                <label for="selfoccupiedVacant" style="padding-left: 10%;">Self occupied/Vacant</label>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="selfoccupiedVacant"
+                                    name="selfoccupiedVacant" required>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2">
+
+                            <div class="col-md-4">
+                                <label for="letOut" style="padding-left: 10%;">Let Out</label>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="letOut" name="letOut" required>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2" style="margin-bottom: 15px;">
+                            <div class="col-md-4">
+                                <label for="netAnnualValue"><b>Net Annual Value</b></label>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="netAnnualValue" name="netAnnualValue"
+                                    required>
+                            </div>
+                        </div>
+                        <h5> <b>Part C: Income from Other Sources</b></h5>
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-4">
+                                <label for="savingsBankInterest">Savings Bank Interest</label>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="savingsBankInterest"
+                                    name="savingsBankInterest" required>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-4">
+                                <label for="fixedDepositInterest">Fixed Deposit Interest</label>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="fixedDepositInterest"
+                                    name="fixedDepositInterest" required>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-4">
+                                <label for="dividend">Dividend</label>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="dividend" name="dividend" required>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-4">
+                                <label for="basicSalary">Agricultural Income</label>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="basicsalary" name="lastName" required>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2">
+                            <div class="form-group col-md-4">
+                                <label for="OtherIncomeName">other Income(If any)</label>
+                                <input type="text" class="form-control" id="OtherIncomeName" name="anyOtherIncome"
+                                    style="width: 90%;" required>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="otherIncomeValue" name="otherIncomeValue"
+                                    required style="text-align: right; margin-top: 5px;"
+                                    oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2" style="margin-bottom: 15px;">
+                            <div class="col-md-4">
+                                <label for="totalIncome"><b>Total Income</b></label>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="totalIncome" name="totalIncome" required>
+                            </div>
+                        </div>
+                        <h5><b>Part D: Deductions</b></h5>
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-4">
+                                <label for="basicSalary">80C : LIC, principal repayment on house loan</label>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="basicsalary" name="lastName" required>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-4">
+                                <label for="basicSalary">80CCD(2): Employee contribution to NPS</label>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="basicsalary" name="lastName" required>
+                            </div>
+                        </div>
+                        <h5>80D: Medical & Health Insurance Premium</h5>
+
+                        <div class="form-row align-items-center mt-2" style="padding-left: 2%;">
+                            <div class="col-md-4">
+                                <label for="selfFamilyChildren" style="padding-left: 5%;">For Self, Family & Children</label>
+                            </div>
+
+
+                            <div class="col-md-4">
+                                <input type="text" class="form-control mb-2" id="selfFamilyChildren" name="selfFamilyChildren" placeholder=""
+                                    required>
+
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control mb-2" id="selfFamilyChildrenValue" name="selfFamilyChildren" placeholder=""
+                                    required>
+                            </div>
+
+                        </div>
+                        <div class="form-row align-items-center mt-2" style="padding-left: 2%;">
+                            <div class="col-md-4">
+                                <label for="forParents" style="padding-left: 5%;">for Parents</label>
+                            </div>
+
+
+                            <div class="col-md-4">
+                                <input type="text" class="form-control mb-2" id="forParents" name="forParents" placeholder=""
+                                    required>
+
+                                </select>
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control mb-2" id="forParentsValue" name="forParents" placeholder=""
+                                    required>
+                            </div>
+
+                        </div>
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-4">
+                                <label for="basicSalary">80TTA: Saving Bank Interest</label>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="basicsalary" name="lastName" required>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2" style="margin-bottom: 15px;">
+                            <div class="col-md-4">
+                                <label for="basicSalary">80TTB: Interest on SB/FD for senior citizens only</label>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="basicsalary" name="lastName" required>
+                            </div>
+                        </div>
+                        <h5><b>Other Deductions</b></h5>
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-4">
+                                <label for="basicSalary">80CCH: All contributions to Agniveer Corpus Fund</label>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="basicsalary" name="lastName" required>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-4">
+                                <label for="basicSalary">80E: Interest on education loan</label>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="basicsalary" name="lastName" required>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-4">
+                                <label for="basicSalary">Gross Total Income</label>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="basicsalary" name="lastName" required>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2" style="margin-bottom: 15px;">
+                            <div class="col-md-4">
+                                <label for="basicSalary"><b>Less:</b> Total Deductions</label>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="basicsalary" name="lastName" required>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-4">
+                                <label for="basicSalary"><b>Total Income</b></label>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="basicsalary" name="lastName" required>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-4">
+                                <label for="basicSalary">Tax Amount</label>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="basicsalary" name="lastName" required>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-4">
+                                <label for="basicSalary">Rebate under section 87A</label>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="basicsalary" name="lastName" required>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-4">
+                                <label for="basicSalary">Health & Education Cess @4%</label>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="basicsalary" name="lastName" required>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-4">
+                                <label for="basicSalary"><b>Net Tax Payable</b></label>
+                            </div>
+                            <div class="col-md-4">
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="basicsalary" name="lastName" required>
+                            </div>
+                        </div>
+                        <!-- <div class="form-row align-items-center mt-2">
+                            <div class="col-md-5">
+                                <label for="basicSalary">80CCH: All contributions to Agniveer Corpus Fund</label>
+                            </div>
+                            <div class="col-md-3">
+
+                            </div>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="basicsalary" name="lastName" required>
+                            </div>
+                        </div> -->
+                        <div class="form-row mt-2" >
+
+                            <div class="form-group col-md-4">
+
+                            </div>
+                            <div class="form-group col-md-4 mt-10" >
+                                <button type="button" class="btn btn-primary btn-block"
+                                    style="background: linear-gradient(180deg, rgba(17, 103, 175, 0.7) 33.5%, #1167AF 100%);">
+                                    Download JSON >>;
+                                </button>
+                            </div>
+                            <div class="form-group col-md-4">
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <include src="includes/ITR_book_call.html"></include>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- <script src="public/js/userData.js"></script> -->
+    <script src="datas/dynamic-contents.js"></script>
+    <script src="public/js/ticker.js"></script>
+    <script>
+        $(document).ready(function () {
+            let userData = JSON.parse(sessionStorage.getItem('userData'));
+            document.getElementById('panNumber').value = userData.panNumber;
+            document.getElementById('email').value = userData.email;
+            document.getElementById('aadharNumber').value = userData.aadharNumber;
+            document.getElementById('da').value = userData.dearnessAllowance;
+            document.getElementById('hra').value = userData.exemptionForHRA;
+            document.getElementById('grossSalary').value = userData.grossSalary;
+            document.getElementById('name').value = userData.firstName + ' ' + userData.middleName + ' ' + userData.lastName;
+            document.getElementById('netAnnualValue').value = userData.netAnnualValue;
+            document.getElementById('age').value = userData.age;
+            document.getElementById('da').value = userData.dearnessAllowance;
+            document.getElementById('hra').value = userData.hra;
+            document.getElementById('grossSalary').value = userData.grossSalary;
+            document.getElementById('exemptionForHRA').value = userData.exemptionForHRA;
+            document.getElementById('professionalTax').value = userData.professionalTax;
+            document.getElementById('standardDeduction').value = userData.standardDeduction30;
+            document.getElementById('netSalary').value = userData.netSalary;
+            if (userData.IncomeFromHouseProperty == "true") {
+                document.getElementById('houseIncomeYes').checked = true;
+            }
+            else if (userData.IncomeFromHouseProperty == "false") {
+                document.getElementById('houseIncomeNo').checked = false;
+            }
+            if (userData.doYouResideInCity == "true") {
+                document.getElementById('cityYes').checked = true;
+            }
+            else if (userData.doYouResideInCity == "false") {
+                document.getElementById('cityNo').checked = false;
+            }
+            document.getElementById('annualRentalIncome').value = userData.annualRentalIncome;
+            document.getElementById('municipalTaxes').value = userData.municipalTaxes;
+            document.getElementById('grossAnnualValue').value = userData.grossAnnualValue;
+            document.getElementById('standardDeduction').value = userData.standardDeduction;
+            document.getElementById('selfoccupiedVacant').value = userData.selfoccupiedVacant;
+            document.getElementById('letOut').value = userData.letOut;
+            document.getElementById('netAnnualValue').value = userData.netAnnualValue;
+            document.getElementById('savingsBankInterest').value = userData.savingsBankInterest;
+            document.getElementById('fixedDepositInterest').value = userData.fixedDepositInterest;
+            document.getElementById('dividend').value = userData.dividend;
+            document.getElementById('OtherIncomeName').value = userData.anyOtherIncome;
+            document.getElementById('otherIncomeValue').value = userData.otherIncomeValue;
+
+
+
+            console.log("this is user age", userData.age);
+            console.log("this is da o fjitu kumaer ", userData.dearnessAllowance);
+        })
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en" class="has-navbar-fixed-top">
+  <head>
+    <!-- <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+         })(window,document,'script','dataLayer','GTM-N42Z47F');
+    </script> -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TDS Calculator | Online Free TDS Calculator by JJ Tax</title>
+    <meta name="description" content="Calculate your taxes effortlessly online with our TDS Calculator and simplify your tax calculations.Chat with our experts to get personalized solution for all your queries.">
+    <meta name="keywords" content="online TDS calculator, calculate TDS online, easy steps to calculate TDS, calculate TDS in easy way, calculation of taxable TDS, calculation of TDS, TDS calculator, calculate TDS,tds calculator, calculate monthly tds on salary, calculate my tds, calculate my tds on salary, calculate tds on fd, calculate tds on monthly salary, calculate tds on my salary, calculate tds on salary,   calculate tds on salary monthly basis, calculate tds on salary online, calculate tds online, calculate total dissolved solids, calculate total dissolved solids from conductivity, calculation for tds on salary, calculation of interest on tds, calculation of salary tds, calculation of tds on rent, calculation of tds on salary for FY 2023-24">
+    <link href="./public/img/new_logo.png" rel="icon" type="image/png">
+    <link rel="stylesheet" href="./public/css/bootstrap.min.css">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League Spartan:wght@300;400;500;600;700;800&display=swap"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="./public/css/scrmob.css">
+    <link rel="stylesheet" href="./public/css/style.css">
+    <link rel="stylesheet" href="./public/css/style_new.css?v=1.1.4">
+    <link rel="stylesheet" href="./public/css/navbar.css">
+    
+    <script src="./public/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js"></script>
+    <script src="./public/js/main.js"></script>
+    <script src="./public/js/common.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+</script>
+<script src="./public/js/common.js"></script>
+<script src="https://unpkg.com/htmlincludejs"></script>
+<!-- Social Tags -->
+<meta property="og:title" content="Simplify Tax Calculations with the TDS Calculator | JJ Tax">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jjfintax.com">
+<meta property="og:image" content="./public/images/SEO-calculator.png">
+<meta property="og:description" content="Calculate your taxes effortlessly with our TDS Calculator and simplify your tax calculations.Chat with our experts to get personalized solution for all your queries.">
+<meta property="og:site_name" content="@jjtax">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@jjtax">
+<meta name="twitter:title" content="Simplify Tax Calculations with the TDS Calculator | JJ Tax">
+<meta name="twitter:description" content="Calculate your taxes effortlessly with our TDS Calculator and simplify your tax calculations.Chat with our experts to get personalized solution for all your queries.">
+<meta name="twitter:creator" content="@JJTax">
+<meta name="twitter:url" content="https://jjfintax.com">
+<meta name="twitter:image" content="./public/images/SEO-calculator.png">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-V1TQR97GVP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-V1TQR97GVP');
+</script> 
+    <script>
+      function disbtn() {
+        document.getElementById("submit_btn").disabled = true;
+        document.getElementById("submit_btn").innerHTML = "Submitting ...";
+      }
+
+      $(document).ready(function(){
+        $(".on-change-selector").blur(calculateTDS).keyup(calculateTDS)
+          .keypress(calculateTDS)
+          .change(calculateTDS);
+
+          var options = $("#nature_of_payment option");                    // Collect options         
+        options.detach().sort(function(a,b) {               // Detach from select, then Sort
+            var at = $(a).text();
+            var bt = $(b).text();         
+            return (at > bt)?1:((at < bt)?-1:0);            // Tell the sort function how to order
+        });
+        options.appendTo("#nature_of_payment");
+      })
+    </script>  
+     <!-- Meta Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1155842502283697');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1155842502283697&ev=PageView&noscript=1"
+  /></noscript>
+<!-- End Meta Pixel Code -->  
+    </head>
+    <body>
+        <!-- <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N42Z47F"
+                height="0" width="0" style="display:none;visibility:hidden">
+            </iframe>
+        </noscript> -->
+      <include src="includes/header.html"></include>
+        <div class="ticker-wrapper-h">
+          <div class="heading">JJ Tax News</div>
+          <ul class="news-ticker-h" id="news-ticker-h"> </ul>
+        </div>
+        
+          <div class="clc-banner-wrapper">
+            <div class="row pt-50 mr-0">
+              <div class="offset-md-2 col-md-8">
+                  <h2 class="page-heading">TDS Calculator</h2>
+                  <div class="hra-calculator-container">
+                    <form>
+                      <div class="form-group row">
+                        <label for="recipient" class="col-sm-6 col-form-label">Recipient</label>
+                        <div class="col-sm-6">
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input on-change-selector" type="radio" name="recipient" id="inlineRadio1" checked value="individuals">
+                            <label class="form-check-label" for="inlineRadio1">Individual/HUF/Sole Proprietor</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input on-change-selector" type="radio" name="recipient" id="inlineRadio2" value="others">
+                            <label class="form-check-label" for="inlineRadio2">Others</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="pan_of_recipient" class="col-sm-6 col-form-label">PAN of recipient is available</label>
+                        <div class="col-sm-6">
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input on-change-selector" type="radio" name="pan_of_recipient" id="inlineRadio3" checked value="Yes">
+                            <label class="form-check-label" for="inlineRadio3">Yes</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input on-change-selector" type="radio" name="pan_of_recipient" id="inlineRadio4" value="No">
+                            <label class="form-check-label" for="inlineRadio4">No</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="fy" class="col-sm-6 col-form-label">FY</label>
+                        <div class="col-sm-6 d-flex">
+                          <select class="form-control on-change-selector input-bg" id="fy">
+                            <option>22-23</option>
+                            <option>23-24</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label for="nature_of_payment" class="col-sm-6 col-form-label">Nature of payment</label>
+                        <div class="col-sm-6 d-flex">
+                          <select class="form-control on-change-selector input-bg" id="nature_of_payment">
+                            <option value="">----Select----</option>
+                            <option>194BA - Income from online games</option>
+                            <option>194B - Income from lottery winnings, card games, crossword puzzles, and other games</option>
+                            <option>194BB- Income from horse race winnings</option>
+                            <option>194EE - TDS on payment of amount standing to the credit of a person under National Savings Scheme (NSS)</option>
+                            <option>194K - Payment of any income for units of a mutual fund, for example, dividend</option>
+                            <option>194F - TDS on payment for the repurchase of the unit by Unit Trust of India (UTI) or a Mutual Fund</option>
+                            <option>194G - TDS on Payments, commission, etc., on the sale of lottery tickets</option>
+                            <option>194H - TDS on Commission or brokerage</option>
+                            <option>193 - Interest on Securities</option>
+                            <option>194A - Interest from other sources</option>
+                            <option>194E - Payment to non-resident sportsmen / sports association</option>
+                            <option>194D - Insurance Commission</option>
+                            <option>194A - Interest from banks/post office/co-operative society</option>
+                            <option>192A - Premature withdrawal from EPF</option>
+                            <option>194J - Any sum paid by way of royalty towards the sale or distribution, or exhibition of cinematographic films</option>
+                            <option>194C - Payment to Contractors / sub-contractors</option>
+                            <option>194DA - TDS on payment against life insurance policy.</option>
+                            <option>194I - TDS on Rent on Plant and machinery</option>
+                            <option>194J - Any sum paid by way of remuneration/fee/commission to a director</option>
+                            <option>194J - Any sum paid for not carrying out any activity concerning any business or any other sum</option>
+                            <option>194I - TDS on Rent on land or building or furniture or fittings</option>
+                            <option>194IA - Payment in consideration of transfer of certain immovable property other than agricultural land.</option>
+                            <option>194IB - Rent payment by an individual or HUF on whom Tax Audit not Apply</option>
+                            <option>194J - Any sum paid by way of fee for professional services</option>
+                            <option>194 - Dividend</option>                            
+                            <option>194J - Any sum paid as a fee for technical services</option>                            
+                            <option>194J - Any sum paid as fees for technical services, but the payee is engaged in the business of call center.</option>                            
+                            <option>194LA - Payment in respect of compensation on acquiring certain immovable property</option>
+                            <option>194M - Certain payments by Individual/HUF not liable to deduct TDS under Section 194C, 194H, and 194J</option>
+                            <option>194O -  Payment for the sale of goods or provision of services by the e-commerce operator through its digital or electronic facility or platform.</option>
+                            <option>194Q - Payments for the purchase of goods</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="amount_of_payment" class="col-sm-6 col-form-label">Amount of payment</label>
+                        <div class="col-sm-6 d-flex">
+                          <span class="currency-symbol">₹</span>
+                          <input type="number" class="form-control on-change-selector text-right-align input-bg" id="amount_of_payment" value="0">
+                        </div>
+                      </div>
+                    </form>
+                    <div class="row hra-calculator-container-bottom">
+                      <div class="col-md-4"></div>
+                      <div class="col-md-4">
+                        <h3>Total TDS</h3>
+                        <div id="TDS"><span>₹<span>0</span></span></div>
+                      </div>
+                      <div class="col-md-4"></div>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <include src="includes/statistics.html"></include>
+      <include src="includes/footer.html"></include>
+          <script src="datas/dynamic-contents.js"></script>
+    <script>
+      $(document).ready(function () { 
+        var wrapper = $('#news-ticker-h').empty();
+        $.each(tickers, function (i, f) {
+          $('#news-ticker-h').append('<li>' + f.key + '</li>');
+        })
+      });       
+    </script>
+    </body>
+  </html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://www.jjfintax.com/public/css/bootstrap.min.css">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=League Spartan:wght@300;400;500;600;700;800&display=swap" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.jjfintax.com/public/css/scrmob.css">
+    <link rel="stylesheet" href="https://www.jjfintax.com/public/css/style.css">
+    <link rel="stylesheet" href="css/style-income-form.css">
+    <link rel="stylesheet" href="https://www.jjfintax.com/public/css/style_new.css">
+    <link rel="stylesheet" href="https://www.jjfintax.com/public/css/navbar.css">
+    <link rel='stylesheet' href='https://www.jjfintax.com/public/css/slick.min.css'>
+    <link rel='stylesheet' href='https://www.jjfintax.com/public/css/slick-theme.min.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="container">
+            <!-- Navbar logo -->
+            <div class="nav-header">
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <img src="https://www.jjfintax.com/public/images/new_logo.png" class="header-logo" alt="logo">
+                    </a>
+                </div>
+            </div>
+            <!-- responsive navbar toggle button -->
+            <input type="checkbox" id="nav-check">
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+            <!-- Navbar items -->
+            <div class="nav-links">
+                <!-- Dropdown menu -->
+                <div class="dropdown">
+                    <a class="dropBtn" href="#">Company
+                        <i class="fas fa-angle-down"></i>
+                    </a>
+                    <div class="drop-content">
+                        <a class="dropdown-item" href="aboutus.html">About Us</a>
+                        <a class="dropdown-item" href="awards.html">Media</a>
+                        <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#formModal">Careers</a>
+                        <a class="dropdown-item" href="investor.html">Investor Relations</a>
+                    </div>
+                </div>
+
+                <!-- Dropdown menu -->
+                <div class="dropdown">
+                    <a class="dropBtn" href="#">Insights
+                        <i class="fas fa-angle-down"></i>
+                    </a>
+                    <div class="drop-content">
+                        <a class="dropdown-item" href="https://blog.jjfintax.com/">Blogs</a>
+                        <a class="dropdown-item" href="jjtaxfitt.html">JJTaxFitt</a>
+                    </div>
+                </div>
+
+                <!-- Dropdown menu -->
+                <div class="dropdown">
+                    <a class="dropBtn" href="#">Services
+                        <i class="fas fa-angle-down"></i>
+                    </a>
+                    <div class="drop-content">
+                        <a class="dropdown-item" href="itr.html">Income Tax</a>
+                        <a class="dropdown-item" href="gst.html">GST</a>
+                        <a class="dropdown-item" href="tds.html">TDS</a>
+                        <a class="dropdown-item" href="accounting.html">Accounting</a>
+                        <a class="dropdown-item" href="roc-compliances.html">ROC Compliances</a>
+                        <a class="dropdown-item" href="legal.html">Legal Services</a>
+                        <a class="dropdown-item" href="startup.html">Startup Services</a>
+                        <a class="dropdown-item" href="tax-planning.html">Tax Planning</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a class="dropBtn" href="#">Tools
+                        <i class="fas fa-angle-down"></i>
+                    </a>
+                    <div class="drop-content">
+                        <a class="dropdown-item" href="tax-calculator.html">Tax Calculator</a>
+                        <a class="dropdown-item" href="hra-calculator.html">HRA Calculator</a>
+                        <a class="dropdown-item" href="tds-calculator.html">TDS Calculator</a>
+                    </div>
+                </div>
+
+                <a href="pricing.html">Pricing</a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#contactmodal">Contact</a>
+                <button onclick="window.fcWidget.open();window.fcWidget.show();" class="loginBtn">Chat with an
+                    expert</button>
+                <a class="btn-link" href="https://web.jjfintax.com:8843/#/" target="_blank">
+                    <button class="loginBtn">Login</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="ticker-wrapper-h">
+        <div class="heading">JJ Tax News</div>
+        <ul class="news-ticker-h">
+            <li><p>Deadline for linking PAN card with Aadhaar is extended to June 30, 2023 from March 31, 2023.</p></li>
+            <li><p>Nomination deadline for Mutual Fund/ Demat Account Holders extended to 30 September</p></li>
+            <li><p>Debt Mutual Funds taxable at slab rate w.e.f. 1st April'23.</p></li>
+            <li><p>Market Linked Debentures taxable at slab rate w.e.f. 1st April'23.</p></li>
+            <li><p>TDS applicable on net winnings from online gaming w.e.f. 1st April'23.</p></li>
+            <li><p>Invest in NPS and secure your future</p></li>
+            <li><p>Investment partner: BAJAJ CAPITAL</p></li>
+            <li><p><b>Pay your taxes through JJ Tax App</b></p></li>
+            <li><p><b>ZERO</b> tax on income of Rs. 10 lakhs*, plan your investments with JJ Tax.</p></li>
+            <li><p><b>101</b> ways to save your taxes LEGALLY. Ask us!</p></li>
+            <li><p>Save <b>80%</b> of your cost. Outsource your Accounting to JJ Tax.</p></li>
+            <li><p>Want to hire a <b>vCFO?</b> Contact JJ Tax.</p></li>
+            <li><p>Now chat in Hindi with our Tax Experts</p></li>
+            <li><p>अब पाए हर TAX से जुड़े सवाल का जवाब हिंदी में</p></li>
+            <li><p>जेजे टैक्स ऐप पर 24/7 चैट करे।</p></li>
+            <li><p>We are a women empowered startup, invest and join our journey</p></li>
+            <li><p>Awarded with the Best Fintech Solution of the year</p></li>
+            <li><p>CEO Rashi awarded with Nationwide Award under 40 by Business Mint</p></li>
+        </ul>
+    </div>
+    <div class="container-fluid inc-tabs">
+        <div class="container">
+            <ul class="incProgressBar extra_menu js-horizontal-scroll ">
+                <li style="width: 107.673px;"><a href="index.html"><span></span>Sources of Income</a></li>
+                <li style="width: 107.673px;"><a href="upload-form-16.html"><span></span>Upload Form 16</a></li>
+                <li style="width: 107.673px;"><a href="financial-details.html"><span></span>Financial Details</a></li>
+                <li style="width: 107.673px;"><a href="basic-details.html"><span></span>Basic Details</a></li>
+                <li style="width: 107.673px;"><a href="basic-details-2.html"><span></span>Basic Details 2</a></li>
+                <li class="current" style="width: 107.673px;"><a href="Salary-Income.html"><span></span>Salary Income</a></li>
+                <li style="width: 107.673px;"><a href="deductions.html"><span></span>Deductions</a></li>
+                <li style="width: 107.673px;"><a href="bank-details.html"><span></span>Bank Details</a></li>
+                <li style="width: 107.673px;"><a href="prepaid-taxes.html"><span></span>Prepaid Taxes</a></li>
+                <li style="width: 107.673px;"><a href="extra-details.html"><span></span>Extra Details</a></li>
+                <li style="width: 107.673px;"><a href="computation.html"><span></span>Computation</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Form start -->
+    <div class="inc-form-container bg-light-blue">        
+        <form action="#">
+            <div class="container-fluid form-section">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-10">
+                            <!-- section title  -->
+                            <div class="row"> 
+                                <div class="col-md-11">
+                                    <h4 class="form-in-tl text-center">HELP US WITH SOME OF YOUR EMPLOYMENT DETAILS</h4>
+                                    <!-- <div class="form-in-desc text-center">We'll keep it a secret.</div> -->
+                                </div>
+                            </div>
+                            <!-- // section title  -->
+                            <div class="inc-forn-in-sec basic-detail">
+                                <div class="numadd_box">
+                                    <div class="wrapper">
+                                        <span class="salNewNo">1</span>Salary Details
+                                    </div>
+                                    <span title="Remove Employer" tabindex="0" data-bs-toggle="popover" data-placement="left" data-bs-trigger="focus" class="delItem hideable hide" data-singleton="true">
+                                        <img src="https://tax2win.in/assets-new/img/new-theme/diy-flow/trash.svg" alt="Delete" title="Delete">
+                                    </span>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-8 col-7">
+                                        <h3>1) Gross Salary / CTC</h3>
+                                    </div>
+                                    <div class="form-group col-md-4 col-5 text-end hideable_breakup">
+                                        <span class="darkbtn salary_breakup_btn">+ Salary Breakup</span>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-xxl-4 col-lg-6 col-xl-4 col-md-5 col-md-6 gross_salary_box">
+                                        <label for="gross_salary_1" style="color: rgb(128, 128, 128);">Salary / Pension Income (Annual)<span class="required">*</span> </label>
+                                        <i class="toltip" data-bs-toggle="modal" data-bs-target="#ctc"><img src="https://tax2win.in/assets/img/efilling-process/tooltip.svg" alt="" width="14"></i>
+                                        <input type="text" name="si_gross_salary[1]" value="" class="form-control textBoxes salary_input currency_field diy-amount" id="gross_salary_1" maxlength="11" placeholder="Rs." inputmode="numeric" data-dirrty-initial-value="12" data-is-dirrty="true">
+                                    </div>
+                                    <div class="col-xxl-8 col-lg-6 col-xl-8 col-md-7 hideable_breakup hidden">
+                                        <div class="row">
+                                            <div class="input_plus form-group col-md-6 col-6">
+                                                <label for="si_value_of_perquisites_1">Value of perquisites </label>
+                                                <i class="toltip" data-bs-toggle="modal" data-bs-target="#value_perquisites"><img src="https://tax2win.in/assets/img/efilling-process/tooltip.svg" alt="" width="14"></i>
+                                                <input type="text" name="si_value_of_perquisites[1]" value="0" class="form-control textBoxes salary_input currency_field diy-amount" id="si_value_of_perquisites_1" maxlength="11" placeholder="Rs." inputmode="numeric" data-dirrty-initial-value="0" data-is-dirrty="false">
+                                            </div>
+                                            <div class="input_plus form-group col-md-6 col-6">
+                                                <label for="si_profits_in_lieu_of_salary_1">Profit in lieu of salary </label>
+                                                <i class="toltip" data-bs-toggle="modal" data-bs-target="#profit_salary"><img src="https://tax2win.in/assets/img/efilling-process/tooltip.svg" alt="" width="14"></i>
+                                                <input type="text" name="si_profits_in_lieu_of_salary[1]" value="0" class="form-control textBoxes salary_input currency_field diy-amount" id="si_profits_in_lieu_of_salary_1" maxlength="11" placeholder="Rs." inputmode="numeric" data-dirrty-initial-value="0" data-is-dirrty="false">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ae_show hideable_parent ae_show_items">
+                                    <div class="row mt-3">
+                                        <div class="form-group col-md-6 col-7">
+                                            <h3>2) Less : Exempted Allowances</h3>
+                                        </div>
+                                        <div class="form-group col-md-6 col-5 text-end ">
+                                            <label for="" class="hidden-xs"> &nbsp;</label>
+                                            <span class="darkbtn hideable_btn hideable_child other_allowance_btn">+ Other Allowances</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="form-group col-md-4 col-4 ae_show_item ">
+                                            <label for="si_exempt_allowances_amount_1">Exempt HRA</label>
+                                            <i class="toltip" data-bs-toggle="modal" data-bs-target="#hra"><img src="https://tax2win.in/assets/img/efilling-process/tooltip.svg" alt="" width="14"></i>
+                                            <input type="hidden" name="si_exempt_allowances_name[1][1]" value="10(13A)" class="si_exempt_allowance" data-dirrty-initial-value="10(13A)" data-is-dirrty="false">
+                                            <input type="text" name="si_exempt_allowances_amount[1][1]" value="" class="form-control salary_input salary_input_minus textBoxes currency_field diy-amount " id="si_exempt_allowances_amount_1" inputmode="numeric" data-dirrty-initial-value="" data-is-dirrty="false">
+                                        </div>
+                                        <div class="form-group col-md-4 col-4 ae_show_item ">
+                                            <label for="si_exempt_allowances_amount_1">LTA</label>
+                                            <i class="toltip" data-bs-toggle="modal" data-bs-target="#leave_travel_concession"><img src="https://tax2win.in/assets/img/efilling-process/tooltip.svg" alt="" width="14"></i>
+                                            <input type="hidden" name="si_exempt_allowances_name[1][2]" value="10(5)" class="si_exempt_allowance" data-dirrty-initial-value="10(5)" data-is-dirrty="false">
+                                            <input type="text" name="si_exempt_allowances_amount[1][2]" value="" class="form-control salary_input salary_input_minus textBoxes currency_field diy-amount " id="si_exempt_allowances_amount_1" inputmode="numeric" data-dirrty-initial-value="" data-is-dirrty="false">
+                                        </div>
+                                        <div class="form-group col-md-4 col-4 ae_show_item ">
+                                            <label for="si_exempt_allowances_amount_1">Gratuity</label>
+                                            <i class="toltip" data-bs-toggle="modal" data-bs-target="#gratuity"><img src="https://tax2win.in/assets/img/efilling-process/tooltip.svg" alt="" width="14"></i>
+                                            <input type="hidden" name="si_exempt_allowances_name[1][3]" value="10(10)" class="si_exempt_allowance" data-dirrty-initial-value="10(10)" data-is-dirrty="false">
+                                            <input type="text" name="si_exempt_allowances_amount[1][3]" value="" class="form-control salary_input salary_input_minus textBoxes currency_field diy-amount " id="si_exempt_allowances_amount_1" inputmode="numeric" data-dirrty-initial-value="" data-is-dirrty="false">
+                                        </div>
+                                    </div>
+                                    <div class="row  hidden_child hidden">
+                                        <div class="ae_show_item innerSec si_exempt_allowances ae_clone_item">
+                                            <div class="add_clone">
+                                                <div class="row">
+                                                    <div class=" form-group col-md-6 col-7">
+                                                        <label for="si_exempt_allowances_name_1">Specify if any other</label>
+                                                        <select name="si_exempt_allowances_name[1][4]" class="form-control textBoxes si_exempt_allowances_name" id="si_exempt_allowances_name_1" data-dirrty-initial-value="" data-is-dirrty="false">
+                                                            <option value="" selected="selected">Please Select</option>
+                                                            <option value="10(6)">Remuneration received as an official of an embassy, high commission etc.</option>
+                                                            <option value="10(7)">Allowances or perquisites paid outside India by the Government for rendering service outside India</option>
+                                                            <option value="10(10A)">Pension</option>
+                                                            <option value="10(10AA)">Leave encashment on Retirement</option>
+                                                            <option value="10(10B)(i)">Compensation limit notified by CG in the Official Gazette</option>
+                                                            <option value="10(10B)(ii)">Compensation under scheme approved by the Central Government</option>
+                                                            <option value="10(10C)">Amount received on voluntary retirement</option>
+                                                            <option value="10(10CC)">Tax paid by employer on non-monetary perquisite</option>
+                                                            <option value="10(14)(i)">Prescribed Allowances or benefits specifically granted to meet expenses in performance of duties of office or employment</option>
+                                                            <option value="10(14)(ii)">Prescribed Allowances or benefits granted to meet personal expenses in performance of duties</option>
+                                                            <option value="EIC">Exempt Income received by a judge covered under the payment of salaries to Supreme court / High Court Judges Act/Rules</option>
+                                                            <option value="OTH">Any Other</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group col-md-6 col-5 amount">
+                                                        <label for="si_exempt_allowances_amount_1">Amount</label>
+                                                        <input type="text" name="si_exempt_allowances_amount[1][4]" value="" class="form-control salary_input salary_input_minus textBoxes currency_field diy-amount" id="si_exempt_allowances_amount_1" inputmode="numeric" data-dirrty-initial-value="" data-is-dirrty="false">
+                                                    </div>
+                                                </div>
+                                            <div class="ae_inlineDel">-</div>
+                                            </div>
+                                        </div>
+                                        <div class=" text-end col-md-12 mb-3">
+                                            <div class=" inlineAdd">+</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-12 calculation mt-3 mb-4">
+                                    <h3>3) Net Salary (Gross Salary - Exempted Allowances) = <div><span>₹ </span><span class="total_salary_amount zero_text_on_clone currency_field diy-amount" value="12">0</span></div></h3>
+                                </div>
+                                <div class="form-group col-md-12 mt-2">
+                                    <h3 style="margin: 0">4) Less: Deductions u/s 16</h3>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-6 col-md-6">
+                                        <label for="si_standard_deduction_1" style="color: rgb(128, 128, 128);">Standard Deduction
+                                        
+                                        </label>
+                                        <input type="text" name="si_standard_deduction[1]" value="12" class="form-control textBoxes dedn16_input salary_input_minus si_standard_deduction currency_field diy-amount" id="si_standard_deduction[_1]" placeholder="Rs." inputmode="numeric" readonly="" min="0" max="50000" data-dirrty-initial-value="12" data-is-dirrty="true">
+                                    </div>
+                                    <div class="form-group col-sm-6 col-6 col-md-6">
+                                        <label for="si_professional_tax_1">Professional Tax </label>
+                                        <input type="text" name="si_professional_tax[1]" value="0" class="form-control textBoxes dedn16_input salary_input_minus currency_field diy-amount" id="si_professional_tax_1" maxlength="11" placeholder="Rs." inputmode="numeric" data-dirrty-initial-value="0" data-is-dirrty="false">
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-12 calculation mt-2">
+                                    <h3>Income chargeable under the head 'Salaries' = <div><span>₹ </span><span class="chargeable_salary_amount zero_text_on_clone currency_field diy-amount" value="12">0</span></div></h3>
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="form-group col-md-12 col-12">
+                                        <h3>Employer Details &amp; TDS Deducted</h3>
+                                    </div>
+                                    <div class="form-group col-md-4 col-sm-12 col-12">
+                                        <label for="EmployerDetail_employer_name_1">Company / Employer Name <span class="required">*</span></label>
+                                        <input type="text" name="si_employer_name[1]" value="sdfasd" class="form-control textBoxes" id="EmployerDetail_employer_name_1" data-dirrty-initial-value="sdfasd" data-is-dirrty="false">
+                                    </div>
+                                    <div class="form-group col-md-4 col-sm-6 col-7">
+                                        <label for="EmployerDetail_tds_deducted_1">TDS Deducted by Employer</label>
+                                        <i class="toltip" data-bs-toggle="modal" data-bs-target="#tds_deducted"><img src="https://tax2win.in/assets/img/efilling-process/tooltip.svg" alt="" width="14"></i>
+                                        <input type="text" name="si_tds_deducted[1]" value="0" class="form-control textBoxes si_tds_deducted currency_field diy-amount" id="EmployerDetail_tds_deducted_1" maxlength="11" placeholder="Rs." inputmode="numeric" data-dirrty-initial-value="0" data-is-dirrty="false">
+                                    </div>
+                                    <div class="form-group col-md-4 col-sm-6 col-5">
+                                        <label for="EmployerDetail_employer_tan_1">TAN of Employer <span class="required hidden employer_tan">*</span></label>
+                                        <i class="toltip" data-bs-toggle="modal" data-bs-target="#employer_tan"><img src="https://tax2win.in/assets/img/efilling-process/tooltip.svg" alt="" width="14"></i>
+                                        <input type="text" name="si_employer_tan[1]" value="" class="form-control textBoxes text-uppercase" id="EmployerDetail_employer_tan_1" maxlength="10" data-dirrty-initial-value="" data-is-dirrty="false">
+                                    </div>
+                                    <div class="clearfix"></div> 
+                                </div>
+                                
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="addSalBtnBox text-end mt-md-4 mt-2">
+                <button type="button" class="addSalBtn addItem" data-placement="left" data-toggle="tooltip" title="" data-bs-original-title="">+ Add Salary Income</button>
+            </div>
+            <div class="basicDtlBtn totalSalBtn desktop_btn btn_group">
+                <small class="cabtn_caption">Get customized solutions at discounted plans</small>
+                <a href="https://tax2win.in/ca-assisted/upgrade/1936132" class="loginBtn btn-border" oncontextmenu="if (!window.__cfRLUnblockHandlers) return false; return false;" data-ctid="screen-name-employement-details-get-ca-52c288f487">GET CA ASSISTED</a><span class="sep_or">OR</span> <button type="submit" name="submit" value="SUBMIT" class="data_deformatter loginBtn loading_btn btn-success  " oncontextmenu="if (!window.__cfRLUnblockHandlers) return false; return false;" data-loading-text="<i class=&quot;fa fa-circle-o-notch fa-spin&quot;></i>  LOADING" data-ctid="screen-name-employement-details-continue-60e933aa9d">CONTINUE <img src="https://tax2win.in/assets-new/img/new-theme/diy-flow/nex-arrow.svg" alt="Continue"></button>
+            </div>
+
+        </form>
+    </div>
+    <!-- Form end -->
+
+
+
+    
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+    <!-- JQUERY STEP -->
+    <script src="js/jquery.steps.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

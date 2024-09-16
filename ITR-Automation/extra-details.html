@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://www.jjfintax.com/public/css/bootstrap.min.css">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=League Spartan:wght@300;400;500;600;700;800&display=swap" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.jjfintax.com/public/css/scrmob.css">
+    <link rel="stylesheet" href="https://www.jjfintax.com/public/css/style.css">
+    <link rel="stylesheet" href="css/style-income-form.css">
+    <link rel="stylesheet" href="https://www.jjfintax.com/public/css/style_new.css">
+    <link rel="stylesheet" href="https://www.jjfintax.com/public/css/navbar.css">
+    <link rel='stylesheet' href='https://www.jjfintax.com/public/css/slick.min.css'>
+    <link rel='stylesheet' href='https://www.jjfintax.com/public/css/slick-theme.min.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="container">
+            <!-- Navbar logo -->
+            <div class="nav-header">
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <img src="https://www.jjfintax.com/public/images/new_logo.png" class="header-logo" alt="logo">
+                    </a>
+                </div>
+            </div>
+            <!-- responsive navbar toggle button -->
+            <input type="checkbox" id="nav-check">
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+            <!-- Navbar items -->
+            <div class="nav-links">
+                <!-- Dropdown menu -->
+                <div class="dropdown">
+                    <a class="dropBtn" href="#">Company
+                        <i class="fas fa-angle-down"></i>
+                    </a>
+                    <div class="drop-content">
+                        <a class="dropdown-item" href="aboutus.html">About Us</a>
+                        <a class="dropdown-item" href="awards.html">Media</a>
+                        <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#formModal">Careers</a>
+                        <a class="dropdown-item" href="investor.html">Investor Relations</a>
+                    </div>
+                </div>
+
+                <!-- Dropdown menu -->
+                <div class="dropdown">
+                    <a class="dropBtn" href="#">Insights
+                        <i class="fas fa-angle-down"></i>
+                    </a>
+                    <div class="drop-content">
+                        <a class="dropdown-item" href="https://blog.jjfintax.com/">Blogs</a>
+                        <a class="dropdown-item" href="jjtaxfitt.html">JJTaxFitt</a>
+                    </div>
+                </div>
+
+                <!-- Dropdown menu -->
+                <div class="dropdown">
+                    <a class="dropBtn" href="#">Services
+                        <i class="fas fa-angle-down"></i>
+                    </a>
+                    <div class="drop-content">
+                        <a class="dropdown-item" href="itr.html">Income Tax</a>
+                        <a class="dropdown-item" href="gst.html">GST</a>
+                        <a class="dropdown-item" href="tds.html">TDS</a>
+                        <a class="dropdown-item" href="accounting.html">Accounting</a>
+                        <a class="dropdown-item" href="roc-compliances.html">ROC Compliances</a>
+                        <a class="dropdown-item" href="legal.html">Legal Services</a>
+                        <a class="dropdown-item" href="startup.html">Startup Services</a>
+                        <a class="dropdown-item" href="tax-planning.html">Tax Planning</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a class="dropBtn" href="#">Tools
+                        <i class="fas fa-angle-down"></i>
+                    </a>
+                    <div class="drop-content">
+                        <a class="dropdown-item" href="tax-calculator.html">Tax Calculator</a>
+                        <a class="dropdown-item" href="hra-calculator.html">HRA Calculator</a>
+                        <a class="dropdown-item" href="tds-calculator.html">TDS Calculator</a>
+                    </div>
+                </div>
+
+                <a href="pricing.html">Pricing</a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#contactmodal">Contact</a>
+                <button onclick="window.fcWidget.open();window.fcWidget.show();" class="loginBtn">Chat with an
+                    expert</button>
+                <a class="btn-link" href="https://web.jjfintax.com:8843/#/" target="_blank">
+                    <button class="loginBtn">Login</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="ticker-wrapper-h">
+        <div class="heading">JJ Tax News</div>
+        <ul class="news-ticker-h">
+            <li><p>Deadline for linking PAN card with Aadhaar is extended to June 30, 2023 from March 31, 2023.</p></li>
+            <li><p>Nomination deadline for Mutual Fund/ Demat Account Holders extended to 30 September</p></li>
+            <li><p>Debt Mutual Funds taxable at slab rate w.e.f. 1st April'23.</p></li>
+            <li><p>Market Linked Debentures taxable at slab rate w.e.f. 1st April'23.</p></li>
+            <li><p>TDS applicable on net winnings from online gaming w.e.f. 1st April'23.</p></li>
+            <li><p>Invest in NPS and secure your future</p></li>
+            <li><p>Investment partner: BAJAJ CAPITAL</p></li>
+            <li><p><b>Pay your taxes through JJ Tax App</b></p></li>
+            <li><p><b>ZERO</b> tax on income of Rs. 10 lakhs*, plan your investments with JJ Tax.</p></li>
+            <li><p><b>101</b> ways to save your taxes LEGALLY. Ask us!</p></li>
+            <li><p>Save <b>80%</b> of your cost. Outsource your Accounting to JJ Tax.</p></li>
+            <li><p>Want to hire a <b>vCFO?</b> Contact JJ Tax.</p></li>
+            <li><p>Now chat in Hindi with our Tax Experts</p></li>
+            <li><p>अब पाए हर TAX से जुड़े सवाल का जवाब हिंदी में</p></li>
+            <li><p>जेजे टैक्स ऐप पर 24/7 चैट करे।</p></li>
+            <li><p>We are a women empowered startup, invest and join our journey</p></li>
+            <li><p>Awarded with the Best Fintech Solution of the year</p></li>
+            <li><p>CEO Rashi awarded with Nationwide Award under 40 by Business Mint</p></li>
+        </ul>
+    </div>
+    <div class="container-fluid inc-tabs">
+        <div class="container">
+            <ul class="incProgressBar extra_menu js-horizontal-scroll ">
+                <li style="width: 107.673px;"><a href="index.html"><span></span>Sources of Income</a></li>
+                <li style="width: 107.673px;"><a href="upload-form-16.html"><span></span>Upload Form 16</a></li>
+                <li style="width: 107.673px;"><a href="financial-details.html"><span></span>Financial Details</a></li>
+                <li style="width: 107.673px;"><a href="basic-details.html"><span></span>Basic Details</a></li>
+                <li style="width: 107.673px;"><a href="basic-details-2.html"><span></span>Basic Details 2</a></li>
+                <li style="width: 107.673px;"><a href="Salary-Income.html"><span></span>Salary Income</a></li>
+                <li style="width: 107.673px;"><a href="deductions.html"><span></span>Deductions</a></li>
+                <li style="width: 107.673px;"><a href="bank-details.html"><span></span>Bank Details</a></li>
+                <li style="width: 107.673px;"><a href="prepaid-taxes.html"><span></span>Prepaid Taxes</a></li>
+                <li class="current" style="width: 107.673px;"><a href="extra-details.html"><span></span>Extra Details</a></li>
+                <li style="width: 107.673px;"><a href="computation.html"><span></span>Computation</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Form start -->
+    <div class="inc-form-container bg-light-blue">        
+        <form action="#">
+            <div class="container-fluid form-section">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-10">
+                            <!-- section title  -->
+                            <div class="row"> 
+                                <div class="col-md-11">
+                                    <h4 class="form-in-tl text-center">ITR DETAILS</h4>
+                                    <!-- <div class="form-in-desc text-center">This will help income tax department to transfer your tax refund directly in your bank account.</div> -->
+                                </div>
+                            </div>
+                            <!-- // section title  -->
+                            <div class="inc-forn-in-sec basic-detail">
+                                <div class="mainbox">
+                                    <div class="highlit_bg">
+                                        <div class="row itr_row align-items-center justify-content-center">
+                                            <div class="col-md-4 col-sm-6 col-6">
+                                                <h3>Return Filing Type</h3>
+                                            </div>
+                                            <div class="col-md-4  col-sm-6 col-6">
+                                                <div class="input_group">
+                                                    <select name="return_type" class="form-control textBoxes show-hide-dropdown"
+                                                        data-target-group="return_type" data-dirrty-initial-value="O">
+                                                        <option value="O" selected="selected">Original Return</option>
+                                                        <option value="R">Revised Return</option>
+                                                        <option value="N">Return Filed Against Notice</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-2 highlit_bg itr_row fld_agst_notice _N hide" data-target-group="return_type">
+                                        <div class="row  align-items-center justify-content-center">
+                                            <div class="col-md-4 col-sm-6 col-6">
+                                                <h3>Return filed against notice u/s</h3>
+                                            </div>
+                                            <div class="col-md-4 col-sm-6 col-6">
+                                                <div class="input_group">
+                                                    <select name="rfa_notice" class="form-control textBoxes show-hide-dropdown"
+                                                        data-target-group="return_notice_type" data-dirrty-initial-value="18">
+                                                        <option value="18" selected="selected">139(9)</option>
+                                                        <option value="13">142(1)</option>
+                                                        <option value="14">148</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row revised_itr mt-md-4 mt-3">
+                                        <div class="mainbox">
+                                            <div class="row hiddenbox _R _N hide" data-target-group="return_type" id="letOutDiv">
+                                                <div class="form-group col-md-6 col-sm-6 col-12">
+                                                    <label for="original_ack_no">Original ITR Acknowledgement no.<span class="required _18"
+                                                            data-target-group="return_notice_type">*</span></label>
+                                                    <input type="text" name="original_ack_no" value="" class="form-control textBoxes" id="original_ack_no"
+                                                        maxlength="15" inputmode="numeric" data-dirrty-initial-value="">
+                                                </div>
+                                                <div class="form-group col-md-6 col-sm-6 col-12">
+                                                    <label for="original_filing_date">Date of Filing Original Return<span class="required _18"
+                                                            data-target-group="return_notice_type">*</span></label>
+                                                    <input type="text" name="original_filing_date" value="" class="form-control textBoxes datepicker"
+                                                        id="original_filing_date" autocomplete="off" inputmode="numeric" data-dirrty-initial-value="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row itr_agst_ntc _N hide" data-target-group="return_type">
+                                        <div class="form-group col-md-6 col-sm-8 col-12">
+                                            <label for="din_no">Unique number/Document identification number(DIN) <span class="required">*</span></label>
+                                            <input type="text" name="din_no" value="" class="form-control textBoxes" id="din_no" inputmode="numeric"
+                                                autocomplete="off" data-dirrty-initial-value="">
+                                        </div>
+                                        <div class="form-group col-md-6 col-sm-4 col-12">
+                                            <label for="original_filing_date">Receipt date of notice <span class="required">*</span></label>
+                                            <input type="text" name="receipt_date_notice" value="" class="form-control textBoxes datepicker"
+                                                id="receipt_date_notice" autocomplete="off" inputmode="numeric" data-dirrty-initial-value="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                                <div class="salNewBox mainDiv mt-md-3 mt-2">
+                                    <div>
+                                        <div class="whiteBg">
+
+                                            <div class="mainbox comon_outer">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                        <div class="custom_radio2 switch switch--horizontal switch--expanding-inner leftSwitch">
+                                                            <h3>Are you filing return of income under seventh proviso to section 139(1)</h3>
+                                                            <div class="outer">
+                                                                <input id="seventh_proviso_radio_b" type="radio" name="income_under_seventh_proviso"
+                                                                    value="0" data-id="seventh_proviso_div" checked="checked"
+                                                                    data-dirrty-initial-value="checked">
+                                                                <label for="seventh_proviso_radio_b">No</label>
+                                                                <input id="seventh_proviso_radio_a" type="radio" name="income_under_seventh_proviso"
+                                                                    value="1" data-id="seventh_proviso_div" data-dirrty-initial-value="unchecked">
+                                                                <label for="seventh_proviso_radio_a">Yes</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="text-end">
+                                                        </div>
+                                                        <p class="col-md-9 mt-2">Select Yes in case your gross income does not exceed Rs. 2.5 Lakh and
+                                                            incurred the electricity expenses more than Rs. 1 lakh OR incurred the Foreign Travelling
+                                                            expenses more than Rs. 2 lakh.</p>
+                                                    </div>
+                                                </div>
+                                                <div class="row collapse hiddenbox mt-2" id="seventh_proviso_div">
+                                                    <div class="form-group col-md-6 col-sm-12 col-12">
+                                                        <label for="excess_foreign_travel_expenditure_amt">Enter Expenditure Amount, If you incurred
+                                                            expenditure of an amount exceeding Rs. 2 lakhs for travel to a foreign country for yourself or
+                                                            for any other person </label>
+                                                        <input type="text" name="excess_foreign_travel_expenditure_amt" value=""
+                                                            class="form-control textBoxes currency_field diy-amount"
+                                                            id="excess_foreign_travel_expenditure_amt" inputmode="numeric" data-dirrty-initial-value="">
+                                                    </div>
+                                                    <div class="form-group col-md-12 col-sm-12 col-12">
+                                                        <label for="excess_electricity_expenditure_amt">Enter Expenditure Amount, If you incurred
+                                                            expenditure of an amount exceeding Rs. 1 lakh on consumption of electricity during the Financial
+                                                            Year </label>
+                                                        <input type="text" name="excess_electricity_expenditure_amt" value=""
+                                                            class="form-control textBoxes currency_field diy-amount" id="excess_electricity_expenditure_amt"
+                                                            inputmode="numeric" data-dirrty-initial-value="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                            <div class="mainbox collapse mt-4 comon_outer" id="seventh_provison_clause_4">
+                                                <div class="section139_clause_4">
+                                                    <div class="col-md-12">
+                                                        <div class="custom_radio2 switch switch--horizontal switch--expanding-inner leftSwitch">
+                                                            <h3>Are you required to file a return as per other conditions prescribed under clause (iv) of
+                                                                seventh proviso to section 139(1)</h3>
+                                                            <div class="outer">
+                                                                <input id="seventh_provison_clause_4_radio_b" type="radio"
+                                                                    name="income_under_seventh_provison_clause_4" value="0"
+                                                                    data-id="seventh_provison_clause_4_div" checked="checked"
+                                                                    data-dirrty-initial-value="checked">
+                                                                <label for="seventh_provison_clause_4_radio_b">No</label>
+                                                                <input id="seventh_provison_clause_4_radio_a" type="radio"
+                                                                    name="income_under_seventh_provison_clause_4" value="1"
+                                                                    data-id="seventh_provison_clause_4_div" data-dirrty-initial-value="unchecked">
+                                                                <label for="seventh_provison_clause_4_radio_a">Yes</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="text-end">
+                                                        </div>
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                    <div class="row hiddenbox mt-4 collapse" id="seventh_provison_clause_4_div">
+                                                        <div class="form-group col-md-6 col-sm-6 col-12">
+                                                            <label for="aggregate_tds_tcs_amt">Enter Tax Amount, If the sum of tax deducted at source and
+                                                                tax collected at source during the Financial Year is Rs. 25000 or more.</label>
+                                                            <input type="text" name="aggregate_tds_tcs_amt" value=""
+                                                                class="form-control textBoxes currency_field diy-amount" id="aggregate_tds_tcs_amt"
+                                                                inputmode="numeric" data-dirrty-initial-value="">
+                                                        </div>
+                                                        <div class="form-group col-md-6 col-sm-6 col-12">
+                                                            <label for="deposit_more_than_crore_saving_amt">Enter Deposit Amount, If you deposited amounts
+                                                                exceeding Rs. 50 Lakh or more in one or more savings accounts during the Financial
+                                                                Year.</label>
+                                                            <input type="text" name="deposit_more_than_crore_saving_amt" value=""
+                                                                class="form-control textBoxes currency_field diy-amount"
+                                                                id="deposit_more_than_crore_saving_amt" inputmode="numeric" data-dirrty-initial-value="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="basicDtlBtn totalSalBtn desktop_btn btn_group">
+                <small class="cabtn_caption">Get customized solutions at discounted plans</small>
+                <a href="https://tax2win.in/ca-assisted/upgrade/1936132" class="loginBtn btn-border" oncontextmenu="if (!window.__cfRLUnblockHandlers) return false; return false;" data-ctid="screen-name-employement-details-get-ca-52c288f487">GET CA ASSISTED</a><span class="sep_or">OR</span> <button type="submit" name="submit" value="SUBMIT" class="data_deformatter loginBtn loading_btn btn-success  " oncontextmenu="if (!window.__cfRLUnblockHandlers) return false; return false;" data-loading-text="<i class=&quot;fa fa-circle-o-notch fa-spin&quot;></i>  LOADING" data-ctid="screen-name-employement-details-continue-60e933aa9d">CONTINUE <img src="https://tax2win.in/assets-new/img/new-theme/diy-flow/nex-arrow.svg" alt="Continue"></button>
+            </div>
+
+        </form>
+    </div>
+    <!-- Form end -->
+
+
+
+    
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+    <!-- JQUERY STEP -->
+    <script src="js/jquery.steps.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

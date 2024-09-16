@@ -1,0 +1,36 @@
+.full-width-div {
+    background: linear-gradient(180.87deg, #166AB1 40.76%, #65A6D3 200.83%), url('../../public/images/ITR_book_call.png');
+    background-size: cover;
+}
+
+.content-wrapper {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    width: 95%;
+    margin: auto;
+}
+
+.content-text {
+    padding-left: 3%;
+    color: white;
+    text-align: left;
+}
+
+.content-text p:first-child {
+    color: white;
+    text-align: left;
+}
+
+.content-text p strong {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 50px;
+    color: white;
+    text-align: left;
+}
+
+.btn-container {
+    background-color: white;
+    margin-right: 10px;
+    border-radius: 10px;
+}

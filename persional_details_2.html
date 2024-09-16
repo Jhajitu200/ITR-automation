@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITR Form</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/htmlincludejs"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link href="public/img/JJTax-logo.png" rel="icon" type="image/png">
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/style_new.css?v=1.1.6">
+    <link rel="stylesheet" href="public/css/navbar.css">
+    <script src="datas/dynamic-contents.js"></script>
+    <link rel="stylesheet" href="public/css/ticker.css">
+    <link rel="stylesheet" href="public/css/common.css">
+    <link href="public/css/current_tab_indicator.css" rel="stylesheet">
+    <link rel="stylesheet" href="public/css/itr_book_call.css">
+    <link href="public/css/persional_details.css" rel="stylesheet">
+    <style>
+        .form-control {
+            width: 90%;
+            padding: 10px;
+            margin: 0px 0;
+            box-sizing: border-box;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-control:focus {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            border-color: #66afe9;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <include src="includes/header.html"></include>
+    <div class="ticker-wrap">
+        <ul class="ticker" id="tickers"></ul>
+    </div>
+
+    <div
+        style="background: linear-gradient(180deg, rgba(17, 103, 175, 0.77) 0, rgba(17, 103, 175, 0.77) 277px, white 277px);padding-top: 8px;">
+        <div id="overlayText" style="text-align: center;">
+            <strong id="responsiveText" style="color: white;">Self file ITR within 15 minutes </strong>
+        </div>
+
+        <div class="container"
+            style="background: #F4F6FC; max-width: 80%;padding-top: 1%;border-top-left-radius: 2%; border-top-right-radius: 2%">
+            <include src="includes/current_tab_indicator.html"></include>
+            <h5 class="text-center mt-3">Please fill in your details. We will keep them confidential.</h5>
+            <div class="row mt-4"
+                style="background: #FFFFFF; width: 90%; margin: auto;padding-top: 2%;padding-left: 2%;">
+                <div class="col-md-12">
+                    <h5>Note: Please enter above mentioned details as mentioned on your PAN card.</h5>
+                    <!-- Personal details form -->
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="financial-year">Financial Year</label>
+
+                                <input type="text" class="form-control" id="financial-year" name="financial-year"
+                                    list="financial-years" style="width:90%" readonly>
+
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="assessment-year">Assessment Year</label>
+                                <input type="text" class="form-control" id="assessment-year" name="assessment-year"
+                                    list="assessment-Years" style="width:90%">
+                                <datalist id="assessment-Years">
+                                    <option value="2023-2024">
+                                    <option value="2022-2023">
+                                    <option value="2021-2022">
+                                    <option value="2020-2021">
+                                    <option value="2019-2020">
+                                        <!-- Add more options as needed -->
+                                </datalist>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="taxPayerStatus">Tax Payer Status*</label>
+                                <input type="text" value="" class="form-control" id="taxPayerStatus"
+                                    name="taxPayerStatus" style="width:90%" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="citizenStatus">Citizen Status</label>
+                                <select class="form-control custom-select" id="citizenStatus" name="citizenStatus"
+                                    style="width: 90%;" required>
+                                    <option value="resident">Resident</option>
+                                    <option value="nonResident">Non Resident</option>
+                                </select>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="pinCode">PIN code</label>
+                                <input type="text" class="form-control" id="pinCode" name="pinCode" style="width: 90%;"
+                                    required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="stateOrDistrict">State / District</label>
+                                <input type="text" class="form-control" id="stateOrDistrict" name="stateOrDistrict"
+                                    style="text-align: left; width: 90%;"  readonly>
+                                <span id="mobileError" style="color: red;"></span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="flat">flat/door/block no.</label>
+                                <input type="text" class="form-control" id="flat" name="flat" style="width: 90%;"
+                                    required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="city">Name of Premises/ Building/ Village</label>
+                                <input type="text" class="form-control" id="city" name="city" style="width: 90%;"
+                                    required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="locality">Road/ Street/ Post Office</label>
+                                <input type="text" class="form-control" id="locality" name="locality"
+                                    style="width: 90%;" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+
+                                <button type="button" class="btn btn-secondary btn-block" id="back"
+                                    style="background: linear-gradient(180deg, rgba(17, 103, 175, 0.7) 33.5%, #1167AF 100%);width: 88%;" 
+                                    onclick="saveData(this)">
+                                    &lt;&lt; Back
+                                </button>
+
+                            </div>
+                            <div class="form-group col-md-6">
+                                <!-- Placeholder for content if needed -->
+                            </div>
+                            <div class="form-group col-md-3">
+
+                                <button type="button" class="btn btn-primary btn-block" id="continue"
+                                    style="background: linear-gradient(180deg, rgba(17, 103, 175, 0.7) 33.5%, #1167AF 100%);width:88%"
+                                    onclick="saveData(this)">
+                                    Continue &gt&gt;
+                                </button>
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="citizenModal" tabindex="-1" role="dialog" aria-labelledby="modalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalLabel">Alert</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    This ITR is not for you.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <include src="includes/ITR_book_call.html"></include>
+
+    <!-- Scripts -->
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="datas/dynamic-contents.js"></script>
+    <script src="public/js/ticker.js"></script>
+    <script src="public/js/data_filling.js" defer></script>
+
+    <script>
+        document.getElementById('pinCode').addEventListener('input', function (event) {
+            const pinCode = event.target.value.trim();
+            const userData=JSON.parse(sessionStorage.getItem('userData'));
+            // Check if the pin code length is exactly 6
+            if (pinCode.length === 6) {
+                let apiUrl = `https://api.postalpincode.in/pincode/${pinCode}`;
+                fetch(apiUrl)
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log(data);
+                        if (data[0].Status === "Success") {
+                            const userData=JSON.parse(sessionStorage.getItem('userData'));
+                            // const length = data[0].PostOffice.length;
+                            // document.getElementById('city').value=data[0].PostOffice[0].District;
+                            document.getElementById('stateOrDistrict').value=`${data[0].PostOffice[0].State} / ${data[0].PostOffice[0].District}`;
+                            userData.state=data[0].PostOffice[0].State;
+                            userData.pinCode=pinCode;
+                            userData.district=data[0].PostOffice[0].District;
+                            console.log(data[0].PostOffice[0].District);
+                            console.log(document.getElementById('stateOrDistrict').value)
+                            console.log("hello")
+                            console.log(length);
+                            sessionStorage.setItem('userData',JSON.stringify(userData));
+                        } else {
+                            console.error('Error: Pincode not found or invalid.');
+                        }
+                    })
+                    .catch(error => console.error('Error fetching data:', error));
+            } else {
+                console.log('Pin code must be exactly 6 digits.');
+            }
+        });
+    </script>
+    
+<!-- 
+
+    <script>
+        $(document).ready(function () {
+            // Array of Indian states
+            const states = [
+                "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh",
+                "Goa", "Gujarat", "Haryana", "Himachal Pradesh", "Jharkhand", "Karnataka",
+                "Kerala", "Madhya Pradesh", "Maharashtra", "Manipur", "Meghalaya",
+                "Mizoram", "Nagaland", "Odisha", "Punjab", "Rajasthan", "Sikkim",
+                "Tamil Nadu", "Telangana", "Tripura", "Uttar Pradesh", "Uttarakhand",
+                "West Bengal", "Andaman and Nicobar Islands", "Chandigarh", "Dadra and Nagar Haveli and Daman and Diu",
+                "Lakshadweep", "Delhi", "Puducherry", "Ladakh", "Jammu and Kashmir"
+            ];
+
+
+            $("#state").autocomplete({
+                source: states,
+                minLength: 1 // Minimum number of characters before suggestions appear
+            }).data("ui-autocomplete")._renderItem = function (ul, item) {
+                return $("<li>")
+                    .append("<div class='ui-menu-item-wrapper'>" + item.label + "</div>")
+                    .appendTo(ul);
+            };
+        });
+    </script> -->
+    <script>
+        $(document).ready(function () {
+            if (sessionStorage.getItem('persionalDetails2Data')) {
+                const persional_details_2_Data = JSON.parse(sessionStorage.getItem('persionalDetails2Data'));
+                document.getElementById('financial-year').value = persional_details_2_Data.financialYear;
+                document.getElementById('assessment-year').value = persional_details_2_Data.assessmentYear;
+                document.getElementById('taxPayerStatus').value = persional_details_2_Data.taxPayerStatus;
+                document.getElementById('citizenStatus').value = persional_details_2_Data.citizenStatus;
+                document.getElementById('pinCode').value = persional_details_2_Data.pinCode;
+                document.getElementById('stateOrDistrict').value = persional_details_2_Data.state;
+                console.log( persional_details_2_Data.state);
+                document.getElementById('flat').value = persional_details_2_Data.flat;
+                document.getElementById('city').value = persional_details_2_Data.city;
+                document.getElementById('locality').value = persional_details_2_Data.locality;
+            }
+            if (JSON.parse(sessionStorage.getItem('userData')).panNumber[3] == 'P') {
+                document.getElementById('taxPayerStatus').value = 'individual';
+            }
+
+        })
+    </script>
+    <script>
+        function saveData(button) {
+            const userData=JSON.parse(sessionStorage.getItem('userData'));
+            let persionalDetails2Data = {
+                financialYear: document.getElementById('financial-year').value.trim(),
+                assessmentYear: document.getElementById('assessment-year').value.trim(),
+                taxPayerStatus: document.getElementById('taxPayerStatus').value.trim(),
+                citizenStatus: document.getElementById('citizenStatus').value.trim(),
+                pinCode: document.getElementById('pinCode').value.trim(),
+                state: document.getElementById('stateOrDistrict').value.trim(),
+                flat: document.getElementById('flat').value.trim(),
+                city: document.getElementById('city').value.trim(),
+                locality: document.getElementById('locality').value.trim(),
+            }
+            userData.financialYear=document.getElementById('financial-year').value.trim();
+            userData.assessmentYear=document.getElementById('assessment-year').value.trim();
+            userData.taxPayerStatus=document.getElementById('taxPayerStatus').value.trim();
+            userData.citizenStatus=document.getElementById('citizenStatus').value.trim();
+            // userData.pinCode=document.getElementById('pinCode').value.trim();
+            sessionStorage.setItem('userData', JSON.stringify(userData));
+            console.log(persionalDetails2Data.state)
+            sessionStorage.setItem('persionalDetails2Data', JSON.stringify(persionalDetails2Data))
+            
+            if (button.id == "continue") {
+                if(persionalDetails2Data.citizenStatus=='nonResident' ){
+                    
+                    alert("because you are not resident of india you are not eligible for ITR1")
+                }else if(persionalDetails2Data.assessmentYear==''){
+                    alert("Please fill the assessment year");
+                }
+                else if(persionalDetails2Data.citizenStatus=='resident'){
+                    window.location.href = "financial_details_PART_A.html";
+                }
+                
+            } else if (button.id = "back") {
+                window.location.href = "persional_details_1.html";
+            }
+        }
+
+    </script>
+
+    <!-- Button class change script -->
+    <script>
+        $(document).ready(function () {
+            function changeButtonClass() {
+                var $uploadForm16Btn = $('#personalDetails');
+                $uploadForm16Btn.removeClass('btn-outline-primary');
+                $uploadForm16Btn.addClass('btn-primary');
+            }
+
+            setTimeout(changeButtonClass, 1000);
+        });
+    </script>
+
+    <!-- Modal trigger script -->
+    <script>
+        $(document).ready(function () {
+            $('#citizenStatus').on('change', function () {
+                if ($(this).val() === 'nonResident') {
+                    console.log("hello jitu");
+                    $('#citizenModal').modal('show');
+                }
+            });
+        });
+    </script>
+    <script>
+        document.getElementById('assessment-year').addEventListener('input', function () {
+            const assessmentYear = this.value;
+            const financialYearInput = document.getElementById('financial-year');
+
+            // Extract start and end year from the assessment year
+            const [startYear, endYear] = assessmentYear.split('-').map(Number);
+
+            if (!isNaN(startYear) && !isNaN(endYear)) {
+                // Calculate the financial year which is one year back
+                const financialYearStart = startYear - 1;
+                const financialYearEnd = endYear - 1;
+                const financialYear = `${financialYearStart}-${financialYearEnd}`;
+
+                // Set the calculated financial year in the financial year input field
+                financialYearInput.value = financialYear;
+            }
+        });
+    </script>
+
+</body>
+
+</html>

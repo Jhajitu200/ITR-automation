@@ -1,0 +1,116 @@
+#overlayText {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    pointer-events: none;
+    z-index: 1;
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+}
+
+
+
+@media (min-width: 1200px) {
+    #responsiveText {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 1200px) {
+    #responsiveText {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 992px) {
+    #responsiveText {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    #responsiveText {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    #responsiveText {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    #responsiveText {
+        font-size: 12px;
+    }
+}
+
+#targetDiv {
+    padding: 0;
+    margin: 0;
+    position: relative;
+    /* Position context for absolute positioning */
+}
+
+label {
+    /* white-space: nowrap; */
+    font-size: 1rem;
+    /* Adjust this as necessary */
+    flex: 1;
+}
+
+.call-option {
+    display: none !important;
+}
+
+.sticky-icon {
+    display: none !important;
+}
+
+.sticky-bar {
+    display: none !important;
+}
+
+
+input{
+    padding: 7px, 45px, 7px, 45px;
+    border-radius: 8px;
+    border: 1px solid #1167AF
+}
+
+label{
+    margin-bottom: 0px;
+}
+
+.custom-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8 8"><path d="M0 2l4 4 4-4H0z"/></svg>');
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    padding-right: 2.5rem; 
+}
+
+
+.form-control {
+    width: 90%;
+    padding: 10px;
+    margin: 0px 0;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.form-control:focus {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border-color: #66afe9;
+    outline: none;
+}

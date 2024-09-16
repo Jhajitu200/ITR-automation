@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>ITR Form</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://unpkg.com/htmlincludejs"></script>
+
+    <link href="public/img/JJTax-logo.png" rel="icon" type="image/png">
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/style_new.css?v=1.1.6">
+    <link rel="stylesheet" href="public/css/navbar.css">
+    <link rel="stylesheet" href="public/css/ticker.css">
+    <link rel="stylesheet" href="public/css/common.css">
+    <link rel="stylesheet" href="public/css/current_tab_indicator.css">
+    <link rel="stylesheet" href="public/css/itr_book_call.css">
+    <link href="public/css/persional_details.css" rel="stylesheet">
+    <style>
+        /* Modal backdrop */
+        .modal-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1040;
+            display: none;
+        }
+
+        /* Modal */
+        .modal {
+            z-index: 1050;
+        }
+
+        /* Blur surrounding content */
+        .blur {
+            filter: blur(5px);
+        }
+    </style>
+    <style>
+        .form-control {
+            width: 90%;
+            padding: 10px;
+            margin: 0px 0;
+            box-sizing: border-box;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-control:focus {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            border-color: #66afe9;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <include src="includes/header.html"></include>
+    <div class="ticker-wrap">
+        <ul class="ticker" id="tickers"></ul>
+    </div>
+
+    <div
+        style="background: linear-gradient(180deg, rgba(17, 103, 175, 0.77) 0, rgba(17, 103, 175, 0.77) 277px, white 277px);padding-top: 8px;">
+        <div id="overlayText" style="text-align: center;">
+            <strong id="responsiveText" style="color: white;">Self file ITR within 15 minutes </strong>
+        </div>
+        <div class="container"
+            style="background: #F4F6FC;padding-top: 1%; width: 74%; border-top-left-radius: 10px;border-top-right-radius: 10px;">
+            <include src="includes/current_tab_indicator.html"></include>
+            <h5 class="text-center mt-2">Please fill in your details. We will keep them confidential.</h5>
+            <div class="row mt-2"
+                style="background: #FFFFFF; width: 90%; margin: auto;padding-top: 2%;padding-left: 2%; border-top-left-radius: 10px;border-top-right-radius: 10px;">
+                <div class="col-md-12">
+                    <b>Note: Please enter above mentioned details as mentioned on your PAN card.</b>
+                    <!-- Personal details form -->
+                    <form style="margin-top: 10px;">
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="firstName">First Name</label>
+                                <input type="text" class="form-control" id="firstName" name="firstName"
+                                    style="width: 90%;" required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="middleName">Middle Name</label>
+                                <input type="text" class="form-control" id="middleName" name="middleName"
+                                    style="width: 90%;">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" class="form-control" id="lastName" name="lastName"
+                                    style="width: 90%;" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="panNumber">PAN Number*</label>
+                                <input type="text" class="form-control" id="panNumber" name="panNumber"
+                                    style="width: 90%;" required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="aadharNumber">Aadhar Number</label>
+                                <input type="text" class="form-control" id="aadharNumber" name="aadharNumber" required
+                                    style="text-align: left; width: 90%;" oninput="validateAadharNumber(this)">
+                                <span id="aadharError" style="color: red;"></span>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="mobileNumber">Mobile Number</label>
+                                <input type="text" class="form-control" id="mobileNumber" name="mobileNumber" required
+                                    style="text-align: left; width: 90%;" oninput="validateMobileNumber(this)">
+                                <span id="mobileError" style="color: red;"></span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="dob">Date of Birth</label>
+                                <input type="date" class="form-control" id="dob" name="dob" required style="width: 90%;"
+                                    placeholder="MM/DD/YYYY" max="2004-12-31">
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="emailID">Email ID</label>
+                                <input type="text" class="form-control" id="emailID" name="emailID"
+                                    style="width: 90%; text-align:left" >
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="employementType">employement Type</label>
+                                <select class="form-control" id="employementType" name="employementType" style="width:90%">
+                                    <option value="government">government</option>
+                                    <option value="other">other</option> 
+                                </select>
+                                
+                            </div>
+                        </div>
+                        <!-- <div class="form-row">
+                            <div class="form-group col-md-4">
+                                <label for="state">state</label>
+                                <input type="text" class="form-control" id="state" name="state" required
+                                    style="text-align: right; width: 90%;">
+                                <span id="mobileError" style="color: red;"></span>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="flat">flat/door/block no.</label>
+                                <input type="text" class="form-control" id="flat" name="flat" style="width: 90%;"
+                                    required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="city">town/city/district</label>
+                                <input type="text" class="form-control" id="city" name="city" style="width: 90%;"
+                                    required>
+                            </div>
+                            <div class="form-group col-md-4">
+                                <label for="locality">locality</label>
+                                <input type="text" class="form-control" id="locality" name="locality"
+                                    style="width: 90%;" required>
+                            </div>
+                        </div> -->
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+
+                                <button type="button" class="btn btn-secondary btn-block" id="back"
+                                    style="background: linear-gradient(180deg, rgba(17, 103, 175, 0.7) 33.5%, #1167AF 100%);"
+                                    onclick="validateFormAndSaveDetails(this)">
+                                    &lt;&lt; Back
+                                </button>
+
+                            </div>
+                            <div class="form-group col-md-6">
+                                <!-- Placeholder for content if needed -->
+                            </div>
+                            <div class="form-group col-md-3">
+
+                                <button type="button" class="btn btn-primary btn-block" id="continue"
+                                    style="background: linear-gradient(180deg, rgba(17, 103, 175, 0.7) 33.5%, #1167AF 100%);width:90%"
+                                    onclick="validateFormAndSaveDetails(this)">
+                                    Continue &gt&gt;
+                                </button>
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="errorModal" class="modal" tabindex="-1" role="dialog" style="display: none;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <p id="errorMessage" style="text-align: center;"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <include src="includes/ITR_book_call.html"></include>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="datas/dynamic-contents.js"></script>
+    <script src="public/js/ticker.js"></script>
+    <script src="public/js/data_filling.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            var $uploadForm16Btn = $('#personalDetails');
+            $uploadForm16Btn.removeClass('btn-outline-primary');
+            $uploadForm16Btn.addClass('btn-primary');
+        });
+        document.getElementById('panNumber').addEventListener('input', function (e) {
+            let value = e.target.value.toUpperCase();
+            if (value.length > 10) {
+                value = value.slice(0, 10);
+            }
+            e.target.value = value;
+        });
+
+        const personalDetails1Data = JSON.parse(sessionStorage.getItem('personalDetails1Data'));
+        if (personalDetails1Data) {
+            document.getElementById('firstName').value = personalDetails1Data.firstName;
+            document.getElementById('middleName').value = personalDetails1Data.middleName;
+            document.getElementById('lastName').value = personalDetails1Data.lastName;
+            document.getElementById('panNumber').value = personalDetails1Data.panNumber;
+            document.getElementById('aadharNumber').value = personalDetails1Data.aadharNumber;
+            document.getElementById('mobileNumber').value = personalDetails1Data.mobileNumber;
+            document.getElementById('emailID').value = personalDetails1Data.email;
+            console.log("i am ready to day dob",personalDetails1Data.email);
+            console.log("i am ready to day dob",personalDetails1Data.dob);
+            document.getElementById('dob').value = personalDetails1Data.dob;
+            document.getElementById('employementType').value = personalDetails1Data.employementType;
+        }
+
+
+        function validateMobileNumber(input) {
+            let value = input.value.replace(/[^0-9]/g, '');
+
+
+            if (value.length > 10) {
+                value = value.slice(0, 10);
+            }
+
+
+            input.value = value;
+
+            if (value.length !== 10) {
+                document.getElementById('mobileError').textContent = 'Mobile number must be exactly 10 digits.';
+            } else if (!/^([6-9])([0-9]{9})$/.test(value)) {
+                document.getElementById('mobileError').textContent = 'Invalid mobile number format.';
+            } else {
+                document.getElementById('mobileError').textContent = '';
+            }
+        }
+
+
+
+        function validateAadharNumber(input) {
+            let value = input.value.replace(/\D/g, '');
+
+            if (value.length > 12) {
+                value = value.slice(0, 12);
+            }
+
+
+            let formattedValue = '';
+            for (let i = 0; i < value.length; i++) {
+                if (i > 0 && i % 4 === 0) {
+                    formattedValue += ' ';
+                }
+                formattedValue += value[i];
+            }
+
+
+            input.value = formattedValue.trim();
+
+            document.getElementById('aadharError').textContent = value.length !== 12 ? 'Aadhar number must be exactly 12 digits.' : '';
+        }
+
+        function validateFormAndSaveDetails(button) {
+            let validate = true;
+            let firstName = document.getElementById('firstName').value.trim();
+            let middleName = document.getElementById('middleName').value.trim();
+            let lastName = document.getElementById('lastName').value.trim();
+            let panNumber = document.getElementById('panNumber').value.trim();
+            let aadharNumber = document.getElementById('aadharNumber').value.replace(/\s/g, '');
+            console.log(aadharNumber);
+            let mobileNumber = document.getElementById('mobileNumber').value.trim();
+            let email = document.getElementById('emailID').value.trim();
+            // let email = document.getElementById('emailID').value.trim();
+            let employementType = document.getElementById('employementType').value.trim();
+            console.log("this is employementType",employementType)
+            console.log("this is email", email);
+            let dob = document.getElementById('dob').value.trim();
+            console.log("this is my dob",dob);
+            if (firstName === "") {
+                showError("Please fill in the first name field.");
+                validate = false;
+            }
+            if (lastName === "") {
+                showError("Please fill in the last name field.");
+                validate = false;
+            }
+
+            if (panNumber === "") {
+                showError("Please fill in the PAN number field.");
+                validate = false;
+            }
+            else if (panNumber.length < 10) {
+                showError("Pan number should be of length 10");
+                validate = false;
+            }
+            else {
+                validate = validatePANNumber(panNumber);
+                if (validate == false) {
+                    showError("Invalid PAN Number");
+                }
+            }
+
+            console.log(email);
+            if (email == "") {
+                showError('please enter the EmailId')
+                validate = false;
+                console.log("email validation ==",validate)
+            }
+            else if (email != "") {
+                validate = validateEmail(email);
+                console.log("email validation !",validate);
+                if (validate == false) {
+                    showError('please enter correct EmailId')
+                }
+            }
+            function validatePANNumber(panNumber) {
+                let panRegex = /^[A-Z]{5}[0-9]{4}[A-Z]{1}$/;
+                if (!panRegex.test(panNumber)) {
+                    showError('Incorrect PAN NUmber pattern')
+                    return false;
+                } else {
+
+                    return true;
+                }
+            }
+            function validateEmail(email) {
+                let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                if (!emailRegex.test(email)) {
+                    showError('Invalid email ID format.');
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+            function calculateAge() {
+                if (!dob) {
+                    showError("Please enter your date of birth.");
+                    return false;
+                }
+                let dobDate = new Date(dob);
+                let targetDate = new Date('2023-04-01');
+                let age = targetDate.getFullYear() - dobDate.getFullYear();
+                let monthDifference = targetDate.getMonth() - dobDate.getMonth();
+                let dayDifference = targetDate.getDate() - dobDate.getDate();
+
+                if (monthDifference < 0 || (monthDifference === 0 && dayDifference < 0)) {
+                    age--;
+                }
+
+                return age;
+            }
+
+            if (aadharNumber === "") {
+                showError("Please fill in the Aadhar number field.");
+                validate = false;
+            }
+            else if (aadharNumber.length < 12) {
+                showError("aadhar number length must be =12");
+                validate = false;
+            }
+            if (mobileNumber == "") {
+                showError("Please fill in the mobile number field.");
+                validate = false;
+            } else if (mobileNumber.length < 10) {
+                showError("mobile number lenght should be =10.");
+                validate = false;
+            } else if (mobileNumber[0] != '9' && mobileNumber[0] != '8' && mobileNumber[0] != '7') {
+                console.log(mobileNumber[0]);
+                showError("Incorrect mobile number Format.");
+                validate = false;
+            }
+
+            let age = calculateAge();
+            console.log(age);
+            if (age == false) {
+                validate = false;
+                showError('Please enter DATE of birth')
+            }
+            else if (age < 18) {
+                showError('Below 18 is not eligible for this ITR')
+                validate = false;
+            }
+
+            let personalDetails1Data = {
+                firstName: firstName,
+                middleName: middleName,
+                lastName: lastName,
+                panNumber: panNumber,
+                aadharNumber: aadharNumber,
+                mobileNumber: mobileNumber,
+                email: email,
+                dob: dob,
+                employementType:employementType
+            };
+            console.log("this is persional employemt type",personalDetails1Data.dob);
+
+            sessionStorage.setItem('personalDetails1Data', JSON.stringify(personalDetails1Data));
+
+            let userData = JSON.parse(sessionStorage.getItem('userData')) || {};
+            userData.firstName = firstName;
+            userData.middleName = middleName;
+            userData.lastName = lastName;
+            userData.panNumber = panNumber;
+            userData.aadharNumber = aadharNumber;
+            userData.mobileNumber = mobileNumber;
+            userData.email = email;
+            userData.age = age;
+            userData.employmentType=employementType;
+            console.log("this is employement type");
+            sessionStorage.setItem('userData', JSON.stringify(userData));
+            console.log("this is testing of user data jitu",userData.employmentType);
+            console.log("UserData:", userData);
+            console.log("this is validate", validate);
+
+
+            if (button.id === 'continue' && validate) {
+                console.log(button.id);
+                dataBase(personalDetails1Data);
+                window.location.href = 'persional_details_2.html';
+            } else if (button.id === 'back') {
+                console.log(button.id);
+                dataBase(personalDetails1Data);
+                window.location.href = 'upload.html';
+            }
+
+
+
+        }
+
+        function showError(message) {
+            let errorModal = document.getElementById('errorModal');
+            let errorMessage = document.getElementById('errorMessage');
+            errorMessage.textContent = message;
+
+            errorModal.style.display = 'block';
+            document.body.insertAdjacentHTML('beforeend', '<div class="modal-backdrop "></div>');
+            document.querySelector('.modal-backdrop').style.display = 'block';
+
+            setTimeout(() => {
+                errorModal.style.display = 'none';
+                document.querySelector('.modal-backdrop').remove();
+            }, 2000);
+        }
+
+        document.getElementById('dob').addEventListener('input', function (e) {
+            var input = e.target;
+            var value = input.value;
+            var length = value.length;
+
+            if ((length === 2 || length === 5) && e.inputType !== 'deleteContentBackward') {
+                input.value += '/';
+            }
+        });
+
+        document.getElementById('dob').addEventListener('keydown', function (e) {
+            var key = e.keyCode || e.charCode;
+            if (key === 8 || key === 46) {
+                var input = e.target;
+                var value = input.value;
+                if (value.length === 3 || value.length === 6) {
+                    input.value = value.substring(0, value.length - 1);
+                }
+            }
+        });
+    </script>
+    <script>
+        $(document).ready(function () {
+            function changeButtonClass() {
+                var $uploadForm16Btn = $('#personalDetails');
+                $uploadForm16Btn.removeClass('btn-outline-primary');
+                $uploadForm16Btn.addClass('btn-primary');
+            }
+
+            setTimeout(changeButtonClass, 1000);
+        });
+    </script>
+    <script>
+        function dataBase(persional_details){
+          fetch('http://127.0.0.1:8000/store-data', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+            },
+            body: JSON.stringify(persional_details)
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Success:', data);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });}
+    </script>
+</body>
+
+</html>

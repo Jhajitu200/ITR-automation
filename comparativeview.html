@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITR Form</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/htmlincludejs"></script>
+
+    <!-- <link rel="canonical" href="https://jjfintax.com"> -->
+    <link href="public/img/JJTax-logo.png" rel="icon" type="image/png">
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="../public/css/scrmob.css"> -->
+    <link rel="stylesheet" href="public/css/style_new.css?v=1.1.6">
+    <link rel="stylesheet" href="public/css/navbar.css">
+    <link href="public/css/financial_details.css" rel="stylesheet">
+    <link href="public/css/current_tab_indicator.css" rel="stylesheet">
+    <link rel="stylesheet" href="public/css/ticker.css">
+    <link rel="stylesheet" href="public/css/common.css">
+    <link rel="stylesheet" href="public/css/itr_book_call.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+    <style>
+        .chart-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 20vh;
+        }
+    </style>
+    <style>
+        .form-control {
+            width: 90%;
+            padding: 10px;
+            margin: 0px 0;
+            box-sizing: border-box;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-control:focus {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            border-color: #66afe9;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <include src="includes/header.html"></include>
+    <div class="ticker-wrap">
+        <ul class="ticker" id="tickers"></ul>
+    </div>
+
+    <div
+        style="background: linear-gradient(180deg, rgba(17, 103, 175, 0.77) 0, rgba(17, 103, 175, 0.77) 277px, white 277px);padding-top: 8px;">
+        <div id="overlayText" style="text-align: center;"><strong id="responsiveText" style="color: white;">Self file
+                ITR within 15 minutes</strong></div>
+
+        <div class="container " style="background: #F4F6FC; max-width: 80%;padding-top: 1%;border-top-left-radius: 2%;
+        border-top-right-radius: 2%;
+        ">
+            <include src="includes/current_tab_indicator.html"></include>
+            <h5 class="text-center" style="font-weight: 600;">Income Details</h5>
+            <p class="text-center" style="width: 80%;margin: auto;font-size: 14px;"><strong>Disclamer:</strong> Please
+                fill in correct details. Kindly note we are not responsible for any wrong information provided by the
+                user. We recommend to get in touch with our tax experts for further assistance.</p>
+            <div class="row mt-4" style="background: #FFFFFF; margin: auto;width: 95%;border-radius: 1%;">
+                <div class="col-md-12">
+
+                    <form id="content">
+                        <div class="form-row align-items-center mt-2" style="padding-left: 2%;">
+                            <div class="col-md-6 col-4">
+                                <!-- Placeholder for content on the left, if needed -->
+                            </div>
+                            <div class="col-md-6 col-8">
+                                <div class="row" style="color: #1167AF;font-family: League Spartan;
+                                    font-size: 26px;
+                                    font-weight: 600;
+                                    line-height: 23.92px;
+                                    text-align: left;                                    
+">
+                                    <div class="col-md-6 col-6">
+                                        Old Tax Regime
+                                    </div>
+                                    <div class="col-md-6 col-6">
+                                        New Tax Regime
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2" style="">
+                            <div class="col-md-6 col-4">
+                                <label for="grosTotalIncome">Gross Total Income</label>
+                            </div>
+                            <div class="col-md-6 col-8">
+                                <div class="row">
+                                    <div class="col-md-6 col-6">
+                                        <input type="number" class="form-control mb-2" id="grosTotalIncomeOld"
+                                            name="grosTotalIncome" placeholder="" readonly>
+                                    </div>
+                                    <div class="col-md-6 col-6">
+                                        <input type="number" class="form-control mb-2" id="grosTotalIncomeNew"
+                                            name="grosTotalIncome" placeholder="" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-6">
+                                <label for="totalDeductions">Less: Total Deductions</label>
+                            </div>
+                            <div class="col-md-6 ">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="number" class="form-control mb-2" id="totalDeductionsOld"
+                                            name="totalDeductions" placeholder="" readonly>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="number" class="form-control mb-2" id="totalDeductionsNew"
+                                            name="totalDeductions" placeholder="" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2" style="">
+                            <div class="col-md-6">
+                                <label for="totalIncome">Total Income</label>
+                            </div>
+                            <div class="col-md-6 ">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="number" class="form-control mb-2" id="totalIncomeOld"
+                                            name="totalIncome" placeholder="" readonly>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="number" class="form-control mb-2" id="totalIncomeNew"
+                                            name="totalIncome" placeholder="" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2" style="">
+                            <div class="col-md-6">
+                                <label for="taxAmount">Tax Amount</label>
+                            </div>
+                            <div class="col-md-6 ">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="number" class="form-control mb-2" id="taxAmountOld" name="taxAmount"
+                                            placeholder="" readonly>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="number" class="form-control mb-2" id="taxAmountNew" name="taxAmount"
+                                            placeholder="" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-6">
+                                <label for="rebate">Rebate under section 87A</label>
+                            </div>
+                            <div class="col-md-6 ">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="number" class="form-control mb-2" id="rebateOld" name="rebate"
+                                            placeholder="" readonly>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="number" class="form-control mb-2" id="rebateNew" name="rebate"
+                                            placeholder="" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2">
+                            <div class="col-md-6">
+                                <label for="healthEducationCess">Health & Education Cess @4%</label>
+                            </div>
+                            <div class="col-md-6 ">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="number" class="form-control mb-2" id="healthEducationCessOld"
+                                            name="healthEducationCess" placeholder="" readonly>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="number" class="form-control mb-2" id="healthEducationCessNew"
+                                            name="healthEducationCess" placeholder="" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2" style="">
+                            <div class="col-md-6">
+                                <label for="netTaxPayable">Net Tax Payable</label>
+                            </div>
+                            <div class="col-md-6 ">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <input type="number" class="form-control mb-2" id="netTaxPayableOld"
+                                            name="netTaxPayable" placeholder="" readonly>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="number" class="form-control mb-2" id="netTaxPayableNew"
+                                            name="netTaxPayable" placeholder="" readonly>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2" style="">
+                            <div class="col-md-6">
+                                <label for="chooseRegime">Choose the regime</label>
+                            </div>
+
+                            <div class="col-md-6 ">
+                                <div class="row" style="padding-left: 5%;">
+                                    <div class="col-md-6">
+                                        <input class="form-check-input" type="radio" name="chooseRegime" id="oldRegime"
+                                            value="yes" required>
+                                        <label class="form-check-label" for="incomeYes">Old Tax Regime</label>
+                                    </div>
+                                    <div class="col-md-6" style="padding-left: 20px;">
+                                        <input class="form-check-input" type="radio" name="chooseRegime" id="newRegime"
+                                            value="yes" required>
+                                        <label class="form-check-label" for="incomeYes">New Tax Regime</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row align-items-center mt-2" style="">
+
+                            <div id="message-to-user"></div>
+
+                        </div>
+                        <!-- <div class="form-row align-items-center mt-2" style="">
+                            
+                            <canvas id="myHistogramChart" width="400" height="400"></canvas>
+
+                        </div> -->
+                        <!-- <div class="form-row align-items-center mt-2" style="">
+                            
+                            <button id="downloadPdf"> downloadPdf</button>
+
+                        </div> -->
+                        <div class="form-row mt-2">
+                            <div class="form-group col-md-3">
+                                <a href="financial_details_part_D.html">
+                                    <button type="button" class="btn btn-secondary btn-block"
+                                        style="background: linear-gradient(180deg, rgba(17, 103, 175, 0.7) 33.5%, #1167AF 100%);width: 90%;">
+                                        &lt;&lt; Back
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="form-group col-md-6">
+
+                            </div>
+                            <div class="form-group col-md-3">
+
+                                <button type="button" class="btn btn-primary btn-block" id="continue"
+                                    style="background: linear-gradient(180deg, rgba(17, 103, 175, 0.7) 33.5%, #1167AF 100%);width: 90%;"
+                                    onclick="saveData(this)">
+                                    Continue &raquo;
+                                </button>
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <include src="includes/ITR_book_call.html"></include>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="public/flip/flip.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="datas/dynamic-contents.js"></script>
+    <script src="public/js/ticker.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            function changeButtonClass() {
+                var $uploadForm16Btn = $('#comparativeView');
+                $uploadForm16Btn.removeClass('btn-outline-primary');
+                $uploadForm16Btn.addClass('btn-primary');
+            }
+
+            setTimeout(changeButtonClass, 1000);
+        });
+
+    </script>
+
+    <script>
+        $(document).ready(function () {
+
+//             let userData = JSON.parse(sessionStorage.getItem('userData'));
+// let totalIncomeOld = userData.netSalary + userData.netAnnualValue + userData.totalIncome - userData.oldTaxRegime.TotalDeductions;
+// let totalIncomeNew = userData.netSalary + userData.netAnnualValue + userData.totalIncome - userData.newTaxRegime.TotalDeductions;
+
+// let taxAmountOld = calculateOldRegimeTax(totalIncomeOld, userData.age);
+// let taxAmountNew = calculateNewRegimeTax(totalIncomeNew);
+
+// document.getElementById('grosTotalIncomeOld').value = userData.netSalary + userData.netAnnualValue + userData.totalIncome;
+// document.getElementById('grosTotalIncomeNew').value = userData.netSalary + userData.netAnnualValue + userData.totalIncome;
+// document.getElementById('totalDeductionsOld').value = userData.oldTaxRegime.TotalDeductions;
+// document.getElementById('totalDeductionsNew').value = userData.newTaxRegime.TotalDeductions;
+// document.getElementById('totalIncomeOld').value = totalIncomeOld;
+// document.getElementById('totalIncomeNew').value = totalIncomeNew;
+// document.getElementById('taxAmountOld').value = taxAmountOld;
+// document.getElementById('taxAmountNew').value = taxAmountNew;
+
+// let rebateOld = calculateRebateOld(totalIncomeOld, taxAmountOld);
+// let rebateNew = calculateRebateNew(totalIncomeNew, taxAmountNew);
+
+// document.getElementById('rebateOld').value = rebateOld;
+// document.getElementById('rebateNew').value = rebateNew;
+
+// let healthEducationCessOld = calculateHealthEducationCess(taxAmountOld, rebateOld);
+// let healthEducationCessNew = calculateHealthEducationCess(taxAmountNew, rebateNew);
+
+// document.getElementById('healthEducationCessOld').value = healthEducationCessOld;
+// document.getElementById('healthEducationCessNew').value = healthEducationCessNew;
+
+// let netTaxPayableOld = calculateNetTaxPayable(taxAmountOld, rebateOld, healthEducationCessOld);
+// let netTaxPayableNew = calculateNetTaxPayable(taxAmountNew, rebateNew, healthEducationCessNew);
+
+// document.getElementById('netTaxPayableOld').value = netTaxPayableOld;
+// document.getElementById('netTaxPayableNew').value = netTaxPayableNew;
+
+// displayRecommendation(userData, netTaxPayableOld, netTaxPayableNew);
+
+// // Functions for calculations
+// function calculateOldRegimeTax(income, age) {
+//     if (income <= 250000) return 0;
+//     if (income <= 300000) return age < 60 ? (income - 250000) * 0.05 : 0;
+//     if (income <= 500000) return age < 60 ? 50000 * 0.05 + (income - 300000) * 0.05 : (income - 300000) * 0.05;
+//     if (income <= 1000000) return age < 60 ? 250000 * 0.05 + (income - 500000) * 0.20 : (age < 80 ? 200000 * 0.05 + (income - 500000) * 0.20 : (income - 500000) * 0.20);
+//     return age < 60 ? 250000 * 0.05 + 500000 * 0.20 + (income - 1000000) * 0.30 : (age < 80 ? 200000 * 0.05 + 500000 * 0.20 + (income - 1000000) * 0.30 : 500000 * 0.20 + (income - 1000000) * 0.30);
+// }
+
+// function calculateNewRegimeTax(income) {
+//     if (income <= 300000) return 0;
+//     if (income <= 600000) return (income - 300000) * 0.05;
+//     if (income <= 900000) return 300000 * 0.05 + (income - 600000) * 0.10;
+//     if (income <= 12000000) return 300000 * 0.05 + 600000 * 0.10 + (income - 900000) * 0.15;
+//     if (income <= 15000000) return 300000 * 0.05 + 600000 * 0.10 + 900000 * 0.15 + (income - 1200000) * 0.20;
+//     return 300000 * 0.05 + 600000 * 0.10 + 900000 * 0.15 + 1200000 * 0.20 + (income - 1500000) * 0.30;
+// }
+
+// function calculateRebateOld(income, tax) {
+//     if (income <= 500000) return Math.min(tax, 12500);
+//     return 0;
+// }
+
+// function calculateRebateNew(income, tax) {
+//     if (income <= 700000) return Math.min(tax, 25000);
+//     return 0;
+// }
+
+// function calculateHealthEducationCess(tax, rebate) {
+//     return (tax - rebate) * 0.04;
+// }
+
+// function calculateNetTaxPayable(tax, rebate, cess) {
+//     return Math.round(tax - rebate + cess);
+// }
+
+// function displayRecommendation(userData, netTaxPayableOld, netTaxPayableNew) {
+//     let message;
+//     if (netTaxPayableOld < netTaxPayableNew) {
+//         message = `
+//             <span>
+//                 <b>Recommendation:</b> Hi <b>${userData.firstName} ${userData.middleName} ${userData.lastName}</b> 😊, 
+//                 Hope you are doing well! 
+//                 You should opt for the old regime as it will help you save ₹${Math.round(netTaxPayableNew - netTaxPayableOld)} 💰.
+//             </span>
+//         `;
+//     } else if (netTaxPayableNew < netTaxPayableOld) {
+//         message = `
+//             <span>
+//                 <b>Recommendation:</b> Hi <b>${userData.firstName} ${userData.middleName} ${userData.lastName}</b> 😊, 
+//                 Hope you are doing well! 
+//                 You should opt for the new regime as it will help you save ₹${Math.round(netTaxPayableOld - netTaxPayableNew)} 💰.
+//             </span>
+//         `;
+//     } else {
+//         message = `
+//             <span>
+//                 <b>Recommendation:</b> Hi <b>${userData.firstName} ${userData.middleName} ${userData.lastName}</b> 😊, 
+//                 Hope you are doing well! 
+//                 You can opt for either the old or new regime, however, opting for the old regime would give you the benefit of availing deductions and exemptions for your investments.
+//             </span>
+//         `;
+//     }
+//     document.getElementById('message-to-user').innerHTML = message;
+// }
+
+            let userData = JSON.parse(sessionStorage.getItem('userData'));
+            let totalIncomeOld = userData.netSalary + userData.netAnnualValueOld + userData.totalIncome - userData.oldTaxRegime.TotalDeductions;
+            let totalIncomeNew = userData.netSalary + userData.netAnnualValueNew + userData.totalIncome - userData.newTaxRegime.TotalDeductions;
+            let taxAmountOld = 0;
+            let taxAmountNew = 0;
+            let rebateOld = 0;
+            let rebateNew = 0;
+            let healthEducationCessOld = 0;
+            let healthEducationCessNew = 0;
+            let netTaxPayableNew = 0;
+            let netTaxPayableOld = 0;
+            document.getElementById('grosTotalIncomeOld').value = userData.netSalary + userData.netAnnualValueOld + userData.totalIncome;
+            document.getElementById('grosTotalIncomeNew').value = userData.netSalary + userData.netAnnualValueNew + userData.totalIncome;
+            document.getElementById('totalDeductionsOld').value = userData.oldTaxRegime.TotalDeductions;
+            document.getElementById('totalDeductionsNew').value = userData.newTaxRegime.TotalDeductions;
+            document.getElementById('totalIncomeOld').value = totalIncomeOld;
+            document.getElementById('totalIncomeNew').value = totalIncomeNew;
+            if (totalIncomeOld <= 250000) {
+                taxAmountOld = 0;
+            } else if (250000 < totalIncomeOld <= 300000) {
+                if (userData.age < 60) {
+                    taxAmountOld = (totalIncomeOld-250000) * 0.05;
+                } else {
+                    taxAmountOld = 0;
+                }
+            } else if (300000 < totalIncomeOld <= 500000) {
+                if (userData.age < 60) {
+                    taxAmountOld =50000*0.05+ (totalIncomeOld-300000) * 0.05;
+                } else if (60 <= userData.age<80) {
+                    taxAmountOld = (totalIncomeOld -300000)* 0.05;
+                } else if(80<=userData.age) {
+                    taxAmountOld = 0;   
+                }
+            } else if (500000 < totalIncomeOld <= 1000000) {
+                if (userData.age < 60) {
+                    taxAmountOld = 250000*0.05 +(totalIncomeOld-500000)*0.20 ;
+                } else if (60 <= userData.age < 80) {
+                    taxAmountOld =200000*0.05+ (totalIncomeOld-500000)*0.20;
+                } else if(80<= userData.age ){
+                    taxAmountOld = (totalIncomeOld-500000)*0.20;
+                }
+            } else if (1000000 < totalIncomeOld) {
+                if (userData.age < 60) {
+                    taxAmountOld = 250000*0.05 +500000*0.20 + (totalIncomeOld-1000000)*0.30 ;
+                } else if (60 <= userData.age < 80) {
+                    taxAmountOld =200000*0.05+ 500000*0.20 + (totalIncomeOld-1000000)*0.30;
+                } else if(80<= userData.age ){
+                    taxAmountOld = 500000*0.20 + (totalIncomeOld-500000)*0.30;
+                }
+            }
+
+            if (totalIncomeNew <= 300000) {
+                taxAmountNew = 0;
+            } else if (300000 < totalIncomeNew <= 600000) {
+                taxAmountNew = (totalIncomeNew-300000) * 0.05;
+            } else if (600000 < totalIncomeNew <= 900000) {
+                taxAmountNew =300000 * 0.05+ (totalIncomeNew-600000) * 0.10;
+            } else if (900000 < totalIncomeNew <= 12000000) {
+                taxAmountNew =300000 * 0.05+ 600000 * 0.10+ (totalIncomeNew-900000) * 0.15;
+            } else if (1200000 < totalIncomeNew <= 15000000) {
+                taxAmountNew =300000 * 0.05+ 600000 * 0.10+ 900000 * 0.15 + (totalIncomeNew-1200000) * 0.20;
+            } else if (1500000 < totalIncomeNew) {
+                taxAmountNew =300000 * 0.05+ 600000 * 0.10+ 900000 * 0.15 + 1200000 * 0.20 +  (totalIncomeNew-1500000) * 0.30;
+            }
+            document.getElementById('taxAmountOld').value = taxAmountOld;
+            document.getElementById('taxAmountNew').value = taxAmountNew;
+            if (totalIncomeOld <= 500000) {
+                if(taxAmountOld>12500){
+                    rebateOld =12500 ;
+                }else{
+                    rebateOld=taxAmountOld
+                }
+                document.getElementById('rebateOld').value = rebateOld;
+            } else if (500000 < totalIncomeOld) {
+                rebateOld = 0;
+                document.getElementById('rebateOld').value = rebateOld;
+            }
+            if (totalIncomeNew <= 700000) {
+                if(taxAmountOld>25000){
+                    rebateOld =25000 ;
+                }else{
+                    rebateOld=taxAmountOld
+                }
+                document.getElementById('rebateNew').value = rebateNew;
+            } else if (700000 < totalIncomeNew) {
+                rebateNew = 0;
+                document.getElementById('rebateNew').value = rebateNew;
+            }
+            healthEducationCessOld = (taxAmountOld + rebateOld) * 0.04;
+            healthEducationCessNew = (taxAmountNew + rebateNew) * 0.04;
+            document.getElementById('healthEducationCessOld').value = healthEducationCessOld;
+            document.getElementById('healthEducationCessNew').value = healthEducationCessNew;
+            netTaxPayableOld = taxAmountOld + rebateOld - healthEducationCessOld;
+            netTaxPayableNew = taxAmountNew + rebateNew - healthEducationCessNew;
+            document.getElementById('netTaxPayableOld').value = netTaxPayableOld;
+            document.getElementById('netTaxPayableNew').value = netTaxPayableNew;
+            if (netTaxPayableOld < netTaxPayableNew) {
+                document.getElementById('message-to-user').innerHTML = `
+  <span>
+    <b>Recommandation::</b> Hi <b>${userData.firstName} ${userData.middleName} ${userData.lastName}</b> 😊, 
+    Hope you are doing well! 
+    You should opt for the new regime as it will help you save 
+    ${Math.round(netTaxPayableNew - netTaxPayableOld)} 💰.
+  </span>
+`;
+
+
+                // $("#message-to-user").html('<span><b>Recommendation:</b> Hi mr ${} <b>' + Math.round(netTaxPayableNew - netTaxPayableOld) + '</b> in taxes.</span>');
+            } else if (netTaxPayableNew < netTaxPayableOld) {
+                document.getElementById('message-to-user').innerHTML = `
+  <span>
+   <b>Recommandation::</b> Hi <b>${userData.firstName} ${userData.middleName} ${userData.lastName}</b> 😊, 
+    Hope you are doing well! 
+    You should opt for the new regime as it will help you save  ₹
+    ${Math.round(netTaxPayableOld - netTaxPayableNew)} 💰.
+  </span>
+`;
+
+
+            } else if((netTaxPayableNew = netTaxPayableOld) && netTaxPayableOld!=0) {
+                document.getElementById('message-to-user').innerHTML = `
+  <span>
+   <b>Recommandation::</b> Hi <b>${userData.firstName} ${userData.middleName} ${userData.lastName}</b> 😊, 
+    Hope you are doing well! 
+    You can opt for either old or new regime, however, opting old regime would give you the benefit of availing deductions and exemptions for your investments
+    ${Math.round(netTaxPayableOld - netTaxPayableNew)} 💰.
+  </span>
+`;
+            }
+        });
+    </script>
+    <script>
+        function saveData(button) {
+            if (button.id = 'continue') {
+                window.location.href = 'preview.html'
+
+            }
+        }
+    </script>
+</body>
+
+</html>

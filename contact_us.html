@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+   
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <div id="container">
+        <form class="contact-form" id="contactForm">
+            <h1 style="font-size: 20px;">Get in Touch</h1>
+            <div class="form-group">
+                <label for="name">Name*</label>
+                <input type="text" id="name" name="name" placeholder="eg: Jitu Kumar Jha" required>
+                <div class="warning-message"></div>
+            </div>
+            <div class="form-group">
+                <label for="mobile">Mobile Number*</label>
+                <input type="tel" id="mobile" name="mobile" placeholder="eg: 8287943093" pattern="[0-9]{10}" required>
+                <div class="warning-message"></div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email*</label>
+                <input type="email" id="email" name="email" placeholder="eg: jitujha2002@gmail.com" required>
+                <div class="warning-message"></div>
+            </div>
+            <div class="form-group">
+                <label for="service">Service</label>
+                <select id="service" name="service" required>
+                    <option value="" disabled selected>Select a service</option>
+                    <option value="Income Tax">Income Tax</option>
+                    <option value="GST">GST</option>
+                    <option value="Tax Planning">Tax Planning</option>
+                    <option value="TDS on Rent/Property">TDS on Rent/Property</option>
+                    <option value="Accounting">Accounting</option>
+                    <option value="TDS">TDS</option>
+                    <option value="Legal Services">Legal Services</option>
+                    <option value="ROC Compliances">ROC Compliances</option>
+                    <option value="Startup Services">Startup Services</option>
+                    <option value="Reply to Notice">Reply to Notice</option>
+                </select>
+                <div class="warning-message"></div>
+            </div>
+            <button type="submit" id="requestCall">Request Callback</button>
+            <p>1.5 Million+ Happy Users | Book a call with CA</p>
+        </form>
+        
+        <div class="contact-info-container">
+            <h1>Let's Get in Touch</h1>
+            <div class="contact-info">
+                <p><span class="label">Email:</span> <span class="value">contact@jjfintax.com</span></p>
+                <p><span class="label">Contact:</span> <span class="value">+91-9310854724</span></p>
+                <p class="address"><span class="label">Address:</span> <span class="value">208, Tower B, Spaze Buziness Park, Sector 66, Gurgaon - 122102, Haryana, India</span></p>
+            </div>
+        </div>
+    </div>
+    <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=..." width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            $('#contactForm').validate({
+                rules: {
+                    name: {
+                        required: true,
+                        minlength: 2
+                    },
+                    mobile: {
+                        required: true,
+                        minlength: 10,
+                        maxlength: 10,
+                        digits: true
+                    },
+                    email: {
+                        required: true,
+                        email: true
+                    },
+                    service: {
+                        required: true
+                    }
+                },
+                messages: {
+                    name: {
+                        required: "Please enter your name ",
+                        minlength: "Your name must be at least 2 characters long"
+                    },
+                    mobile: {
+                        required: "Please enter your mobile number",
+                        minlength: "Your mobile number must be 10 digits long",
+                        maxlength: "Your mobile number must be 10 digits long",
+                        digits: "Please enter a valid mobile number"
+                    },
+                    email: {
+                        required: "Please enter your email",
+                        email: "Please enter a valid email address"
+                    },
+                    service: {
+                        required: "Please select a service"
+                    }
+                },
+                errorPlacement: function(error, element) {
+                    // Place error message in the next sibling div with class warning-message
+                    error.appendTo(element.siblings('.warning-message'));
+                },
+                submitHandler: function(form) {
+                    const formData = new FormData(form);
+    
+                    fetch('process_form.php', {
+                        method: 'POST',
+                        body: formData
+                    })
+                    .then(response => response.text())
+                    .then(result => {
+                        alert(result); 
+                        form.reset(); 
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                        alert('An error occurred. Please try again.');
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

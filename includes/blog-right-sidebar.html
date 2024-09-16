@@ -1,0 +1,51 @@
+<div class="col-sm-12 col-md-12 col-lg-3">
+  <div class="section-2-related-topics-pan">
+    <p class="section-2-related-topics-title-pan" >Related Topics</p>
+    <div class="section-2-related-topics-detail-pan" style="margin-left:1rem;">
+      <div id="latest-post">
+        <div class="wrapper">
+        </div>
+      </div>   
+    </div>
+  </div>
+  <div class="section-2-related-tools-pan mt-30">
+      <p class="section-2-related-tools-title-pan" >Related Tools</p>
+      <div class="section-2-related-tools-detail-pan">
+        <ul class="related-tools">
+          <li ><a href="/emi-calculator.html">EMI Calculator</a></li>
+          <li ><a href="/tax-calculator.html">Tax Calculator</a></li>
+          <li ><a href="/hra-calculator.html">HRA Calculator</a></li>
+          <li ><a href="/tds-calculator.html">TDS Calculator</a></li>
+        </ul>
+      </div>
+  </div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/datas/blogs.js"></script>
+<script>
+  $(document).ready(function () {
+    var wrapper = $('#news-ticker-h').empty();
+    $.each(tickers, function (i, f) {
+      $('#news-ticker-h').append('<li>' + f.key + '</li>');
+    })
+  
+    var path = window.location.pathname;
+    var page = path.split("/").pop();
+
+    var currentPageDetails = json.List.filter(function (el) {
+        return el.link == '/blog/'+page;
+    });
+
+    var newArray = json.List.filter(function (el) {
+      return el.category == currentPageDetails[0].category;
+    });
+    
+    $.each(newArray, function (i, f) {        
+      if(i<=10){
+        $('#latest-post .wrapper').append("<div class='block-21 mb-4 d-flex'><a class='blog-img mr-2' style='background-image: url("+f.src+");''></a><div class='text'><h3 class='heading'><a href='"+f.link+"''>"+f.title+"</a></h3><div class='meta'><div><a href='"+f.link+"'><i class='fa fa-calendar-alt'></i> "+f.date+"</a></div></div></div></div>");
+      }
+    });
+  });
+</script>

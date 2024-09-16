@@ -1,0 +1,205 @@
+<style>
+  @media screen and (max-width: 990px) {
+   #blank-div{
+    display: none;
+   }
+  #price{
+    display: none;
+   } 
+  #contact{
+    display : none;
+  }   
+  #contact-mobile{
+    display:inline;
+  }
+  #price-mobile{
+    display:inline;
+   }
+  }
+
+  @media screen and (min-width:991px) {
+    footer{
+      height: 572px;
+    }
+    #price{
+    display: inline;
+   } 
+   #price-mobile{
+    display:none;
+   }
+   #contact{
+    display : inline;
+   }
+   
+  #contact-mobile{
+    display: none;
+  }
+  }
+</style> 
+
+
+<footer>
+    <div class="container py-5 ">
+      <div class="row display:flex change">
+        <div class="col-sm-12 col-md-12 col-lg-3 text-center" >
+          <!-- https://submit-form.com/opqN35DN -->
+          <form class="subscribe-form" >
+            <div class="control d-flex justify-content-center">
+              <input type="email" id="email" name="email" aria-label="email" placeholder="name@example.com" required="required" class="input-fields">
+              <button class="footer-input submit-btn" id="subscribe-btn" type="button"><i class="fa fa-paper-plane"></i></button>
+            </div>
+          </form>
+          <p align="center" class="is-size-7" style="padding-top: 0.25rem; color:white">
+              Two insightful newsletters every week
+          </p>
+          <div class="mobile-app-links" style="display: flex;flex-wrap: nowrap;">
+            <a href="https://play.google.com/store/apps/details?id=com.jjtax.app"><img src="./public/img/playstore.png" width="129px" height="52.5px" alt="JJ Tax APP/Play Store"></a>
+            <a href="https://jjtax.onelink.me/LXJ6/a8575660"><img src="./public/img/appstore.png" width="133.5px" height="52.5px" alt="JJ Tax APP/App Store"> </a>
+            <a href="https://apps.samsung.com/appquery/appDetail.as?appId=com.jjtax.app"><img src="./public/img/samsungstore.jpg"  height="52.5px" width="auto" alt="JJ Tax samsungstore"> </a>
+          </div>    
+          <div class="social-media-links">
+              <ul>
+                <li><a target="_blank" href="https://api.whatsapp.com/send?phone=9310854724"><i class="fab fa-whatsapp"> </i></a></li>
+                <li><a target="_blank" href="https://open.spotify.com/show/1LoGRoGWHHBo8MHm3q365E"><i class="fab fa-spotify"> </i></a></li>
+                <li><a target="_blank" href="https://www.linkedin.com/in/jj-fintax/"><i class="fab fa-linkedin"> </i></a></li>
+                <li><a target="_blank" href="https://www.instagram.com/jjfintax/"><i class="fab fa-instagram"></i></a></li>
+                <li><a target="_blank" href="https://www.youtube.com/channel/UC8BrcQ7nxa148InUkm-E-GA"><i class="fab fa-youtube"></i></a></li>
+                <li><a target="_blank" href="https://twitter.com/JJTaxApp"><i class="fab fa-twitter"> </i></a></li>
+                <li><a target="_blank" href="https://www.facebook.com/JJ-Tax-102265144737511"><i class="fab fa-facebook-f"> </i></a></li>
+              </ul>
+          </div>
+        </div>
+        <div class="col-sm-12 col-lg-9 col-12 " >
+          <div class="row mob-ml-0" >
+
+            <div class="col-6 col-sm-6 col-md-6 col-lg-3 " >
+              <a class="active-link hide" id="price-mobile" href="/pricing.html" >
+                <h5 class="footer-section-heading">Pricing</h5>
+              </a>
+                <h5 class="footer-section-heading"  >Services</h5>
+                <ul class="list-unstyled">
+                  <li class="footer-font-info"><a class="active-link" href="/itr.html">Income Tax</a></li>
+                  <li class="footer-font-info"><a class="active-link" href="/gst.html">GST</a></li>
+                  <li class="footer-font-info"><a class="active-link" href="/tds.html">TDS</a></li>
+                  <li class="footer-font-info"><a class="active-link" href="/tax-planning.html">Tax Planning</a></li>  
+                  <li class="footer-font-info"><a class="active-link" href="/accounting.html">Accounting</a></li>
+                  <li class="footer-font-info"><a class="active-link" href="/startup.html">Startup Services</a></li>
+                  <li class="footer-font-info"><a class="active-link" href="/roc-compliances.html">ROC Compliances</a></li>
+                  <li class="footer-font-info"><a class="active-link" href="#">Wealth Management</a></li>
+                </ul>
+            </div>              
+            <div class="col-6 col-sm-6 col-md-6 col-lg-3 ">
+              <a class="active-link hide" id="contact-mobile" href="#" data-bs-toggle="modal" data-bs-target="#contactmodal">
+                <h5 class="footer-section-heading">Contact Us</h5>
+              </a>
+                <h5 class="footer-section-heading">Other Services</h5>
+                <ul class="list-unstyled">
+                  <li class="footer-font-info"><a class="active-link" href="/legal.html">Legal Services</a></li>
+                  <li class="footer-font-info"><a class="active-link" href="">Firm Incorporation</a></li>
+                  <li class="footer-font-info"><a class="active-link" href="/hra-calculator.html">HRA Calculator</a></li>
+                  <li class="footer-font-info"><a class="active-link" href="#">NRI Services</a></li>
+                  <li class="footer-font-info"><a class="active-link" href="#">DSC</a></li>
+                  <li class="footer-font-info"><a class="active-link" href="#">Reply to notice</a></li>
+                  <li class="footer-font-info"><a class="active-link" href="/pan.html">PAN</a></li>
+                  <li class="footer-font-info"><a class="active-link" href="#">Aadhaar-PAN link</a></li>
+                  <li class="footer-font-info"><a class="active-link" href="#">RBI/FEMA Compliances</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-sm-6 col-md-6 col-lg-3 ">
+              <h5 class="footer-section-heading">Legal Services</h5>
+              <ul class="list-unstyled">
+                <li class="footer-font-info"><a class="active-link" href="#">POSH Compliances</a></li>
+                <li class="footer-font-info"><a class="active-link" href="#">License & Registration</a></li>
+                <li class="footer-font-info"><a class="active-link" href="#">Appeals & Notices</a></li>
+                <li class="footer-font-info"><a class="active-link" href="#">Contracts & Agreements</a></li>
+                <li class="footer-font-info"><a class="active-link" href="#">Company Policy</a></li>
+                <li class="footer-font-info"><a class="active-link" href="#">Trademark</a></li>
+              </ul>
+        
+            </div>
+            <div class="col-6 col-sm-6 col-md-6 col-lg-3 ">
+              <a class="active-link hide" id="price" href="/pricing.html" >
+                <h5 class="footer-section-heading">Pricing</h5>
+              </a>
+              <a class="active-link hide" id="contact" href="#" data-bs-toggle="modal" data-bs-target="#contactmodal">
+                <h5 class="footer-section-heading">Contact Us</h5>
+              </a>
+              <h5 class="footer-section-heading mt-20">Company</h5>
+              <ul class="list-unstyled">
+                <li class="footer-font-info"><a class="active-link" href="/aboutus.html">About Us</a></li>
+                <li class="footer-font-info"><a class="active-link" href="/awards.html">Media</a></li>
+                <!-- <li class="footer-font-info"><a class="active-link" href="#">Finmag</a></li> -->
+                <li class="footer-font-info"><a class="active-link" href="#">Careers</a></li>
+                <li class="footer-font-info"><a class="active-link" href="/investor.html">Investor Relations</a></li>
+              </ul>
+              <br/>
+              <br/>
+            </div>
+
+            <!-- this is empty div -->
+            <div class="col-6 col-sm-6 col-md-6 col-lg-3 " id="blank-div"></div>
+
+            <div class="col-6 col-sm-6 col-md-6 col-lg-3 ">
+              <h5 class="footer-section-heading">JJ Capsule</h5>
+              <ul class="list-unstyled">
+                <li class="footer-font-info"><a class="active-link" href="/blog/">Blogs</a></li>
+                <li class="footer-font-info"><a class="active-link" href="#">News & Updates</a></li>
+                <li class="footer-font-info"><a class="active-link" href="/tax-calendar.html">Tax Calendar</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-sm-6 col-md-6 col-lg-3 ">
+              <h5 class="footer-section-heading ">Tools</h5>
+              <ul class="list-unstyled">
+                <li class="footer-font-info"><a class="active-link" href="/emi-calculator.html">EMI Calculator</a></li>
+                <li class="footer-font-info"><a class="active-link" href="/tax-calculator.html">TAX Calculator</a></li>
+                <li class="footer-font-info"><a class="active-link" href="/hra-calculator.html">HRA Calculator</a></li>
+                <li class="footer-font-info"><a class="active-link" href="/tds-calculator.html">TDS Calculator</a></li>
+              </ul>
+            </div>
+            <div class="col-6 col-sm-6 col-md-6 col-lg-3 ">
+              <h5 class="footer-section-heading " >Other Links</h5>
+              <ul class="list-unstyled">
+                <li class="footer-font-info"><a class="active-link" href="/faq.html">FAQs</a></li>
+                <li class="footer-font-info"><a class="active-link" href="/terms-and-conditions.html">T&C</a></li>
+                <li class="footer-font-info"><a class="active-link" href="/privacy-policy.html">Privacy Policy</a></li>
+                <li class="footer-font-info"><a class="active-link" href="/gallery.html">Gallery </a></li>
+                <li class="footer-font-info"><a class="active-link" href="/refer-and-earn.html">Refer and Earn</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    console.log("hello jitu");
+    $(document).ready(function () {
+      console.log("hello in document ready");
+        var wrapper = $('#news-ticker-h').empty();
+        $.each(tickers, function (i, f) {
+          $('#news-ticker-h').append('<li>' + f.key + '</li>');
+        });
+
+        $("#subscribe-btn").click(function () {
+          console.log('Hi');
+          //   $.post(
+          //   "https://submit-form.com/opqN35DN",
+          //   {
+          //     email: $("#userEmail").val(),
+          //   },
+          //   null,
+          //   "json" // dataType must be set to json
+          // )
+          //   .then(function (response) {
+          //     console.log(response);
+          //   })
+          //   .catch(function (response) {
+          //     console.error(response);
+          //   });
+          });
+
+      }); 
+   
+  </script>

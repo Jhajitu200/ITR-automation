@@ -1,0 +1,770 @@
+body{
+  font-family: 'League Spartan';
+  /* background-image: url('../../public/img/diwali-theme-4.gif'); */
+  background-size: cover;
+  background-attachment: fixed;
+}
+.offer-bg{
+  /* background-image: url('../../public/img/diwali-theme-4.gif'); */
+  background-size: cover;
+  background: linear-gradient(242.56deg, #F4F4F4 18.05%, #E6F4F7 122.12%);
+}
+.bold-title-big{
+  align-items: center;font-family: 'Inter', League Spartan;font-size: 40px;color: #053757
+}
+.bold-title-small{
+  align-items: center;font-family: 'Inter', League Spartan;font-size: 20px;color: #053757
+}
+#calendar{
+  border: 2px solid #6AA9D5;
+  padding: 10px;
+  box-shadow: 1px 4px 15px 1px #6AA9D5;
+}
+.fc-day-disabled {
+  visibility:hidden;
+}
+.month-names ul{list-style-type: none;}
+.month-names ul li {    line-height: 45px;
+  margin-bottom: 20px;
+  width: 100%;
+  background: #F1F9FB;}
+.month-names ul li button{    background: #dff9ff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  vertical-align: middle;
+  gap: 10px;
+  border: 0px solid #d5d5d5;
+  width: 100%;
+  box-shadow: 2px 3px 8px 0px #a7a7a7;
+  padding:5px 17px;}
+  .fc td, .fc th{
+    border-color: #6AA9D5 !important;text-align: center;
+  }
+  .fc-row .fc-content-skeleton td{    height: 100%;
+    margin-top: 20px;}
+.fc th{padding: 10px !important;font-size: 22px;}
+.fc-ltr .fc-basic-view .fc-day-top .fc-day-number {
+  font-size: 25px;float: none !important;margin-top: 10px !important;
+  display: block !important;
+  cursor: pointer !important;
+}
+.fc-title, .fc-time, .fc-day-grid-event {
+  display: none !important;
+}
+.fc-event-container{background: red;}
+.fc-highlight {
+  background: #18253F;
+  color: #fff;
+}
+.eventDate{
+
+}
+.fc-toolbar button {
+  border: none !important;
+  background: none !important;
+}
+/* Clear out the default background color on the regular event */
+.fc-h-event {
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 0px solid black;
+}
+
+/* Override background color / opacity for background events */
+.fc .fc-bg-event {
+  background-color: red;
+  opacity: 0.7;
+}
+
+/* Override font color and style on background events */
+.fc .fc-bg-event .fc-event-title {
+  color: white;
+  font-style: normal;
+  padding-top: 20px; /* Using this to move the text away from the date */
+}
+
+/* Make text wrap for event titles */
+.fc-daygrid-event {
+  white-space: normal;
+}
+.load-calendar span{font-size: 22px;text-align: center;width: 100%;}
+.cal-events-wrapper{margin-top: 75px;text-align: left;width: 100%;}
+.cal-selected-date{font-weight: 600;color: #2F678D;font-size: 25px;}
+.selected-date-events{padding: 5px 5px 5px 35px;margin: 0;background: #fff;border: 1px solid #eee;
+  box-shadow: 1px 2px 3px #c5c5c5;}
+.selected-date-events li{font-size: 18px;margin-bottom: 15px;margin-top: 15px;}
+.upcoming-heading{margin-top: 45px;font-weight: 600;}
+.buy-now-btn, .buy-now-btn:hover{background-color: #2d79b8 !important;border: #FFF !important;font-size: 14px !important;border-radius: 22px !important;}.p-15{padding: 15px;}.p-rl-15{padding: 0 15px;}.post-title{font-size: 30px;}.subtitle{font-size: 18px;
+    padding-top: 5px;
+    padding-bottom: 15px;}.captioned-image-container{padding-top: 15px;}
+  .popup-donwload-btn-div{
+    margin-bottom: 10px;
+                  position: relative;
+                  bottom: 175px;
+                  left: 153px;
+  }
+  .popup-donwload-btn{
+    background: #104789;
+                    border: 1px solid #104789;
+                    color: #fff;
+                    font-size: 24px;
+                    padding: 6px 15px;
+                    border-radius: 7px;
+                    margin: 0;
+  }
+  .pricing-box-light_bw{
+    background: url('../../public/img/plan_bg_1_bw.jpg') no-repeat #fff;
+    background-size: 100% 40%;
+    padding: 8px 15px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px #e6f4f7;
+    border-radius: 15px;
+    min-height: 355px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .news-ticker-h b{margin-right: 5px;margin-left: 5px;}
+  .pricing-box-light{
+    background: url('../../public/img/plan_bg_1.png') no-repeat #fff;
+    background-size: 100% 40%;
+    padding: 8px 15px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px #e6f4f7;
+    border-radius: 15px;
+    min-height: 470px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .plan-anch a:hover{
+    color: #fff;
+    text-decoration: underline;
+  }
+  .services-box{
+    padding: 20px 0 7px 0px;
+    color: #64758b;
+    text-align: center;
+    border-radius: 7px;
+  }
+  .services-box h4{
+    color: #64758b;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  .stats-box{
+    padding: 20px 0 7px 0px;
+    color: #64758b;
+    text-align: center;
+    border-radius: 25px;
+    width: 100%;
+    height: 100%;
+    background: #cae3f0;
+  }
+  .stats-box h4{
+    color: #323232;
+    font-weight: bold;
+    margin-top: 10px;
+    font-size: 25px;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+  }
+  .stats-box .image{
+    margin-bottom: 20px;
+  }
+  .stats-box .image img{
+    width: 75px;
+  }
+  .stats-box .text{
+    font-size: 23px;
+    color: #0062b5;
+    text-align: center;
+    line-height: 30px;
+    margin-bottom: 15px;
+  }
+  
+  .pricing-box-dark{
+    background: url('../../public/img/plan_bg_2.png') no-repeat #fff;
+    background-size: 100% 40%;
+    padding: 8px 15px;
+    box-shadow: 0px 4px 4px #e6f4f7;
+    border-radius: 15px;
+    border-radius: 15px;
+  }
+  .blue-box-shadow{    box-shadow: 0px 4px 3px #6dabd6;}
+  .pricing-box-light-2{
+    background: url('../../public/img/plan_bg_1.png') no-repeat #fff;
+    background-size: 100% 40%;
+    padding: 8px 15px;
+    border-radius: 15px;
+  }
+  .pricing-box-dark-2{
+    background: url('../../public/img/plan_bg_2.png') no-repeat #fff;
+    background-size: 100% 40%;
+    padding: 8px 15px;
+    border-radius: 15px;
+  }
+  .brand-bottom-border{
+    border-bottom: 4px solid #6BAAD5;
+  }
+  .pl-7{padding-left: 7px;}
+  .plan-title{color: #fff;margin-top: 5px;font-family: 'Inter', League Spartan;
+    font-weight: bolder;}
+.plan-img{margin-top: 15px;    width: 100%;}
+.plan-img-pro{width: 100%;}
+.plan-caption{font-weight: bolder;    font-family: 'Inter', League Spartan;
+    font-size: 15px;margin-top: 3px;
+    color: #ffffff;}
+.plan-price{font-weight: bolder;    font-family: 'Inter', League Spartan;
+    font-size: 23px;color: #ffffff;}
+.plan-price-2{font-weight: bolder;    font-family: 'Inter', League Spartan;font-size: 15px;color: #ffffff;}ul.empty{list-style-type: none;}.color-white{color: #fff;}.f-20{font-size: 20px;}.f-23{font-size: 23px;}.f-25{font-size: 25px;}.f-30{font-size: 30px;}.plan-caption-2{font-family: 'Inter', League Spartan;font-size: 20px;color: #ffffff;font-weight: bolder;margin-top: 2px;margin-bottom: 8px;}.mt-50{margin-top: 50px;}.mt-70{margin-top: 70px;}ul.list-with-icon{ margin-left: 25px;margin-top: 40px;}ul.list-with-icon-ml{ margin-left: 25px;margin-top: 10px;}.clc-banner-wrapper{background: linear-gradient(180deg, rgba(17, 103, 175, 0.87) 0%, #6BAAD5 100%);}ul.list-with-icon li{}
+ul.list-with-icon li.tick, ul.list-with-icon-ml li.tick{ font-weight: bolder;   font-family: 'Inter', League Spartan;font-size: 14px;color: #6AA9D5;list-style-image: url(../../public/img/applicable.png);color: #6AA9D5;}ul.list-with-icon li.cross, ul.list-with-icon-ml li.cross{font-weight: bolder;font-family: 'Inter', League Spartan;font-size: 12px;color: #64758b;list-style-image: url(../../public/img/not_applicable.png);color: #64758b;}.most-popular{    position: absolute;color: #6aa9d5;border: 1px solid #c3e7ff;border-radius: 5px;padding: 2px 10px;left: 25px;top: -26px;}.pt-20{ padding-top: 20px;}.pt-50{ padding-top: 50px;}.pb-50{ padding-bottom: 50px;}.pr{position: relative;}.ad-popup-modal{background-image: linear-gradient(#053757, #1167AF);}.core-mantra{
+  padding-top: 2rem;}.core-mantra .title{text-align: center;font-family: 'Inter', League Spartan;font-size: 36px;color: #1167AF; font-weight: bold;}.core-mantra-sections{text-align: center;
+}.core-mantra-sections img{}.core-mantra-sections .text{}.core-mantra-sections .text h4{text-align: center;font-family: 'Inter', League Spartan;font-size: 15px;color: #053757;font-weight: bold;}.core-mantra-sections .text p{text-align: center;font-family: 'Inter', League Spartan;font-size: 12px;color: #6AA9D5;}.w50percent{width: 120px;}.ad-popup-modal h2.ad-title {color: #FFFFFF; font-size: 40px;}.ad-popup-modal p.ad-description {color: #FFFFFF; font-size: 20px;}.ad-popup-modal .modal-header{border-bottom: none !important;}.badge-background-1:hover{    background: #fff;color: #6aa9d5;}.most-popular p{margin: 0;
+    font-weight: bold;font-family: 'Inter', League Spartan;text-transform: capitalize;font-size: 13px;}.ol{    list-style-type: decimal;}
+.about-us{
+  font-family: 'Inter', League Spartan;
+  font-size: 14px;    font-weight: bold;
+  color: #053757;text-align: justify;
+}.videowrapper {
+  float: none;
+  clear: both;
+  width: 100%;
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 25px;
+  height: 0;
+}
+
+.txt-gradient-bg{
+  font-family: 'League Spartan';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 70px;
+  text-align: center;
+  background: linear-gradient(0deg, #1167AF 0%, #053757 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.videowrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.theme-btn{
+  background: linear-gradient(180deg, #1167AF 0%, #6AA9D5 100%);
+  border-radius: 10px;
+  font-family: 'League Spartan';
+  font-style: normal;
+  padding: 13px;
+  font-size: 18px;
+  line-height: 44px;
+  font-weight: bold;
+  align-items: center;
+  text-align: center;
+  color: #fff !important;
+}
+.footer-section-heading{
+  font-family: 'Inter', League Spartan;font-size: 18px;color: #ffffff;
+  font-weight: bold;
+}
+footer{
+  background-color: #053757;
+}
+.social-table
+{
+  width: 60%;
+  margin-top: 20px;
+}
+.pl-0{padding-left: 0!important;}
+.theme-btn-with-bg-color{
+  background: #6AA9D5;
+  border-radius: 10px;
+  font-family: 'League Spartan';
+  font-style: normal;
+  padding: 13px;
+  font-size: 18px;
+  line-height: 44px;
+  font-weight: bold;
+  align-items: center;
+  text-align: center;
+  color: #fff !important;
+}
+.theme-btn-border{
+  background: #FFFFFF;
+  border-radius: 10px;
+  background: linear-gradient(180deg, #1167AF 0%, #6AA9D5 100%);
+  box-sizing: border-box;
+
+}
+.theme-btn-without-bg{
+  font-family: 'League Spartan';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  background: linear-gradient(180deg, #1167AF 0%, #6AA9D5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  border: 1px solid #1167AF;
+  padding: 5px;
+  margin-top: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+.banner-bottom{width: 380px;}
+.google-rank-div{    margin-bottom: 20px;
+  margin-top: 30px;}
+.main-caption{
+  font-family: 'Inter', League Spartan;font-size: 65px; font-weight: bold;    
+  /* background: linear-gradient(186.22deg, #1167AF 4.91%, #6BAAD5 100.2%); */
+  background: #1167AF;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  margin-top: 20px;}
+#tvBorder{
+  background: url(../../public/img/mobilephone-1.png) center no-repeat;
+  width: 534px;
+  height: 534px;
+  padding-left: 155px;
+  padding-top: 40px;  
+}
+.bandw img{width: 100%;}
+/* .box3 img{width: 100%;} */
+.box4 img{width: 100%;}
+.container-fluid{position: relative;}
+.hra-calculator-container{    
+  box-sizing: border-box;
+  background: #FFFFFF;
+  border-radius: 5px;
+  padding: 40px;
+}
+.mr-0{margin-right: 0 !important;}
+.calc-section{
+  width: 750px;
+  margin: auto;
+}
+.hra-calculator-container-bottom{   
+  background: linear-gradient(180deg, #E6F4F7 0%, #E6F4F7 100%);
+  border-radius: 5px;
+  padding: 20px;
+}
+.hra-calculator-container-bottom h3{
+  color: #053757;
+  font-size: 25px;
+}
+.hra-calculator-container-bottom span {
+  font-size: 28px;
+  color: #000000;
+}
+.form-check-input:checked {
+  background-color: #6AA9D5 !important;
+  border-color: #6AA9D5 !important;
+}
+.input-bg{
+  background: #E6F4F7;
+  border-radius: 5px;
+  border: 1px solid #E6F4F7;
+}
+.input-bg:focus{
+  background: #e9fbff;
+  border-radius: 5px;
+  border: 1px solid #E6F4F7;
+}
+
+.text-right-align{
+  text-align: right;
+  padding-left: 20px;}.currency-symbol{
+  right: -18px;
+  position: relative;
+  top: 6px;
+}
+.page-heading{
+  font-family: 'League Spartan';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 60px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.fnt-50{ font-size: 50px !important;}
+.slick-slide .d-flex {
+  margin-left: 12px;
+}
+
+.slick-prev:before, .slick-next:before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  color: transparent !important;
+}
+.slick-prev:before {
+  left: 0;
+  background: url(../img/left-arrow.png);
+}
+.slick-next:before{
+  right: 0;
+  background: url(../img/right-arrow.png);
+  margin-top: -8px;
+}
+.eng-short-container{
+  display: flex;
+  flex-direction: column;
+  vertical-align: middle;
+  justify-content: center;
+  height: 250px;
+}
+.eng-short-container, .eng-video-container, .info-pic {
+  width: 90%;
+  margin: auto;
+}
+.finfit-heading{
+  width: fit-content;
+  border-bottom: 2px solid #6aa9d5;
+  color: #053757;
+}
+.slick-slide img{width: 100% !important;}
+.page-heading-bold{
+  font-family: 'League Spartan';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 50px;
+  text-align: center;
+  color: #FFFFFF;
+}
+.why-us{text-align: center;font-family: 'Inter', League Spartan;font-size: 32px;color: #1167AF;}
+.mt-20{margin-top: 20px !important;}
+.mt-30{margin-top: 30px !important;}
+.mt-50{margin-top: 50px !important;}
+.mt-70{margin-top: 70px !important;}
+.mb-15{margin-bottom: 15px !important;}
+.page-heading-theme-clr{
+  font-family: 'League Spartan';
+font-style: normal;
+font-weight: 700;
+font-size: 40px;
+line-height: 40px;
+align-items: center;
+text-align: center;
+color: #053757;
+}
+.page-sub-heading-black{
+  font-family: 'League Spartan';
+font-style: normal;
+font-weight: 700;
+font-size: 25px;
+line-height: 40px;
+text-align: center;
+color: #053757;
+}
+
+.input-icons i {
+  position: absolute;
+}
+
+.input-icons {
+left: 150px;
+margin-bottom: 10px;
+position: relative;
+bottom: 85px;
+}
+
+.icon {
+padding: 11px;
+min-width: 40px;
+font-size: 21px !important;
+color: #11468c;
+}
+
+.input-field {
+width: 100%;
+padding: 3px;
+text-align: center;
+border: 4px solid #104789;
+border-radius: 15px;
+}
+.subscribe-form{}
+.subscribe-form .input-fields{text-align: center; width: 100%;height: 50px;border-radius: 3px 0px 0px 3px;font-family: 'Inter', Poppins;font-size: 20px;border: 1px solid #03A9F4;padding-left: 10px;}.subscribe-form .submit-btn{width:25%; height:51px;border-radius: 0px 7px 7px 0px;font-family: 'Inter', Poppins;font-size: 20px; border-color: #6aa9d5;background-color: #6aa9d5; color: #ffffff;}
+.timer-div{width: 75%;}
+.fc-basic-view .fc-body .fc-row {
+  min-height: 3em;
+}
+.fc-basic-view .fc-day-number, .fc-basic-view .fc-week-number {
+  padding: 0px !important;
+}
+.fc-content-skeleton tbody{
+  display: none;
+}
+.fc-day-grid-container{height: auto !important;}
+.social-media-links{    margin-top: 20px;}
+.social-media-links ul{list-style-type: none;
+  display: flex;
+  flex-direction: row;justify-content: center;
+  gap: 10px;}
+.social-media-links ul li{}
+@media screen and (max-width:320px) {
+  .media-body {margin-left: 0px !important;}
+  .blog-list .item .post-thumb{width: 100% !important;}
+  .media{    flex-direction: column;}
+  .left-side-bar{display: none !important;}
+  .blog-list .item .post-thumb {margin-bottom: 25px;}
+  .fc-basic-view .fc-body .fc-row {min-height: 2em;}
+  .fc th{padding: 5px !important;font-size: 16px;}
+  .fc-ltr .fc-basic-view .fc-day-top .fc-day-number {
+    font-size: 20px;float: none !important;
+    margin-top: 13px !important;
+    display: block !important;
+    cursor: pointer !important;
+  }
+  .cal-events-wrapper{margin-top: 0px;}
+  .timer-div{width: 100%;}
+  .m-mt-60{margin-top: 60px;}
+  .menu-display .navbar-collapse{
+    position: absolute;
+    top: 45px;
+    right: 12px;
+    background: #FFFFFF;
+    z-index: 9999;
+    padding: 16px;}
+  .main-caption{font-size: 25px;}
+  #tvBorder {
+    background: url(../../public/img/mobilephone-1.png) 20px no-repeat;
+    width: 268px;
+    height: 534px;
+    padding-left: 33px;
+    padding-top: 40px;
+  }
+}
+
+@media screen and (max-width:375px) {
+  .media-body {margin-left: 0px !important;}
+  .blog-list .item .post-thumb{width: 100% !important;}
+  .media{    flex-direction: column;}
+  .left-side-bar{display: none !important;}
+  .blog-list .item .post-thumb {margin-bottom: 25px;}
+  .fc-basic-view .fc-body .fc-row {min-height: 2em;}
+  .fc-ltr .fc-basic-view .fc-day-top .fc-day-number {
+    font-size: 20px;float: none !important;
+    margin-top: 13px !important;
+    display: block !important;
+    cursor: pointer !important;
+  }
+  .fc th{padding: 5px !important;font-size: 16px;}
+  .cal-events-wrapper{margin-top: 0px;}
+  .timer-div{width: 100%;}
+  .m-mt-60{margin-top: 60px;}
+  .header-logo {
+    width: 185px;
+    margin-top: 10px;
+  }
+
+.navbar {
+  padding: 10px !important;
+}
+  .menu-display .navbar-collapse{
+    position: absolute;
+    top: 45px;
+    right: 12px;
+    background: #FFFFFF;
+    z-index: 9999;
+    padding: 16px;}
+  .main-caption{font-size: 25px;}
+  #tvBorder {
+    background: url(../../public/img/mobilephone-1.png) 20px no-repeat;
+    width: 268px;
+    height: 534px;
+    padding-left: 33px;
+    padding-top: 40px;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .media-body {margin-left: 0px !important;}
+  .blog-list .item .post-thumb{width: 100% !important;}
+  .media{    flex-direction: column;}
+  .blog-list .item .post-thumb {margin-bottom: 25px;}
+  .left-side-bar{display: none !important;}
+  .fc th{padding: 5px !important;font-size: 16px;}
+  .cal-events-wrapper{margin-top: 0px;}
+  .timer-div{width: 100%;}  
+  .m-mt-60{margin-top: 60px;}
+  .menu-display .navbar-collapse{
+    position: absolute;
+    top: 45px;
+    right: 12px;
+    background: #FFFFFF;
+    z-index: 9999;
+    padding: 16px;
+  }
+  #tvBorder {
+    background: url(../../public/img/mobilephone-1.png) 25px no-repeat;
+    width: 100%;
+    height: 534px;
+    padding-left: 0px;
+    padding-top: 0px;
+  }
+  #tvBorder video {
+    object-fit: fill;
+    margin-top: 39px;
+    margin-left: 37px;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .header-logo {
+    width: 125px;
+}
+  .left-side-bar{display: none !important;}
+  .fc-basic-view .fc-body .fc-row {min-height: 2em;}
+  .fc-ltr .fc-basic-view .fc-day-top .fc-day-number {
+    font-size: 20px;float: none !important;
+    margin-top: 13px !important;
+    display: block !important;
+    cursor: pointer !important;
+  }
+  .fc th{padding: 5px !important;font-size: 16px;}
+  .cal-events-wrapper{margin-top: 0px;}
+  .timer-div{width: 100%;}
+  .m-mt-60{margin-top: 60px;}
+    .menu-display .navbar-collapse{
+      position: absolute;
+      top: 45px;
+      right: 12px;
+      background: #FFFFFF;
+      z-index: 9999;
+      padding: 16px;}
+}
+
+
+/* Tablet devices */
+@media only screen and (max-width: 786px) {
+  .nav-header{
+    margin-bottom: 10px;
+  }
+  #tvBorder {
+    background: url(../../public/img/mobilephone-1.png) 25px no-repeat;
+    padding-left: 38px;
+    padding-top: 40px;
+  }
+}
+
+/* Large devices */
+@media only screen and (max-width: 425px) {
+  .icon {
+    padding: 9px;
+  }
+  .input-field {
+    width: 86%;
+    padding: 3px 0 0 0;
+    text-align: center;
+    border: 4px solid #104789;
+    border-radius: 15px;
+}
+.input-icons {
+  left: 122px;
+  margin-bottom: 10px;
+  position: relative;
+  bottom: 71px;
+}
+  .banner-bottom {
+    width: 370px !important;
+  }
+  #tvBorder {
+    background: url(../../public/img/mobilephone-1.png) 77px no-repeat;
+    padding-left: 52px;
+    padding-top: 0px;
+  }
+  .google_rank{    width: 155px;    margin-left: 8px;}
+  .tax_rank{width: 145px;}
+}
+
+/* Medium devices */
+@media only screen and (max-width: 375px) {
+  .input-icons {
+    left: 110px;
+    margin-bottom: 10px;
+    position: relative;
+    bottom: 62px;
+}
+.input-field {
+  width: 100%;
+  padding: 4px 0 0 0;
+  text-align: center;
+  border: 4px solid #104789;
+  border-radius: 15px;
+}
+  .banner-bottom {
+    width: 350px !important;
+  }
+  #tvBorder {
+    background: url(../../public/img/mobilephone-1.png) 52px no-repeat;
+    padding-left: 27px;
+    padding-top: 0px;
+  }
+  .google_rank{    width: 155px;    margin-left: 8px;}
+  .tax_rank{width: 145px;}
+  .theme-btn{
+    padding: 9px !important;
+    font-size: 17px !important;
+  }
+  .theme-btn-without-bg{
+    padding: 8px !important; 
+    font-size: 19px !important;
+  }
+}
+
+/* Small devices */
+@media only screen and (max-width: 320px) {
+  .banner-bottom {
+    width: 100% !important;
+  }
+  #tvBorder {
+    background: url(../../public/img/mobilephone-1.png) 25px no-repeat;
+    width: 100%;
+    height: 534px;
+    padding-left: 0px;
+    padding-top: 0px;
+  }
+  .google_rank{    width: 125px;}
+  .tax_rank{width: 122px;}
+  .theme-btn{
+    padding: 9px !important;
+    font-size: 14px !important;
+  }
+  .theme-btn-without-bg{
+    padding: 8px !important; 
+    font-size: 15px !important;
+  }
+  .input-icons {
+    left: 88px;
+    margin-bottom: 10px;
+    position: relative;
+    bottom: 52px;
+  }
+  .icon {
+    padding: 8px;
+    min-width: 40px;
+    font-size: 15px;
+    color: #11468c;
+  }
+  .input-field {
+    width: 100%;
+    padding: 4px 0px 0px 0;
+    text-align: center;
+    border: 2px solid #104789;
+    border-radius: 15px;
+  }
+}

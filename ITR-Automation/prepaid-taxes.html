@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://www.jjfintax.com/public/css/bootstrap.min.css">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=League Spartan:wght@300;400;500;600;700;800&display=swap" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.jjfintax.com/public/css/scrmob.css">
+    <link rel="stylesheet" href="https://www.jjfintax.com/public/css/style.css">
+    <link rel="stylesheet" href="css/style-income-form.css">
+    <link rel="stylesheet" href="https://www.jjfintax.com/public/css/style_new.css">
+    <link rel="stylesheet" href="https://www.jjfintax.com/public/css/navbar.css">
+    <link rel='stylesheet' href='https://www.jjfintax.com/public/css/slick.min.css'>
+    <link rel='stylesheet' href='https://www.jjfintax.com/public/css/slick-theme.min.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="container">
+            <!-- Navbar logo -->
+            <div class="nav-header">
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <img src="https://www.jjfintax.com/public/images/new_logo.png" class="header-logo" alt="logo">
+                    </a>
+                </div>
+            </div>
+            <!-- responsive navbar toggle button -->
+            <input type="checkbox" id="nav-check">
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+            <!-- Navbar items -->
+            <div class="nav-links">
+                <!-- Dropdown menu -->
+                <div class="dropdown">
+                    <a class="dropBtn" href="#">Company
+                        <i class="fas fa-angle-down"></i>
+                    </a>
+                    <div class="drop-content">
+                        <a class="dropdown-item" href="aboutus.html">About Us</a>
+                        <a class="dropdown-item" href="awards.html">Media</a>
+                        <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#formModal">Careers</a>
+                        <a class="dropdown-item" href="investor.html">Investor Relations</a>
+                    </div>
+                </div>
+
+                <!-- Dropdown menu -->
+                <div class="dropdown">
+                    <a class="dropBtn" href="#">Insights
+                        <i class="fas fa-angle-down"></i>
+                    </a>
+                    <div class="drop-content">
+                        <a class="dropdown-item" href="https://blog.jjfintax.com/">Blogs</a>
+                        <a class="dropdown-item" href="jjtaxfitt.html">JJTaxFitt</a>
+                    </div>
+                </div>
+
+                <!-- Dropdown menu -->
+                <div class="dropdown">
+                    <a class="dropBtn" href="#">Services
+                        <i class="fas fa-angle-down"></i>
+                    </a>
+                    <div class="drop-content">
+                        <a class="dropdown-item" href="itr.html">Income Tax</a>
+                        <a class="dropdown-item" href="gst.html">GST</a>
+                        <a class="dropdown-item" href="tds.html">TDS</a>
+                        <a class="dropdown-item" href="accounting.html">Accounting</a>
+                        <a class="dropdown-item" href="roc-compliances.html">ROC Compliances</a>
+                        <a class="dropdown-item" href="legal.html">Legal Services</a>
+                        <a class="dropdown-item" href="startup.html">Startup Services</a>
+                        <a class="dropdown-item" href="tax-planning.html">Tax Planning</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a class="dropBtn" href="#">Tools
+                        <i class="fas fa-angle-down"></i>
+                    </a>
+                    <div class="drop-content">
+                        <a class="dropdown-item" href="tax-calculator.html">Tax Calculator</a>
+                        <a class="dropdown-item" href="hra-calculator.html">HRA Calculator</a>
+                        <a class="dropdown-item" href="tds-calculator.html">TDS Calculator</a>
+                    </div>
+                </div>
+
+                <a href="pricing.html">Pricing</a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#contactmodal">Contact</a>
+                <button onclick="window.fcWidget.open();window.fcWidget.show();" class="loginBtn">Chat with an
+                    expert</button>
+                <a class="btn-link" href="https://web.jjfintax.com:8843/#/" target="_blank">
+                    <button class="loginBtn">Login</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="ticker-wrapper-h">
+        <div class="heading">JJ Tax News</div>
+        <ul class="news-ticker-h">
+            <li><p>Deadline for linking PAN card with Aadhaar is extended to June 30, 2023 from March 31, 2023.</p></li>
+            <li><p>Nomination deadline for Mutual Fund/ Demat Account Holders extended to 30 September</p></li>
+            <li><p>Debt Mutual Funds taxable at slab rate w.e.f. 1st April'23.</p></li>
+            <li><p>Market Linked Debentures taxable at slab rate w.e.f. 1st April'23.</p></li>
+            <li><p>TDS applicable on net winnings from online gaming w.e.f. 1st April'23.</p></li>
+            <li><p>Invest in NPS and secure your future</p></li>
+            <li><p>Investment partner: BAJAJ CAPITAL</p></li>
+            <li><p><b>Pay your taxes through JJ Tax App</b></p></li>
+            <li><p><b>ZERO</b> tax on income of Rs. 10 lakhs*, plan your investments with JJ Tax.</p></li>
+            <li><p><b>101</b> ways to save your taxes LEGALLY. Ask us!</p></li>
+            <li><p>Save <b>80%</b> of your cost. Outsource your Accounting to JJ Tax.</p></li>
+            <li><p>Want to hire a <b>vCFO?</b> Contact JJ Tax.</p></li>
+            <li><p>Now chat in Hindi with our Tax Experts</p></li>
+            <li><p>अब पाए हर TAX से जुड़े सवाल का जवाब हिंदी में</p></li>
+            <li><p>जेजे टैक्स ऐप पर 24/7 चैट करे।</p></li>
+            <li><p>We are a women empowered startup, invest and join our journey</p></li>
+            <li><p>Awarded with the Best Fintech Solution of the year</p></li>
+            <li><p>CEO Rashi awarded with Nationwide Award under 40 by Business Mint</p></li>
+        </ul>
+    </div>
+    <div class="container-fluid inc-tabs">
+        <div class="container">
+            <ul class="incProgressBar extra_menu js-horizontal-scroll ">
+                <li style="width: 107.673px;"><a href="index.html"><span></span>Sources of Income</a></li>
+                <li style="width: 107.673px;"><a href="upload-form-16.html"><span></span>Upload Form 16</a></li>
+                <li style="width: 107.673px;"><a href="financial-details.html"><span></span>Financial Details</a></li>
+                <li style="width: 107.673px;"><a href="basic-details.html"><span></span>Basic Details</a></li>
+                <li style="width: 107.673px;"><a href="basic-details-2.html"><span></span>Basic Details 2</a></li>
+                <li style="width: 107.673px;"><a href="Salary-Income.html"><span></span>Salary Income</a></li>
+                <li style="width: 107.673px;"><a href="deductions.html"><span></span>Deductions</a></li>
+                <li style="width: 107.673px;"><a href="bank-details.html"><span></span>Bank Details</a></li>
+                <li class="current" style="width: 107.673px;"><a href="prepaid-taxes.html"><span></span>Prepaid Taxes</a></li>
+                <li style="width: 107.673px;"><a href="extra-details.html"><span></span>Extra Details</a></li>
+                <li style="width: 107.673px;"><a href="computation.html"><span></span>Computation</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Form start -->
+    <div class="inc-form-container bg-light-blue">        
+        <form action="#">
+            <div class="container-fluid form-section">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-10">
+                            <!-- section title  -->
+                            <div class="row"> 
+                                <div class="col-md-11">
+                                    <h4 class="form-in-tl text-center">PREPAID TAXES</h4>
+                                    <div class="form-in-desc text-center">Have you paid anything before?</div>
+                                </div>
+                            </div>
+                            <!-- // section title  -->
+                            <div class="inc-forn-in-sec basic-detail">
+                                <div class="col-xxl-12 col-lg-12 col-md-12 col-sm-12 col-12 common_note">
+                                    <div class="as-upload h6 m-0">Do you have a Form 26AS? Click here to <a href="" data-bs-toggle="modal" data-bs-target="#myModal">Upload Form 26AS </a> and avoid manual entry </div>
+                                </div>
+                                <div class="comon_outer mt-md-4 mt-2 mb-4">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <h3>TDS on Salary Income &nbsp; <a href="https://tax2win.in/efile-income-tax-return/salary-income/1936132"
+                                                    class="edit_tds">Edit Salary Detail</a></h3>
+                                        </div>
+                                    </div>
+                                    <div class="mt-md-4 mt-3 " id="letOutDiv">
+                                        <div class="letDiv ">
+                                            <div class="row letDivIn ">
+                                                <div class="form-group col-md-3 col-sm-6 col-12">
+                                                    <label for="si_employer_name_0">Company / Employer Name </label>
+                                                    <input type="text" name="si_employer_name[0]" value="sdfasd" class="form-control textBoxes" disabled=""
+                                                        id="si_employer_name_0" data-dirrty-initial-value="sdfasd">
+                                                </div>
+                                                <div class="form-group col-md-3 col-sm-6 col-12">
+                                                    <label for="si_employer_tan_0">TAN of the Employer </label>
+                                                    <input type="text" name="si_employer_tan[0]" value="" class="form-control textBoxes" disabled=""
+                                                        id="si_employer_tan_0" data-dirrty-initial-value="">
+                                                </div>
+                                                <div class="form-group col-md-3 col-sm-6 col-7">
+                                                    <label for="si_salary_income_0">Salary / Pension Amount </label>
+                                                    <input type="text" name="si_salary_income[0]" value="0"
+                                                        class="form-control textBoxes currency_field diy-amount" disabled="" id="si_salary_income_0"
+                                                        inputmode="numeric" data-dirrty-initial-value="0">
+                                                </div>
+                                                <div class="form-group col-md-3 col-sm-6 col-5">
+                                                    <label for="si_tds_deducted_0">Tax Amount </label>
+                                                    <input type="text" name="si_tds_deducted[0]" value="0"
+                                                        class="form-control textBoxes currency_field diy-amount" disabled="" id="si_tds_deducted_0"
+                                                        inputmode="numeric" data-dirrty-initial-value="0">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                </div>
+                                <div class="mainbox comon_outer mb-md-4 mb-3">
+                                    <div class="row">
+                                        <div class="col-xxl-12 col-xl-12 col-md-12 col-sm-12 col-12">
+                                            <div class="custom_radio2 switch switch--horizontal switch--expanding-inner leftSwitch">
+                                                <h3>Advance Tax and Self Assessment Tax Payment</h3>
+                                                <div class="outer">
+                                                    <input id="advance_tax_radio_b" type="radio" name="at_sat_radio" value="0" data-id="letOutDiv"
+                                                        checked="checked" data-dirrty-initial-value="checked">
+                                                    <label for="advance_tax_radio_b">No</label>
+                                                    <input id="advance_tax_radio_a" type="radio" name="at_sat_radio" value="1" data-id="letOutDiv"
+                                                        data-dirrty-initial-value="unchecked">
+                                                    <label for="advance_tax_radio_a">Yes</label>
+                                                </div>
+                                            </div>
+                                            <p class="col-md-12 mt-1 text-muted">Help us understand what advance tax you have already paid and we'll
+                                                automatically <br> consider it in your Income Tax return. </p>
+                                        </div>
+                                    </div>
+                                    <div class="row hiddenbox collapse" id="letOutDiv">
+                                        <div class="letDiv items">
+                                            <input type="hidden" name="prepaid_taxes_at_sat_id[1]" value="" data-dirrty-initial-value="">
+                                            <div class="letDivIn item innerSec seprate_section">
+                                                <div class="add_clone mt-2">
+                                                    <div class="row w-100">
+                                                        <div class="form-group col-md-3 col-sm-3 col-6">
+                                                            <label for="pp_bsr_code_1">BSR Code <span class="required">*</span></label>
+                                                            <input type="text" name="pp_bsr_code[1]" value="" class="form-control textBoxes text-uppercase"
+                                                                id="pp_bsr_code_1" data-dirrty-initial-value="">
+                                                        </div>
+                                                        <div class="form-group col-md-3 col-sm-3 col-6">
+                                                            <label for="pp_deposit_date_1">Date of Challan <span class="required">*</span></label>
+
+                                                            <input type="text" name="pp_deposit_date[1]" value="" class="form-control textBoxes datepicker"
+                                                                id="pp_deposit_date_1" inputmode="numeric" data-dirrty-initial-value="">
+
+                                                        </div>
+                                                        <div class="form-group col-md-3 col-sm-3 col-6">
+                                                            <label for="pp_srl_no_of_challan_1">Challan No. <span class="required">*</span></label>
+                                                            <input type="number" name="pp_srl_no_of_challan[1]" value="" min="" max="" step=""
+                                                                class="form-control textBoxes" id="pp_srl_no_of_challan_1" inputmode="numeric"
+                                                                data-dirrty-initial-value="">
+                                                        </div>
+                                                        <div class="form-group col-md- col-sm-3 col-6">
+                                                            <label for="at_sat_amount_1">Tax Amount <span class="required">*</span></label>
+                                                            <input type="text" name="at_sat_amount[1]" value=""
+                                                                class="form-control textBoxes currency_field diy-amount" id="at_sat_amount_1"
+                                                                inputmode="numeric" data-dirrty-initial-value="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="inlineDel">-</div>
+                                                </div>
+                                            </div>
+                                            <div class=" text-end col-md-12">
+                                                <div class="addItem pull-right inlineAdd">+</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mainbox comon_outer mb-md-4 mb-3">
+                                    <div class="row">
+
+                                        <div class="col-md-12">
+                                            <div class="custom_radio2 switch switch--horizontal switch--expanding-inner leftSwitch">
+                                                <h3>Details of TDS Paid on Other Than Salary</h3>
+                                                <div class="outer">
+                                                    <input id="tds_other_than_salary_radio_b" type="radio" name="tds_radio" value="0" checked="checked"
+                                                        data-dirrty-initial-value="checked">
+                                                    <label for="tds_other_than_salary_radio_b">No</label>
+                                                    <input id="tds_other_than_salary_radio_a" type="radio" name="tds_radio" value="1"
+                                                        data-dirrty-initial-value="unchecked">
+                                                    <label for="tds_other_than_salary_radio_a">Yes</label>
+                                                </div>
+                                            </div>
+                                            <p class="col-md-8 mt-1 text-muted">
+                                                If you've had TDS deducted on any source of income except salary; like on interest, rent etc. then you can
+                                                enter here. (refer Form 16A or 26AS)
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row hiddenbox collapse" id="letOutDiv">
+                                        <div class="letDiv items">
+                                            <input type="hidden" name="prepaid_taxes_tds_id[1]" value="" data-dirrty-initial-value="">
+                                            <div class="letDivIn item innerSec seprate_section">
+                                                <div class="add_clone mt-2">
+                                                    <div class="row w-100">
+                                                        <div class="form-group col-md-3 col-sm-6 col-6">
+                                                            <label for="pp_deductor_name_1">Name of Deductor <span class="required">*</span></label>
+                                                            <input type="text" name="pp_deductor_name[1]" value="" class="form-control textBoxes"
+                                                                id="pp_deductor_name_1" data-dirrty-initial-value="">
+                                                        </div>
+                                                        <div class="form-group col-md-3 col-sm-6 col-6">
+                                                            <label for="pp_deductor_tan_1">TAN of Deductor <span class="required">*</span></label>
+                                                            <input type="text" name="pp_deductor_tan[1]" value=""
+                                                                class="form-control textBoxes text-uppercase" id="pp_deductor_tan_1"
+                                                                data-dirrty-initial-value="">
+                                                        </div>
+                                                        <div class="form-group col-md-3 col-sm-6 col-12">
+                                                            <label for="tds_gross_amount_1">Amount on which TDS deducted <span
+                                                                    class="required">*</span></label>
+                                                            <input type="text" name="tds_gross_amount[1]" value=""
+                                                                class="form-control textBoxes currency_field diy-amount" id="tds_gross_amount_1"
+                                                                inputmode="numeric" data-dirrty-initial-value="">
+                                                        </div>
+                                                        <div class="form-group col-md-3 col-sm-6 col-12">
+                                                            <label for="tds_amount_1">Total TDS deducted <span class="required">*</span></label>
+                                                            <input type="text" name="tds_amount[1]" value=""
+                                                                class="form-control textBoxes currency_field diy-amount" id="tds_amount_1"
+                                                                inputmode="numeric" data-dirrty-initial-value="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="inlineDel">-</div>
+                                                </div>
+                                            </div>
+                                            <div class=" text-right col-md-12">
+                                                <div class="addItem pull-right inlineAdd">+</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mainbox comon_outer mb-md-4 mb-3">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="custom_radio2 switch switch--horizontal switch--expanding-inner leftSwitch">
+                                                <h3>Details of TDS Paid on Rental Income</h3>
+                                                <div class="outer">
+                                                    <input id="tds_paid_on_rent_income_b" type="radio" name="tds_26qc_radio" value="0" checked="checked"
+                                                        data-dirrty-initial-value="checked">
+                                                    <label for="tds_paid_on_rent_income_b">No</label>
+                                                    <input id="tds_paid_on_rent_income_a" type="radio" name="tds_26qc_radio" value="1"
+                                                        data-dirrty-initial-value="unchecked">
+                                                    <label for="tds_paid_on_rent_income_a">Yes</label>
+                                                </div>
+                                            </div>
+                                            <p class="col-md-8 mt-1 text-muted">
+                                                If you have received rent exceeding Rs. 50,000 per month then this section is for you!! Enter the details
+                                                of TDS deducted on rent by your tenant u/s 194IB. You can also check this from Form 26AS.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row hiddenbox collapse" id="letOutDiv">
+                                        <div class="letDiv items update_lastid">
+                                            <input type="hidden" name="prepaid_taxes_tds_id[1]" value="" data-dirrty-initial-value="">
+                                            <div class="letDivIn item innerSec seprate_section">
+                                                <div class="add_clone mt-2">
+                                                    <div class="row w-100">
+                                                        <div class="form-group col-md-3 col-sm-6 col-6">
+                                                            <label for="pp_deductor_name_26qc_1">Name of Deductor <span class="required">*</span></label>
+                                                            <input type="text" name="pp_deductor_name_26qc[1]" value="" class="form-control textBoxes"
+                                                                id="pp_deductor_name_26qc_1" data-dirrty-initial-value="">
+                                                        </div>
+                                                        <div class="form-group  col-md-3 col-sm-6 col-6">
+                                                            <label for="pp_deductor_pan_26qc_1">PAN of Deductor <span class="required">*</span></label>
+                                                            <input type="text" name="pp_deductor_pan_26qc[1]" value=""
+                                                                class="form-control textBoxes text-uppercase" id="pp_deductor_pan_26qc_1"
+                                                                data-dirrty-initial-value="">
+                                                        </div>
+                                                        <div class="form-group col-md-3 col-sm-6 col-12">
+                                                            <label for="tds_gross_amount_26qc_1">Amount on which TDS deducted <span
+                                                                    class="required">*</span></label>
+                                                            <input type="text" name="tds_gross_amount_26qc[1]" value=""
+                                                                class="form-control textBoxes currency_field diy-amount" id="tds_gross_amount_26qc_1"
+                                                                inputmode="numeric" data-dirrty-initial-value="">
+                                                        </div>
+                                                        <div class="form-group col-md-3 col-sm-6 col-12">
+                                                            <label for="tds_amount_26qc_1">Total TDS deducted <span class="required">*</span></label>
+                                                            <input type="text" name="tds_amount_26qc[1]" value=""
+                                                                class="form-control textBoxes currency_field diy-amount" id="tds_amount_26qc_1"
+                                                                inputmode="numeric" data-dirrty-initial-value="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="inlineDel">-</div>
+                                                </div>
+                                            </div>
+                                            <div class=" text-end col-md-12">
+                                                <div class="addItem pull-right inlineAdd">+</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mainbox comon_outer mb-md-4 mb-3">
+                                    <div class="row">
+
+                                        <div class="col-md-12 col-sm-12 col-12">
+                                            <div class="custom_radio2 switch switch--horizontal switch--expanding-inner leftSwitch">
+                                                <h3>Details of Tax Collected at Source</h3>
+                                                <div class="outer">
+                                                    <input id="tcs_radio_b" type="radio" name="tcs_radio" value="0" checked="checked"
+                                                        data-dirrty-initial-value="checked">
+                                                    <label for="tcs_radio_b">No</label>
+                                                    <input id="tcs_radio_a" type="radio" name="tcs_radio" value="1" data-dirrty-initial-value="unchecked">
+                                                    <label for="tcs_radio_a">Yes</label>
+                                                </div>
+                                            </div>
+                                            <p class="col-md-8 mt-1 text-muted">
+                                                If at the time of sale of the specified category of goods, the seller has collected TCS from you then enter
+                                                the details here. You can also check this from Form 26AS.
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="row hiddenbox collapse" id="coDiv">
+                                        <div class="letDiv items">
+                                            <input type="hidden" name="prepaid_taxes_tcs_id[1]" value="" data-dirrty-initial-value="">
+                                            <div class="letDivIn item innerSec seprate_section">
+                                                <div class="add_clone mt-2">
+                                                    <div class="row w-100">
+                                                        <div class="form-group col-md-3 col-sm-6 col-6">
+                                                            <label for="pp_collector_name_1">Name of Collector <span class="required">*</span></label>
+                                                            <input type="text" name="pp_collector_name[1]" value="" class="form-control textBoxes"
+                                                                id="pp_collector_name_1" data-dirrty-initial-value="">
+                                                        </div>
+                                                        <div class="form-group col-md-3 col-sm-6 col-6">
+                                                            <label for="pp_collector_tan_1">TAN of Collector <span class="required">*</span></label>
+                                                            <input type="text" name="pp_collector_tan[1]" value=""
+                                                                class="form-control textBoxes text-uppercase" id="pp_collector_tan_1"
+                                                                data-dirrty-initial-value="">
+                                                        </div>
+                                                        <div class="form-group col-md-3 col-sm-6 col-12">
+                                                            <label for="tcs_gross_amount_1">Amount on which TCS collected <span
+                                                                    class="required">*</span></label>
+                                                            <input type="text" name="tcs_gross_amount[1]" value=""
+                                                                class="form-control textBoxes currency_field diy-amount" id="tcs_gross_amount_1"
+                                                                inputmode="numeric" data-dirrty-initial-value="">
+                                                        </div>
+                                                        <div class="form-group col-md-3 col-sm-6 col-12">
+                                                            <label for="tcs_amount_1">Total TCS Collected <span class="required">*</span></label>
+                                                            <input type="text" name="tcs_amount[1]" value=""
+                                                                class="form-control textBoxes currency_field diy-amount" id="tcs_amount_1"
+                                                                inputmode="numeric" data-dirrty-initial-value="">
+                                                        </div>
+                                                    </div>
+                                                    <div class="inlineDel">-</div>
+                                                </div>
+                                            </div>
+                                            <div class=" text-end col-md-12">
+                                                <div class="addItem pull-right inlineAdd">+</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="basicDtlBtn totalSalBtn desktop_btn btn_group">
+                <small class="cabtn_caption">Get customized solutions at discounted plans</small>
+                <a href="https://tax2win.in/ca-assisted/upgrade/1936132" class="loginBtn btn-border" oncontextmenu="if (!window.__cfRLUnblockHandlers) return false; return false;" data-ctid="screen-name-employement-details-get-ca-52c288f487">GET CA ASSISTED</a><span class="sep_or">OR</span> <button type="submit" name="submit" value="SUBMIT" class="data_deformatter loginBtn loading_btn btn-success  " oncontextmenu="if (!window.__cfRLUnblockHandlers) return false; return false;" data-loading-text="<i class=&quot;fa fa-circle-o-notch fa-spin&quot;></i>  LOADING" data-ctid="screen-name-employement-details-continue-60e933aa9d">CONTINUE <img src="https://tax2win.in/assets-new/img/new-theme/diy-flow/nex-arrow.svg" alt="Continue"></button>
+            </div>
+
+        </form>
+    </div>
+    <!-- Form end -->
+
+
+
+    
+    <script src="js/jquery-3.3.1.min.js"></script>
+
+    <!-- JQUERY STEP -->
+    <script src="js/jquery.steps.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

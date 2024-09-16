@@ -1,0 +1,281 @@
+<style>
+  @media screen and (min-width:1200px) {
+    .dropdown:hover .drop-content {
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (max-width:1200px) {
+    .dropdown:hover .drop-content {
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+
+</style>
+
+<div class="navbar">
+    <div class="container">
+      <!-- Navbar logo -->
+      <div class="nav-header">
+        <div class="nav-logo">
+          <a href="/index.html">
+            <img src="public/img/JJTax-logo.png" class="header-logo" alt="logo">
+          </a>
+        </div>
+      </div> 
+      <!-- responsive navbar toggle button -->
+      <input type="checkbox" id="nav-check">
+      <div class="nav-btn" id="nav-mobile" >
+        <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+      </div>  
+      <!-- Navbar items -->
+      <div class="nav-links ">
+        <!-- Dropdown menu -->
+        <div class="dropdown">
+            <a class="dropBtn" href="#">Company
+            <i class="fas fa-angle-down"></i>
+            </a>
+            <div class="drop-content">
+            <a class="dropdown-item" href="./aboutus.html">About Us</a>
+            <a class="dropdown-item" href="./awards.html">Media</a>
+            <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#formModal">Careers</a>
+            <a class="dropdown-item" href="./investor.html">Investor Relations</a>
+            </div>
+        </div>
+    
+        <!-- Dropdown menu -->
+        <div class="dropdown">
+          <a class="dropBtn" href="#">Insights
+              <i class="fas fa-angle-down"></i>
+          </a>
+          <div class="drop-content">
+              <a class="dropdown-item" href="/blog/">Blogs</a>
+              <a class="dropdown-item" href="/jjtaxfitt.html">JJTaxFitt</a>
+              <a class="dropdown-item" href="/tax-calendar.html">Tax Calendar</a>
+          </div>
+        </div>
+            
+        <!-- Dropdown menu -->
+
+        <div class="dropdown">
+          <a class="dropBtn" href="#">Services <i class="fas fa-angle-down"></i></a>
+          <div class="drop-content" style="width: 40vw;margin-right: 30vw;border-radius: 10px;">
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-4">
+                  <br/>
+                  <h4 style="color:#053757; font-weight: 800;">For Individuals</h4>
+                  <ul class="list-unstyled">
+                    <li><a href="../itr.html">Income Tax</a></li>
+                    <li><a href="./gst.html">GST</a></li>
+                    <li><a href="../tax-planning.html">Tax Planning</a></li>
+                    <li><a href="../tds.html">TDS on Rent/Property</a></li>
+                  </ul>
+                </div>
+                <div class="col-lg-4">
+                  <br/>
+                  <h4 style="color:#053757;font-weight: 800;">For Businesses</h4>
+                  <ul class="list-unstyled">
+                    <li><a href="../itr.html">Income Tax</a></li>
+                    <li><a href="./gst.html">GST</a></li>
+                    <li><a href="../accounting.html">Accounting</a></li>
+                    <li><a href="../tds.html">TDS</a></li>
+                  </ul>
+                </div>
+                <div class="col-lg-4">
+                  <br/>
+                  <h4 style="color: #053757;font-weight: 800;">Other Services</h4>
+                  <ul class="list-unstyled">
+                    <li><a href="../legal.html">Legal Services</a></li>
+                    <li><a href="roc-compliances.html">ROC Compliances</a></li>
+                    <li><a href="../startup.html">Startup Services</a></li>
+                    <li><a href="#">Reply to Notice</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+
+
+                <!-- <div class="dropdown">
+        <a class="dropBtn" href="#">Services
+            <i class="fas fa-angle-down"></i>
+        </a>
+        <div class="drop-content">
+          <a class="dropdown-item" href="/itr.html">Income Tax</a>
+          <a class="dropdown-item" href="/gst.html">GST</a>
+          <a class="dropdown-item" href="/tds.html">TDS</a>
+          <a class="dropdown-item" href="/accounting.html">Accounting</a>
+          <a class="dropdown-item" href="/roc-compliances.html">ROC Compliances</a>
+          <a class="dropdown-item" href="/legal.html">Legal Services</a>
+          <a class="dropdown-item" href="/startup.html">Startup Services</a>
+          <a class="dropdown-item" href="/tax-planning.html">Tax Planning</a>
+        </div>for 
+        </div> -->
+    
+        <div class="dropdown">
+        <a class="dropBtn" href="#">Tools
+            <i class="fas fa-angle-down"></i>
+        </a>
+        <div class="drop-content">
+          <a class="dropdown-item" href="/emi-calculator.html">EMI Calculator</a>
+          <a class="dropdown-item" href="/tax-calculator.html">Tax Calculator</a>
+          <a class="dropdown-item" href="/hra-calculator.html">HRA Calculator</a>
+          <a class="dropdown-item" href="/tds-calculator.html">TDS Calculator</a>
+        </div>
+        </div>
+        
+        <a href="/pricing.html">Pricing</a>
+        <a href="#" data-bs-toggle="modal" data-bs-target="#contactmodal">Contact</a>
+        <button onclick="window.fcWidget.open();window.fcWidget.show();" class="loginBtn">Chat with an expert</button>
+        <a class="btn-link" href="https://web.jjfintax.com:8843/#/" target="_blank">
+        <button class="loginBtn">Login</button>
+        </a>
+      </div>
+    </div>        
+  </div>
+  <div class="sticky-icon is-hidden-mobile">
+    <a href="https://api.whatsapp.com/send?phone=9310854724" data-action="share/whatsapp/share" target="_blank" class="social-media-color"><i class="fab fa-whatsapp"> </i> WhatsApp </a>
+    <a href="https://www.linkedin.com/in/jj-fintax/" class="social-media-color"><i class="fab fa-linkedin"> </i> LinkedIN </a>
+    <a href="https://www.instagram.com/jjfintax/" class="social-media-color"><i class="fab fa-instagram"></i> Instagram </a>
+    <a href="https://www.facebook.com/JJ-Tax-102265144737511" class="social-media-color"><i class="fab fa-facebook-f"> </i> Facebook </a>
+    <a href="https://www.youtube.com/channel/UC8BrcQ7nxa148InUkm-E-GA" class="social-media-color"><i class="fab fa-youtube"></i> Youtube </a>
+    <a href="https://twitter.com/JJTaxApp" class="social-media-color"><i class="fab fa-twitter"> </i> Twitter </a>
+    <a href="https://open.spotify.com/show/1LoGRoGWHHBo8MHm3q365E" class="social-media-color"><i class="fab fa-spotify"> </i> Spotify </a>
+  </div>
+
+  <div class="sticky-bar is-hidden-mobile" style="width: 40px;">
+    <a class="p-0" href="#" data-bs-toggle="modal" data-bs-target="#enquiryFormModal">
+      <img src="/public/img/enquiry-form.png"/>
+    </a>
+  </div>
+
+  <div class="modal fade" id="contactmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5">Get In Touch</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              Mobile No : +91-9310854724
+             </div>
+            <div class="mb-3">
+              EMail ID : contact@jjfintax.com
+            </div>
+            <div class="mb-3">
+              Address : 208, Tower B, Spaze Buziness Park, <br>
+              Sector 66, Gurgaon - 122102, Haryana, India
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="formModal" aria-labelledby="exampleModalToggleLabel2" tabindex="-1" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Come Join JJTax</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form id="careerForm" name="careerForm" method="post" action="https://submit-form.com/dktfg2z3" onsubmit="disbtn();">
+            <input type="hidden" name="_redirect" value="https://www.jjfintax.com/success.html" />
+            <input type="hidden" name="_email.subject" value="New Job Resume" />
+            <input type="hidden" name="_email.from" value="JJ Tax Site" />
+            <input type="checkbox" name="_data" style="display:none" tabindex="-1" autocomplete="off"/>
+            <div align="center">Provide us with your details and we'll have a look at it soon.<br><br></div>
+            <div class="mb-3">
+              <select id="post" class="form-select">
+                <option value="Tax_Expert">Apply for Tax Expert</option>
+                <option value="Tech_Intern">Apply for Tech Intern</option>
+                <option value="Legal_Intern">Apply for Legal Intern</option>
+                <option value="Marketing_Intern">Apply for Marketing Intern</option>
+                <option value="Assistant_Company_Secretary">Apply for Assistant Company Secretary</option>
+                <option value="Legal_Intern">Apply for Legal Associates</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required="required">
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control" id="email" name="email" placeholder="Your e-Mail" required="required">
+            </div>
+            <div class="mb-3">
+              <input type="number" class="form-control" min=10 id="mobile" name="mobile" placeholder="Mobile" required="required" title="Enter a Valid Mobile Number">
+            </div>
+            <div class="mb3">
+              <input
+              type="hidden"
+              id="document"
+              name="document"
+              role="uploadcare-uploader" required="required"
+              data-public-key="c8128b4ef704e7fe2021"
+              />
+            </div>  
+            <br>
+            <input type="submit" id="submit_btn" class="btn btn-success" value="Apply Now">
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>                
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="enquiryFormModal" aria-labelledby="exampleModalToggleLabel3" tabindex="-1" aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalToggleLabel3">Enquiry Form</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form id="careerForm" name="careerForm" method="post" action="https://submit-form.com/yX4b8PKhI" onsubmit="disbtn();">
+        <div class="modal-body">
+            <input type="hidden" name="_redirect" value="https://www.jjfintax.com/success.html" />
+            <input type="hidden" name="_email.subject" value="New Enquiry From Website" />
+            <input type="hidden" name="_email.from" value="JJ Tax Site" />
+            <input type="checkbox" name="_data" style="display:none" tabindex="-1" autocomplete="off" />
+            <div class="mb-3">
+              <input type="text" class="form-control" id="name" name="name" placeholder="Your Name" required="required">
+            </div>
+            <div class="mb-3">
+              <input type="email" class="form-control" id="email" name="email" placeholder="Your e-Mail">
+            </div>
+            <div class="mb-3">
+              <input type="number" class="form-control" min=10 id="mobile" name="mobile" placeholder="Mobile" required="required" title="Enter a Valid Mobile Number">
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" id="state" name="state" placeholder="Your State">
+            </div>
+            <div class="mb-3">
+              <textarea name="remark" class="form-control" placeholder="Remark"></textarea>
+            </div>
+         
+        </div>
+        <div class="modal-footer">
+          <input type="submit" id="submit_btn" class="btn btn-success" value="Submit">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>   
+      </form>             
+      </div>
+    </div>
+  </div>

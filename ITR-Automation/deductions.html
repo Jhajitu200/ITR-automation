@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://www.jjfintax.com/public/css/bootstrap.min.css">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=League Spartan:wght@300;400;500;600;700;800&display=swap" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://www.jjfintax.com/public/css/scrmob.css">
+    <link rel="stylesheet" href="https://www.jjfintax.com/public/css/style.css">
+    <link rel="stylesheet" href="css/style-income-form.css">
+    <link rel="stylesheet" href="https://www.jjfintax.com/public/css/style_new.css">
+    <link rel="stylesheet" href="https://www.jjfintax.com/public/css/navbar.css">
+    <link rel='stylesheet' href='https://www.jjfintax.com/public/css/slick.min.css'>
+    <link rel='stylesheet' href='https://www.jjfintax.com/public/css/slick-theme.min.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="container">
+            <!-- Navbar logo -->
+            <div class="nav-header">
+                <div class="nav-logo">
+                    <a href="index.html">
+                        <img src="https://www.jjfintax.com/public/images/new_logo.png" class="header-logo" alt="logo">
+                    </a>
+                </div>
+            </div>
+            <!-- responsive navbar toggle button -->
+            <input type="checkbox" id="nav-check">
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+            <!-- Navbar items -->
+            <div class="nav-links">
+                <!-- Dropdown menu -->
+                <div class="dropdown">
+                    <a class="dropBtn" href="#">Company
+                        <i class="fas fa-angle-down"></i>
+                    </a>
+                    <div class="drop-content">
+                        <a class="dropdown-item" href="aboutus.html">About Us</a>
+                        <a class="dropdown-item" href="awards.html">Media</a>
+                        <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#formModal">Careers</a>
+                        <a class="dropdown-item" href="investor.html">Investor Relations</a>
+                    </div>
+                </div>
+
+                <!-- Dropdown menu -->
+                <div class="dropdown">
+                    <a class="dropBtn" href="#">Insights
+                        <i class="fas fa-angle-down"></i>
+                    </a>
+                    <div class="drop-content">
+                        <a class="dropdown-item" href="https://blog.jjfintax.com/">Blogs</a>
+                        <a class="dropdown-item" href="jjtaxfitt.html">JJTaxFitt</a>
+                    </div>
+                </div>
+
+                <!-- Dropdown menu -->
+                <div class="dropdown">
+                    <a class="dropBtn" href="#">Services
+                        <i class="fas fa-angle-down"></i>
+                    </a>
+                    <div class="drop-content">
+                        <a class="dropdown-item" href="itr.html">Income Tax</a>
+                        <a class="dropdown-item" href="gst.html">GST</a>
+                        <a class="dropdown-item" href="tds.html">TDS</a>
+                        <a class="dropdown-item" href="accounting.html">Accounting</a>
+                        <a class="dropdown-item" href="roc-compliances.html">ROC Compliances</a>
+                        <a class="dropdown-item" href="legal.html">Legal Services</a>
+                        <a class="dropdown-item" href="startup.html">Startup Services</a>
+                        <a class="dropdown-item" href="tax-planning.html">Tax Planning</a>
+                    </div>
+                </div>
+
+                <div class="dropdown">
+                    <a class="dropBtn" href="#">Tools
+                        <i class="fas fa-angle-down"></i>
+                    </a>
+                    <div class="drop-content">
+                        <a class="dropdown-item" href="tax-calculator.html">Tax Calculator</a>
+                        <a class="dropdown-item" href="hra-calculator.html">HRA Calculator</a>
+                        <a class="dropdown-item" href="tds-calculator.html">TDS Calculator</a>
+                    </div>
+                </div>
+
+                <a href="pricing.html">Pricing</a>
+                <a href="#" data-bs-toggle="modal" data-bs-target="#contactmodal">Contact</a>
+                <button onclick="window.fcWidget.open();window.fcWidget.show();" class="loginBtn">Chat with an
+                    expert</button>
+                <a class="btn-link" href="https://web.jjfintax.com:8843/#/" target="_blank">
+                    <button class="loginBtn">Login</button>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="ticker-wrapper-h">
+        <div class="heading">JJ Tax News</div>
+        <ul class="news-ticker-h">
+            <li><p>Deadline for linking PAN card with Aadhaar is extended to June 30, 2023 from March 31, 2023.</p></li>
+            <li><p>Nomination deadline for Mutual Fund/ Demat Account Holders extended to 30 September</p></li>
+            <li><p>Debt Mutual Funds taxable at slab rate w.e.f. 1st April'23.</p></li>
+            <li><p>Market Linked Debentures taxable at slab rate w.e.f. 1st April'23.</p></li>
+            <li><p>TDS applicable on net winnings from online gaming w.e.f. 1st April'23.</p></li>
+            <li><p>Invest in NPS and secure your future</p></li>
+            <li><p>Investment partner: BAJAJ CAPITAL</p></li>
+            <li><p><b>Pay your taxes through JJ Tax App</b></p></li>
+            <li><p><b>ZERO</b> tax on income of Rs. 10 lakhs*, plan your investments with JJ Tax.</p></li>
+            <li><p><b>101</b> ways to save your taxes LEGALLY. Ask us!</p></li>
+            <li><p>Save <b>80%</b> of your cost. Outsource your Accounting to JJ Tax.</p></li>
+            <li><p>Want to hire a <b>vCFO?</b> Contact JJ Tax.</p></li>
+            <li><p>Now chat in Hindi with our Tax Experts</p></li>
+            <li><p>अब पाए हर TAX से जुड़े सवाल का जवाब हिंदी में</p></li>
+            <li><p>जेजे टैक्स ऐप पर 24/7 चैट करे।</p></li>
+            <li><p>We are a women empowered startup, invest and join our journey</p></li>
+            <li><p>Awarded with the Best Fintech Solution of the year</p></li>
+            <li><p>CEO Rashi awarded with Nationwide Award under 40 by Business Mint</p></li>
+        </ul>
+    </div>
+    <div class="container-fluid inc-tabs">
+        <div class="container">
+            <ul class="incProgressBar extra_menu js-horizontal-scroll ">
+                <li style="width: 107.673px;"><a href="index.html"><span></span>Sources of Income</a></li>
+                <li style="width: 107.673px;"><a href="upload-form-16.html"><span></span>Upload Form 16</a></li>
+                <li style="width: 107.673px;"><a href="financial-details.html"><span></span>Financial Details</a></li>
+                <li style="width: 107.673px;"><a href="basic-details.html"><span></span>Basic Details</a></li>
+                <li style="width: 107.673px;"><a href="basic-details-2.html"><span></span>Basic Details 2</a></li>
+                <li style="width: 107.673px;"><a href="Salary-Income.html"><span></span>Salary Income</a></li>
+                <li class="current" style="width: 107.673px;"><a href="deductions.html"><span></span>Deductions</a></li>
+                <li style="width: 107.673px;"><a href="bank-details.html"><span></span>Bank Details</a></li>
+                <li style="width: 107.673px;"><a href="prepaid-taxes.html"><span></span>Prepaid Taxes</a></li>
+                <li style="width: 107.673px;"><a href="extra-details.html"><span></span>Extra Details</a></li>
+                <li style="width: 107.673px;"><a href="computation.html"><span></span>Computation</a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- Form start -->
+    <div class="inc-form-container bg-light-blue">        
+        <form action="#">
+            <div class="container-fluid form-section">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-md-10">
+                            <!-- section title  -->
+                            <div class="row"> 
+                                <div class="col-md-11">
+                                    <h4 class="form-in-tl text-center">DEDUCTIONS</h4>
+                                    <div class="form-in-desc text-center">We're here to help you to get maximum deductions on your TAX</div>
+                                </div>
+                            </div>
+                            <!-- // section title  -->
+                            <nav>
+                                <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <button class="nav-link active" id="investment-tab" data-bs-toggle="tab" data-bs-target="#investment" type="button" role="tab" aria-controls="nav-investment" aria-selected="true" style="">Section 80C</button>
+                                <button class="nav-link" id="insurance-tab" data-bs-toggle="tab" data-bs-target="#insurance" type="button" role="tab" aria-controls="nav-insurance" aria-selected="false" style="">Section 80D </button>
+                                <button class="nav-link" id="donations-tab" data-bs-toggle="tab" data-bs-target="#donations" type="button" role="tab" aria-controls="nav-donations" aria-selected="false" style="">Donation</button>
+                                <button class="nav-link" id="anyOther-tab" data-bs-toggle="tab" data-bs-target="#anyOther" type="button" role="tab" aria-controls="nav-anyOther" aria-selected="false" style="">Other</button>
+                                </div>
+                            </nav>
+                            <div class="inc-forn-in-sec basic-detail">
+                                <div class="common_note mt-md-4 mb-md-4 mt-3 mb-3">
+                                    Note: Incase of New Tax Regime, only deduction u/s 80CCD(2) is allowed. This is available under Other tab.
+                                </div>
+                                <div class="m_div_control m_deductions">
+                                    <div class="salNewBox mainDiv otherSrc" data-src="1">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                            </div>
+                                        </div>
+                                        <div class="deductionCont">
+                                            <div class="tab-content" id="nav-tabContent">
+                                                <div class="tab-pane fade active show" id="investment" role="tabpanel" aria-labelledby="nav-investment-tab">
+                                                    <div class="salNewBoxCont">
+                                                        <div class="salNewBox">
+                                                            <div class="whiteBg">
+                                                                <div class="row">
+                                                                    <div class="form-group col-md-12">
+                                                                        <h3><span> Enter your tax saving investment details like PPF investment, Fixed Deposits etc. <i class="toltip" data-bs-toggle="modal" data-bs-target="#tax_saving_detil"><img width="14"></i></span></h3>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="form-group col-md-4 col-sm-6 col-6">
+                                                                        <label for="ins_lic1">LIC</label>
+                                                                        <input type="text" name="ins_lic[1]" value="" class="form-control textBoxes currency_field diy-amount" id="ins_lic1" inputmode="numeric" data-dirrty-initial-value="">
+                                                                    </div>
+                                                                    <div class="fform-group col-md-4 col-sm-3 col-3">
+                                                                        <label for="invt_pf">PF</label>
+                                                                        <input type="text" name="invt_pf" value="0" class="form-control textBoxes currency_field diy-amount" id="invt_pf" inputmode="numeric" data-dirrty-initial-value="0">
+                                                                    </div>
+                                                                    <div class="form-group col-md-4 col-sm-3 col-3">
+                                                                        <label for="invt_ppf">PPF</label>
+                                                                        <input type="text" name="invt_ppf" value="0" class="form-control textBoxes currency_field diy-amount" id="invt_ppf" inputmode="numeric" data-dirrty-initial-value="0">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="form-group col-md-4 col-sm-6 col-12">
+                                                                        <label for="home_loan_principal_repayment">Principal Repayment on housing Loan </label>
+                                                                        <input type="text" name="home_loan_principal_repayment" value="0" class="form-control textBoxes currency_field diy-amount" id="home_loan_principal_repayment" inputmode="numeric" data-dirrty-initial-value="0">
+                                                                    </div>
+                                                                    <div class="form-group col-md-4 col-sm-3 col-6">
+                                                                        <label for="invt_fdr">FDR (Tax Savings)</label>
+                                                                        <input type="text" name="invt_fdr" value="0" class="form-control textBoxes currency_field diy-amount" id="invt_fdr" inputmode="numeric" data-dirrty-initial-value="0">
+                                                                    </div>
+                                                                    <div class="form-group col-md-4 col-sm-3 col-6">
+                                                                        <label for="invt_nsc">NSC</label>
+                                                                        <input type="text" name="invt_nsc" value="0" class="form-control textBoxes currency_field diy-amount" id="invt_nsc" inputmode="numeric" data-dirrty-initial-value="0">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="row">
+                                                                    <div class="form-group col-md-4 col-sm-4 col-12">
+                                                                        <label for="edu_tuition_fees">Tuition fees</label>
+                                                                        <input type="text" name="edu_tuition_fees" value="0" class="form-control textBoxes currency_field diy-amount" id="edu_tuition_fees" inputmode="numeric" data-dirrty-initial-value="0">
+                                                                    </div>
+                                                                    <div class="form-group col-md-4 col-sm-3 col-6">
+                                                                        <label for="invt_annuty_premium">Premium paid to Annuity</label>
+                                                                        <input type="text" name="invt_annuty_premium" value="0" class="form-control textBoxes currency_field diy-amount" id="invt_annuty_premium" inputmode="numeric" data-dirrty-initial-value="0">
+                                                                    </div>
+                                                                    <div class="form-group col-md-4 col-sm-4 col-6">
+                                                                        <label for="invt_80c_others">Other 80C Deductions</label>
+                                                                        <input type="text" name="invt_80c_others" value="0" class="form-control textBoxes currency_field diy-amount" id="invt_80c_others" inputmode="numeric" data-dirrty-initial-value="0">
+                                                                    </div>
+                                                                </div>
+                                                                <div class="clear"></div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="tab-pane fade" id="insurance" role="tabpanel" aria-labelledby="nav-insurance-tab">
+                                                    <div class="insurance">
+                                                        <div class="salNewBoxCont">
+                                                            <div class="salNewBox">
+                                                                <div class="whiteBg">
+                                                                    <div class="row items">
+                                                                        <div class="policyHolderBoxIn item">
+                                                                            <div class="add_clone">
+                                                                                <div class="innerSec w-100">
+                                                                                    <div class="row">
+                                                                                        <div class="form-group col-md-4 col-sm-12 col-12">
+                                                                                            <label for="ins_medical_member_1">Medical Insurance</label>
+                                                                                            <select name="ins_medical_member[1]" class="form-control textBoxes"
+                                                                                                id="ins_medical_member_1" data-dirrty-initial-value="">
+                                                                                                <option value="" selected="selected">Select Policy type</option>
+                                                                                                <option value="self">For Self, Spouse and Dependent children</option>
+                                                                                                <option value="parent">For Parents</option>
+                                                                                            </select>
+                                                                                        </div>
+                                                                                        <div class="form-group col-md-8 col-sm-12 col-12 halfradiobox">
+                                                                                            <div
+                                                                                                class="custom_radio2 mt-md-4 mt-1 pt-2 switch switch--horizontal switch--expanding-inner leftSwitch ph_age">
+                                                                                                <h3>Is any of the policy holder aged 60 years or more</h3>
+                                                                                                <div class="outer d-flex">
+                                                                                                    <input type="radio" class="ins_policy_holder_age"
+                                                                                                        id="ins_policy_holder_age_yes_1" name="ins_policy_holder_age[1]"
+                                                                                                        value="Y" data-dirrty-initial-value="unchecked"><label
+                                                                                                        for="ins_policy_holder_age_yes_1">Yes</label><input type="radio"
+                                                                                                        class="ins_policy_holder_age" id="ins_policy_holder_age_no_1"
+                                                                                                        name="ins_policy_holder_age[1]" value="N" checked="checked"
+                                                                                                        data-dirrty-initial-value="checked"><label
+                                                                                                        for="ins_policy_holder_age_no_1">No</label> </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="letDiv">
+                                                                                        <div class="letDivIn">
+                                                                                            <div class="row">
+                                                                                                <div class="form-group col-md-6 col-sm-6 col-12">
+                                                                                                    <label for="ins_preventive_health_check_up_1">Preventive Health
+                                                                                                        Check Up </label>
+                                                                                                    <i class="toltip" data-bs-toggle="modal"
+                                                                                                        data-bs-target="#preventive_health"><img
+                                                                                                            src="https://tax2win.in/assets/img/efilling-process/tooltip.svg"
+                                                                                                            alt="" width="14"></i>
+                                                                                                    <input type="text" name="ins_preventive_health_check_up[1]" value=""
+                                                                                                        class="form-control textBoxes currency_field diy-amount"
+                                                                                                        id="ins_preventive_health_check_up_1" inputmode="numeric"
+                                                                                                        data-dirrty-initial-value="">
+                                                                                                </div>
+                                                                                                <div
+                                                                                                    class="form-group col-md-6 col-sm-6 col-12 hidden ins_medical_expenditure">
+                                                                                                    <label for="ins_medical_expenditure_1">Medical Expenditure</label>
+                                                                                                    <input type="text" name="ins_medical_expenditure[1]" value=""
+                                                                                                        class="form-control textBoxes currency_field diy-amount"
+                                                                                                        id="ins_medical_expenditure_1" inputmode="numeric"
+                                                                                                        data-dirrty-initial-value="">
+                                                                                                </div>
+                                                                                                <div class="form-group col-md-6">
+                                                                                                    <label for="ins_premium_amt_1">Medical insurance premium</label>
+                                                                                                    <i class="toltip" data-bs-toggle="modal"
+                                                                                                        data-bs-target="#mi_premium"><img
+                                                                                                            src="https://tax2win.in/assets/img/efilling-process/tooltip.svg"
+                                                                                                            alt="" width="14"></i>
+                                                                                                    <input type="text" name="ins_premium_amt[1]" value=""
+                                                                                                        class="form-control textBoxes currency_field diy-amount"
+                                                                                                        id="ins_premium_amt_1" inputmode="numeric"
+                                                                                                        data-dirrty-initial-value="">
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="inlineDel">-</div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="text-end col-md-12">
+                                                                            <div class="addItem pull-right inlineAdd">+</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="clear"></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="tab-pane fade" id="anyOther" role="tabpanel" aria-labelledby="nav-contact-tab">
+                                                    <div class="tabBox">
+                                                        <div class="salNewBoxCont comon_outer">
+                                                            <div class="salNewBox">
+
+                                                                <div class="whiteBg">
+                                                                    <div>
+
+                                                                        <div class="row items">
+                                                                            <div class="item innerSec any_other">
+                                                                                <div class="add_clone">
+                                                                                    <div class="row w-100">
+                                                                                        <div class="form-group col-md-6 col-sm-6 col-6">
+                                                                                            <label for="any_other_name_1">Specify if any other</label>
+                                                                                            <select name="any_other_name[1]"
+                                                                                                class="form-control textBoxes any_other_name" id="any_other_name_1"
+                                                                                                data-dirrty-initial-value="">
+                                                                                                <option value="" selected="selected">Please Select</option>
+                                                                                                <option value="80ccc">80CCC</option>
+                                                                                                <option value="80cch">80CCH</option>
+                                                                                                <option value="80ccd1">80CCD(1)</option>
+                                                                                                <option value="80ccd1b">80CCD(1B)</option>
+                                                                                                <option value="80ccd2">80CCD(2) - Deposited by Employer</option>
+                                                                                                <option value="80ee">80EE</option>
+                                                                                                <option value="80eea">80EEA</option>
+                                                                                                <option value="80eeb">80EEB</option>
+                                                                                                <option value="80ggc">80GGC</option>
+                                                                                            </select>
+                                                                                        </div>
+                                                                                        <div class="form-group col-md-6 col-sm-6 col-6 amount">
+                                                                                            <label for="any_other_amount_1">Amount</label>
+                                                                                            <input type="text" name="any_other_amount[1]" value=""
+                                                                                                class="form-control textBoxes currency_field diy-amount"
+                                                                                                id="any_other_amount_1" inputmode="numeric"
+                                                                                                data-dirrty-initial-value="">
+                                                                                        </div>
+                                                                                        <div class="form-group col-md-4 col-sm-6 col-12 basic_salary ccd1"
+                                                                                            style="display: none;">
+                                                                                            <label for="basic_salary_da_1">Basic Salary + DA</label>
+                                                                                            <input type="text" name="basic_salary_da[1]" value=""
+                                                                                                class="form-control textBoxes currency_field diy-amount"
+                                                                                                id="basic_salary_da_1" inputmode="numeric" data-dirrty-initial-value="">
+                                                                                        </div>
+                                                                                        <div class="col-md-6">
+                                                                                            <div class="ggac w-100" style="display: none;">
+                                                                                                <div class="row">
+                                                                                                    <div class="form-group col-md-6 col-sm-6 col-6">
+                                                                                                        <label for="ao_donee_name_1">Donee Name</label>
+                                                                                                        <input type="text" name="ao_donee_name[1]" value=""
+                                                                                                            class="form-control textBoxes" id="ao_donee_name_1"
+                                                                                                            data-dirrty-initial-value="">
+                                                                                                    </div>
+                                                                                                    <div class="form-group col-md-6 col-sm-6 col-6">
+                                                                                                        <label for="ao_donee_pan_1">Donee Pan</label>
+                                                                                                        <input type="text" name="ao_donee_pan[1]" value=""
+                                                                                                            class="form-control textBoxes text-uppercase"
+                                                                                                            id="ao_donee_pan_1" data-dirrty-initial-value="">
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                    <div class="inlineDel">-</div>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="text-end col-md-12">
+                                                                                <div class="addItem pull-right inlineAdd">
+                                                                                    +
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="salNewBoxCont mt-md-3 mt-1 comon_outer">
+                                                                <div class="salNewBox">
+                                                                    <div class="whiteBg">
+                                                                        <div>
+                                                                            <div class="form-group col-md-12">
+                                                                                <h3>Section 80DD / 80U <i data-html="true" data-toggle="tooltip" data-bs-placement="top"
+                                                                                        data-bs-original-title="You can claim tax refunds if you or any of your family member is disabled. If such is the case, we'll help lower the burden on your shoulders."><img
+                                                                                            src="https://tax2win.in/assets-new/img/new-theme/diy-flow/tooltip.svg"
+                                                                                            width="15" alt=""></i>
+
+                                                                                </h3>
+                                                                            </div>
+                                                                            <div class="row">
+                                                                                <div class="form-group  col-md-6 col-sm-6 col-6">
+                                                                                    <label for="disabled_member">Disabled Member</label>
+                                                                                    <select name="disabled_member" class="form-control textBoxes" id="disabled_member"
+                                                                                        data-dirrty-initial-value="">
+                                                                                        <option value="" selected="selected">Please Select Member</option>
+                                                                                        <option value="self">Self</option>
+                                                                                        <option value="family">Family Member</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                                <div class="form-group  col-md-6 col-sm-6 col-6">
+                                                                                    <label for="disabled_amount">Total Expenditure</label>
+                                                                                    <input type="text" name="disabled_amount" value="0"
+                                                                                        class="form-control textBoxes currency_field diy-amount" id="disabled_amount"
+                                                                                        inputmode="numeric" data-dirrty-initial-value="0">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="row" id="dedn">
+                                                                                <div class="custom_radio flex-sm-column align-items-sm-start" id="h3">
+                                                                                    <span class="mb-2">Severity of disability</span>
+                                                                                    <div>
+                                                                                        <input id="disabled_severity_40" type="radio" name="disabled_severity"
+                                                                                            value="40" checked="checked" data-dirrty-initial-value="checked">
+                                                                                        <label for="disabled_severity_40">More than 40%</label>
+                                                                                        <input id="disabled_severity_80" type="radio" name="disabled_severity"
+                                                                                            value="80" data-dirrty-initial-value="unchecked">
+                                                                                        <label for="disabled_severity_80">More than 80%</label>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="salNewBoxCont mt-md-3 mt-3 comon_outer">
+                                                                <div class="salNewBox">
+                                                                    <div class="whiteBg">
+                                                                        <div>
+                                                                            <div class="form-group col-md-12">
+                                                                                <h3>Section 80DDB <i class="toltip" data-bs-toggle="modal"
+                                                                                        data-bs-target="#section_80ddb"><img
+                                                                                            src="https://tax2win.in/assets/img/efilling-process/tooltip.svg" alt=""
+                                                                                            width="14"></i></h3>
+                                                                            </div>
+                                                                            <div class="row">
+                                                                                <div class="form-group col-md-6 col-sm-6 col-6">
+                                                                                    <label for="diseased_citizen">Diseased Citizen</label>
+                                                                                    <select name="diseased_citizen" class="form-control textBoxes" id="diseased_citizen"
+                                                                                        data-dirrty-initial-value="">
+                                                                                        <option value="" selected="selected">Please Select Member</option>
+                                                                                        <option value="normal">Normal Citizen (Less than 60 years of age)</option>
+                                                                                        <option value="senior">Senior Citizen (60 or more)</option>
+                                                                                    </select>
+                                                                                </div>
+                                                                                <div class="form-group col-md-6 col-sm-6 col-6">
+                                                                                    <label for="disabled_amount">Total Expenditure</label>
+                                                                                    <input type="text" name="diseased_amount" value="0"
+                                                                                        class="form-control textBoxes currency_field diy-amount" id="diseased_amount"
+                                                                                        inputmode="numeric" data-dirrty-initial-value="0">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="salNewBoxCont mt-md-3 mt-3 comon_outer">
+                                                                <div class="salNewBox">
+
+                                                                    <div class="whiteBg">
+                                                                        <div>
+                                                                            <div class="form-group col-md-12">
+                                                                                <h3>Section 80E <i data-html="true" data-toggle="tooltip" data-bs-placement="top"
+                                                                                        data-bs-original-title="Did you know that your education loan can get you access to the best of universities and the interest paid on it can be claimed as a deduction."><img
+                                                                                            src="https://tax2win.in/assets-new/img/new-theme/diy-flow/tooltip.svg"
+                                                                                            width="15" alt=""></i>
+
+                                                                                </h3>
+                                                                            </div>
+                                                                            <div class="form-group col-md-6">
+                                                                                <label for="edu_interest_on_loan">Interest on education loan</label>
+                                                                                <i class="toltip" data-bs-toggle="modal" data-bs-target="#intrest_edu_loan"><img
+                                                                                        src="https://tax2win.in/assets/img/efilling-process/tooltip.svg" alt=""
+                                                                                        width="14"></i>
+                                                                                <input type="text" name="edu_interest_on_loan" value="0"
+                                                                                    class="form-control textBoxes currency_field diy-amount" id="edu_interest_on_loan"
+                                                                                    inputmode="numeric" data-dirrty-initial-value="0">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="salNewBoxCont mt-md-3 mt-3 comon_outer">
+                                                                <div class="salNewBox">
+
+                                                                    <div class="whiteBg">
+                                                                        <div>
+                                                                            <div class="form-group col-md-12">
+                                                                                <h3>Section 80GG <i data-html="true" data-toggle="tooltip" data-bs-placement="top"
+                                                                                        data-bs-original-title="You can claim tax benefits against the amount you have paid as house rent. It can be claimed only if you do not either receive or claim your HRA"><img
+                                                                                            src="https://tax2win.in/assets-new/img/new-theme/diy-flow/tooltip.svg"
+                                                                                            width="15" alt=""></i>
+
+                                                                                </h3>
+                                                                            </div>
+                                                                            <div class="row">
+                                                                                <div class="form-group col-md-6 col-sm-6 col-12">
+                                                                                    <label for="house_rent_paid">Rent Paid for the year</label>
+                                                                                    <input type="text" name="house_rent_paid" value="0"
+                                                                                        class="form-control textBoxes currency_field diy-amount" id="house_rent_paid"
+                                                                                        inputmode="numeric" data-dirrty-initial-value="0">
+                                                                                </div>
+                                                                                <div class="form-group col-md-6 col-sm-6 col-12">
+                                                                                    <label for="house_rent_paid_months">Number of months rent is paid for</label>
+                                                                                    <input type="text" name="house_rent_paid_months" value="0"
+                                                                                        class="form-control textBoxes" id="house_rent_paid_months" inputmode="numeric"
+                                                                                        oninput="if (!window.__cfRLUnblockHandlers) return false; pincode_formatter(this)"
+                                                                                        data-dirrty-initial-value="0">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="clear"></div>
+                                                <div class="tab-pane fade items Donations" id="donations" role="tabpanel" aria-labelledby="nav-donations-tab">
+                                                    <div class="salNewBoxCont item seprate_section">
+                                                        <input type="hidden" name="deductions_donations_id[1]" value="" class="item_id"
+                                                            data-name="deductions_donations_id"
+                                                            data-deletepage="efile-income-tax-return/deductions/delete-donation/1936132" data-dirrty-initial-value="">
+                                                        <div class="action_box">
+                                                            <div class="hideable numadd_box hide">
+                                                                <div class="wrapper"><span class="salNewNo">1</span>Donations</div><span title="Remove Item"
+                                                                    tabindex="0" data-bs-toggle="popover" data-bs-trigger="focus" data-placement="left" class="delItem "
+                                                                    data-singleton="true" data-bs-original-title="Remove Donation"> <img
+                                                                        src="https://tax2win.in/assets-new/img/new-theme/diy-flow/trash.svg" alt="Delete"
+                                                                        title="Delete"></span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="salNewBox">
+
+                                                            <div class="whiteBg">
+                                                                <div class="row">
+                                                                    <div class="form-group col-md-12">
+                                                                        <h3> <span>Under section 80G several donations are eligible for deduction either upto 100% or
+                                                                                50% with or without restriction. just enter the amount we will automatically do the rest
+                                                                                of calculation to get maximum refunds.</span></h3>
+                                                                    </div>
+
+                                                                    <div class="form-group col-md-6 col-sm-6 col-6 ">
+                                                                        <label for="donee_name">Name of Donee</label>
+                                                                        <input type="text" name="donee_name[1]" value="" class="form-control textBoxes"
+                                                                            id="donee_name_1" data-dirrty-initial-value="">
+                                                                    </div>
+                                                                    <div class="form-group col-md-6 col-sm-6 col-6">
+                                                                        <label for="donee_pan">PAN of Donee</label>
+                                                                        <input type="text" name="donee_pan[1]" value="" class="form-control textBoxes text-uppercase"
+                                                                            id="donee_pan_1" data-dirrty-initial-value="">
+                                                                    </div>
+                                                                    <div class="calc_box_parent">
+                                                                        <div class="row">
+                                                                            <div class="form-group col-md-4 col-sm-4 col-6">
+                                                                                <label for="donation_cash">Donation in Cash</label>
+                                                                                <input type="text" name="donation_cash[1]" value=""
+                                                                                    class="form-control textBoxes calc_box_input calc_box_add currency_field diy-amount"
+                                                                                    id="donation_cash_1" inputmode="numeric" data-dirrty-initial-value="">
+                                                                            </div>
+                                                                            <div class="form-group col-md-4 col-sm-4 col-6">
+                                                                                <label for="donation_other_mode">Donation in Other Mode</label>
+                                                                                <input type="text" name="donation_other_mode[1]" value=""
+                                                                                    class="form-control textBoxes calc_box_input calc_box_add currency_field diy-amount"
+                                                                                    id="donation_other_mode_1" inputmode="numeric" data-dirrty-initial-value="">
+                                                                            </div>
+                                                                            <div class="form-group col-md-4 col-sm-4 col-12">
+                                                                                <label for="donation_amount">Donation Amount <i class="toltip" data-bs-toggle="modal"
+                                                                                        data-bs-target="#donation_amount"><img
+                                                                                            src="https://tax2win.in/assets/img/efilling-process/tooltip.svg" alt=""
+                                                                                            width="14"></i></label>
+                                                                                <input type="text" name="donation_amount[1]" value=""
+                                                                                    class="form-control textBoxes calc_box_output currency_field diy-amount"
+                                                                                    id="donation_amount_1" readonly="" data-dirrty-initial-value="">
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="charity_box">
+                                                                        <div class="row">
+
+                                                                            <div class="form-group col-md-4 col-sm-4 col-6">
+                                                                                <label for="donation_qualifying[1]">Limit of Deductions</label><select
+                                                                                    name="donation_qualifying[1]"
+                                                                                    class="form-control textBoxes donation_qualifying show_hide_arn"
+                                                                                    id="donation_qualifying_list_1" data-dirrty-initial-value="">
+                                                                                    <option value="" selected="selected">Please Select</option>
+                                                                                    <option value="Q">Qualifying Limit</option>
+                                                                                    <option value="N">Without Qualifying Limit</option>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="form-group col-md-4 col-sm-4 col-6">
+                                                                                <label for="donation_qualifying_percent[1]">Percentage of Amount</label><select
+                                                                                    name="donation_qualifying_percent[1]"
+                                                                                    class="form-control textBoxes donation_qualifying_percent show_hide_arn"
+                                                                                    id="donation_qualifying_percent_list_1" data-dirrty-initial-value="">
+                                                                                    <option value="" selected="selected">Please Select</option>
+                                                                                    <option value="50">50%</option>
+                                                                                    <option value="100">100%</option>
+                                                                                </select>
+                                                                            </div>
+                                                                            <div class="form-group col-md-4 col-sm-4 col-12 arn_box" style="display:none">
+                                                                                <label for="arn_number[1]"> Donation ARN Number<span
+                                                                                        class="required">*</span></label><input type="text" name="arn_number[1]"
+                                                                                    value="" class="form-control textBoxes arn_number" maxlength="25" id="arn_number_1"
+                                                                                    data-dirrty-initial-value="">
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <br>
+                                                                        <div class="form-group col-md-12 mt-4">
+                                                                            <h3>DONEE ADDRESS</h3>
+                                                                        </div>
+                                                                        <div class="pincode_box">
+                                                                            <div class="row">
+                                                                                <div class="form-group col-md-4 col-sm-4 col-12">
+                                                                                    <label for="pincode_1">Pincode</label>
+                                                                                    <input type="text" name="pincode[1]" value="" class="form-control textBoxes pincode"
+                                                                                        id="pincode_1" inputmode="numeric" data-dirrty-initial-value="">
+                                                                                    <div class="fetch-data" id="datashow-pincode" style="display: none;">
+                                                                                        <span id="address_deatails"></span>
+                                                                                        <a data-bs-toggle="collapse" href="#basicaddres_row" role="button"
+                                                                                            aria-expanded="false" aria-controls="basicaddres_row"
+                                                                                            id="edit_pancards"><img
+                                                                                                src="https://tax2win.in/assets-new/img/new-theme/diy-flow/edit.svg"
+                                                                                                alt="Edit" title="Edit Address" width="14"></a>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="col-md-8 col-sm-8 col-12 collapse" id="basicaddres_row">
+                                                                                    <div class="row">
+                                                                                        <div class="form-group col-md-6 col-sm-6 col-6">
+                                                                                            <label for="city_1">City</label>
+                                                                                            <input type="text" name="city[1]" value=""
+                                                                                                class="form-control textBoxes city" id="city_1"
+                                                                                                data-dirrty-initial-value="">
+                                                                                        </div>
+                                                                                        <div class="form-group col-md-6 col-sm-6 col-6">
+                                                                                            <label for="state_1">State</label>
+                                                                                            <select name="statecode[1]" class="form-control textBoxes statecode"
+                                                                                                id="state_1" data-dirrty-initial-value="">
+                                                                                                <option value="" selected="selected">Please Select</option>
+                                                                                                <option value="1">ANDAMAN AND NICOBAR ISLANDS</option>
+                                                                                                <option value="2">ANDHRA PRADESH</option>
+                                                                                                <option value="3">ARUNACHAL PRADESH</option>
+                                                                                                <option value="4">ASSAM</option>
+                                                                                                <option value="5">BIHAR</option>
+                                                                                                <option value="6">CHANDIGARH</option>
+                                                                                                <option value="33">CHHATISHGARH</option>
+                                                                                                <option value="7">DADRA AND NAGAR HAVELI</option>
+                                                                                                <option value="8">DAMAN AND DIU</option>
+                                                                                                <option value="9">DELHI</option>
+                                                                                                <option value="10">GOA</option>
+                                                                                                <option value="11">GUJARAT</option>
+                                                                                                <option value="12">HARYANA</option>
+                                                                                                <option value="13">HIMACHAL PRADESH</option>
+                                                                                                <option value="14">JAMMU AND KASHMIR</option>
+                                                                                                <option value="35">JHARKHAND</option>
+                                                                                                <option value="15">KARNATAKA</option>
+                                                                                                <option value="16">KERALA</option>
+                                                                                                <option value="37">LADAKH</option>
+                                                                                                <option value="17">LAKHSWADEEP</option>
+                                                                                                <option value="18">MADHYA PRADESH</option>
+                                                                                                <option value="19">MAHARASHTRA</option>
+                                                                                                <option value="20">MANIPUR</option>
+                                                                                                <option value="21">MEGHALAYA</option>
+                                                                                                <option value="22">MIZORAM</option>
+                                                                                                <option value="23">NAGALAND</option>
+                                                                                                <option value="24">ORISSA</option>
+                                                                                                <option value="25">PONDICHERRY</option>
+                                                                                                <option value="26">PUNJAB</option>
+                                                                                                <option value="27">RAJASTHAN</option>
+                                                                                                <option value="28">SIKKIM</option>
+                                                                                                <option value="29">TAMILNADU</option>
+                                                                                                <option value="36">TELANGANA</option>
+                                                                                                <option value="30">TRIPURA</option>
+                                                                                                <option value="31">UTTAR PRADESH</option>
+                                                                                                <option value="34">UTTARAKHAND</option>
+                                                                                                <option value="32">WEST BENGAL</option>
+                                                                                            </select>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group col-md-12 col-sm-12 col-12">
+                                                                                    <label for="address_1">Address</label>
+                                                                                    <input type="text" name="address[1]" value="" class="form-control textBoxes area"
+                                                                                        id="address_1" data-dirrty-initial-value="">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="addSalBtnBox text-end mt-md-3 mt-3"><button type="button" class="addSalBtn addItem"
+                                                            data-placement="left" title="Add Donation">+ Add Donation</button></div>
+                                                </div>
+                                            </div>
+                                            <div class="dedRef"></div>
+                                        </div>
+                                    
+                                    
+                                    
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div class="addSalBtnBox text-end mt-md-4 mt-2">
+                <button type="button" class="addSalBtn addItem" data-placement="left" data-toggle="tooltip" title="" data-bs-original-title="">+ Add Salary Income</button>
+            </div>
+            <div class="basicDtlBtn totalSalBtn desktop_btn btn_group">
+                <small class="cabtn_caption">Get customized solutions at discounted plans</small>
+                <a href="https://tax2win.in/ca-assisted/upgrade/1936132" class="loginBtn btn-border" oncontextmenu="if (!window.__cfRLUnblockHandlers) return false; return false;" data-ctid="screen-name-employement-details-get-ca-52c288f487">GET CA ASSISTED</a><span class="sep_or">OR</span> <button type="submit" name="submit" value="SUBMIT" class="data_deformatter loginBtn loading_btn btn-success  " oncontextmenu="if (!window.__cfRLUnblockHandlers) return false; return false;" data-loading-text="<i class=&quot;fa fa-circle-o-notch fa-spin&quot;></i>  LOADING" data-ctid="screen-name-employement-details-continue-60e933aa9d">CONTINUE <img src="https://tax2win.in/assets-new/img/new-theme/diy-flow/nex-arrow.svg" alt="Continue"></button>
+            </div>
+
+        </form>
+    </div>
+    <!-- Form end -->
+
+
+
+    
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="https://www.jjfintax.com/public/js/bootstrap.bundle.min.js"></script>
+    <!-- JQUERY STEP -->
+    <script src="js/jquery.steps.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

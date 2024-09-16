@@ -1,0 +1,1 @@
+this is name and address of company RUPTECH EDUCATIONAL INDIA Sachidanand Farm House, Kishangarh Village, In Front Of Swimming Pool, Near DDA Sports Complex,, LaneGreen Ave,Vasant Kunj - 110070 Delhi +(91)11-26802764 accounts1@scottishigh.com

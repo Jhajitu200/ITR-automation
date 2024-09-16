@@ -1,0 +1,301 @@
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+
+header .gradient {
+	background: #512DA8; /* Old browsers */
+	background: -moz-linear-gradient(-45deg, #512DA8 2%, #673AB7 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(-45deg, #512DA8 2%,#673AB7 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(135deg, #512DA8 2%,#673AB7 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#512DA8', endColorstr='#673AB7',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 0.7;
+}
+
+.header-container {
+	position: absolute;
+	top: 150px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	color: #fff;
+}
+
+.scroll-hint {
+	display: block;
+	width: 26px;
+	height: 44px;
+	position: absolute;
+	left: 50%;
+	margin-left: -20px;
+	bottom: 40px;
+	color: #fff;
+	background: url(img/mouse.svg) no-repeat center center;
+}
+
+.scroll-hint .scrollwheel {
+	position: absolute;
+	left: 50%;
+	top: 10px;
+	height: 10px;
+	width: 2px;
+	background: #fff;
+	display: block;
+	border-radius: 1px;
+	margin-left: -1px;
+}
+
+.header-container nav {
+	position: absolute;
+	bottom: 0;
+}
+
+.header-container nav a {
+	text-decoration: none;
+	padding: 10px;
+	display: inline-block;
+}
+
+.btn {
+	box-shadow: 0 3px 10px rgba(0, 0, 0, 0.23), 0 3px 10px rgba(0, 0, 0, 0.16);
+	color: #fff;
+	padding: 10px;
+	display: inline-block;
+	background: #009688;
+}
+
+.btn:hover {
+	background: #01695f;
+	color: #fff;
+}
+
+.btn.github {
+	background: #202d5f;
+}
+
+.btn.github:hover {
+	background: #141c3c;
+}
+
+.btn.wordpress {
+	background: #0073aa;
+}
+.btn.wordpress:hover {
+	background: #004667;
+}
+
+.btn.typo3 {
+	background: #ff8700;
+}
+.btn.typo3:hover {
+	background: #b35f00;
+}
+
+.container {
+	width: 1140px;
+	max-width: 100%;
+	margin: auto;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.demo-container {
+	position: relative;
+}
+
+.info {
+	float: left;
+}
+
+.small-demo {
+	
+}
+
+.small-demo .caption {
+	padding: 10px;
+	color: #212121;
+	font-size: 0.875rem;
+}
+.gallery-box{
+	
+}
+.small-demo a {
+	
+}
+.small-demo img {
+	max-width: 100%;
+	width: 100%;
+	border: 1px solid #d5d5d5;
+    padding: 5px;
+    height: 180px;
+	object-fit: cover;
+	display: block;
+	-webkit-transition: -webkit-transform .35s ease;
+	-moz-transition: -moz-transform .35s ease;
+	-o-transition: -o-transform .35s ease;
+	-ms-transition: -ms-transform .35s ease;
+	transition: transform .35s ease;
+}
+
+.small-demo a:hover img {
+	-webkit-transform: scale(1.05);
+	-moz-transform: scale(1.05);
+	-o-transform: scale(1.05);
+	-ms-transform: scale(1.05);
+	transform: scale(1.05);
+}
+
+section {
+	padding: 50px 0;
+}
+
+.row {
+	margin-right: -15px;
+	margin-left: -15px;
+}
+.row:before,
+.row:after {
+	display: table;
+  content: " ";
+}
+
+.row:after {
+	clear: both;
+}
+
+.col-left {
+	float: left;
+	width: 25%;
+	padding: 0 15px;
+}
+
+.col-right {
+	float: left;
+	width: 75%;
+	padding: 0 15px;
+}
+
+table {
+	width: 100%;
+	max-width: 100%;
+	margin-bottom: 20px;
+	border-spacing: 0;
+	border-collapse: collapse;
+	font-size: 16px;
+}
+
+table tr th {
+	padding: 20px;
+	border-bottom: 0px;
+	background: #f5f5f5;
+	font-weight: 600;
+}
+
+table tr td {
+	padding: 15px 20px;
+	border-bottom: 0px;
+	border-top: 1px solid #e3e3e3;
+}
+
+table tr:nth-of-type(even) {
+	background-color: #f9f9f9;
+}
+
+table
+
+th {
+	text-align: left;
+}
+
+a {
+	color: #009688;
+	text-decoration: none;
+}
+a:hover {
+	color: #01695f;
+}
+
+.flyin-navi {
+	height: 50px;
+	position: fixed;
+	display: none;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: #009688;
+}
+
+.flyin-navi li a {
+	color: #fff;
+	padding: 0 10px;
+}
+
+.flyin-navi ul {
+	margin: 0;
+	padding: 0;
+}
+
+.flyin-navi li {
+	float: left;
+	list-style: none;
+	line-height: 50px;
+}
+
+.flyin-navi li.active a {
+	font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+	body {
+		font-size: 90%;
+	}
+
+	.info h1 {
+		font-size: 2rem;
+	}
+
+	.info h1 sup {
+		font-size: 1.25rem;
+	}
+}
+
+@media (max-width: 763px) {
+	body {
+		font-size: 90%;
+	}
+
+	section {
+		padding: 20px 0;
+	}
+
+	.col-left,.col-right {
+		width: 100%;
+	}
+
+	h2 {
+		margin-bottom: 10px;
+	}
+
+	.info {
+		width: 100%;
+		float: none;
+	}
+
+	.header-container {
+		position: static;
+		padding-top: 30px;
+	}
+
+	.header-container nav {
+		position: static;
+		margin-bottom: 20px;
+	}
+
+	.small-demo {
+		width: 100%;
+		float: none;
+	}
+}

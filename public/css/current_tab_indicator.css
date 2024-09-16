@@ -1,0 +1,22 @@
+.btn-group-line {
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.btn-group-line .btn {
+    flex: 1;
+    border-radius: 10px; /* Fully rounded buttons */
+    position: relative;
+    margin: 5px;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); 
+}
+
+.btn-group-line .line {
+    flex-grow: 1;
+    height: 2px;
+    background-color: #ccc;
+    margin: 0 -2px;
+}

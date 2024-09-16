@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en" class="has-navbar-fixed-top">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>One Stop Solution for all your Tax needs | JJ Tax</title>
+    <link href="../public/img/new_logo.png" rel="icon" type="image/png">
+    <link rel="stylesheet" href="./public/css/bootstrap.min.css">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League Spartan:wght@300;400;500;600;700;800&display=swap"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="./public/css/scrmob.css">
+    <script src="./public/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js"></script>
+    <script src="./public/js/main.js"></script>
+    <script>
+      function disbtn() {
+        document.getElementById("submit_btn").disabled = true;
+        document.getElementById("submit_btn").innerHTML = "Submitting ...";
+      }
+    </script>    
+    <style>
+       /* Logo Display */
+        .logo-display 
+        {
+          top: 13px;
+          left: 150px;
+          width: 200px;
+          height: 50px;
+        }
+        .ticker-wrapper-h
+        {
+	        display: flex;	
+	        position: relative;
+	        overflow: hidden;
+          background-color: #6AA9D5;
+        }
+        .ticker-wrapper-h .heading
+        {
+	        background-color: #1167AF;
+	        color: #fff;
+	        padding: 5px 10px;
+	        flex: 0 0 auto;
+	        z-index: 1000;
+        }
+        .ticker-wrapper-h .heading:after
+        {
+	        content: "";
+	        position: absolute;
+	        top: 0;
+	        border-left: 20px solid #1167AF;
+	        border-top: 17px solid transparent;
+	        border-bottom: 15px solid transparent;
+        }
+        .news-ticker-h
+        {
+	        display: flex;
+	        margin:0;
+	        padding: 0;
+	        padding-left: 90%;
+	        z-index: 999;
+          animation-iteration-count: infinite;
+	        animation-timing-function: linear;
+	        animation-name: tic-h;
+	        animation-duration: 550s;
+	      }
+        .news-ticker-h:hover 
+        { 
+	        animation-play-state: paused; 
+        }
+        .news-ticker-h li
+        {
+	        display: flex;
+	        width: 100%;
+	        align-items: center;
+	        white-space: nowrap;
+	        padding-left: 20px;
+        }
+        .news-ticker-h li a
+        {
+        	color: #212529;
+	        text-decoration: none;
+          font-family: var(--font-league-spartan);
+          color: #fff;
+        }
+        @keyframes tic-h 
+        {
+	        0%
+           {
+		          -webkit-transform: translate3d(0, 0, 0);
+		          transform: translate3d(0, 0, 0);
+		          visibility: visible;
+	         }
+	        100% 
+          {
+		        -webkit-transform: translate3d(-100%, 0, 0);
+		        transform: translate3d(-100%, 0, 0);
+	        }
+        }        
+        a:link 
+        { 
+          text-decoration: none; 
+        }
+
+        .menu:link 
+        { 
+          text-decoration: none; color:#ffffff; 
+        }
+
+        a:visited 
+        { 
+          text-decoration: none; 
+        }
+
+        .active-link { text-decoration: none;color:#ffffff; }
+
+        a:hover 
+        {
+          text-decoration: none;
+          color:#6aa9d5;
+        }
+    </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+            <div class="container-fluid">
+              <a href="index.html"><img class="logo-display navbar-brand img-fluid" src="../public/img/logo-amazon.png" alt="JJTax" ></a>
+                <div class="menu-display">
+                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                      <li class="nav-item">
+                        <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#contactmodal">Get In Touch</a>
+                      </li>
+                    </ul>          
+                  </div>
+                </div>
+            </div>
+        </nav>
+        <div class="modal fade" id="contactmodal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h1 class="modal-title fs-5">Get In Touch</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form>
+                    <div class="mb-3">
+                      Mobile No : +91-9310854724
+                     </div>
+                    <div class="mb-3">
+                      EMail ID : contact@jjfintax.com
+                    </div>
+                    <div class="mb-3">
+                      Address : 234, Tower B-2, Spaze I Tech Park, <br>
+                      Sohna Road, Sector 49, Gurgaon - 122018, Haryana, India
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="sticky-icon is-hidden-mobile">
+          <a href="https://www.linkedin.com/in/jj-fintax/" class="social-media-color"><i class="fab fa-linkedin"> </i> LinkedIN </a>
+          <a href="https://www.instagram.com/jjfintax/" class="social-media-color"><i class="fab fa-instagram"></i> Instagram </a>
+          <a href="https://www.facebook.com/JJ-Tax-102265144737511" class="social-media-color"><i class="fab fa-facebook-f"> </i> Facebook </a>
+          <a href="https://www.youtube.com/channel/UC8BrcQ7nxa148InUkm-E-GA" class="social-media-color"><i class="fab fa-youtube"></i> Youtube </a>
+          <a href="https://twitter.com/JJTaxApp" class="social-media-color"><i class="fab fa-twitter"> </i> Twitter </a>
+          <a href="https://open.spotify.com/show/1LoGRoGWHHBo8MHm3q365E" class="social-media-color"><i class="fab fa-spotify"> </i> Spotify </a>
+        </div>
+        <div class="ticker-wrapper-h">
+            <div class="heading">JJ Tax News</div>
+                  <ul class="news-ticker-h" id="news-ticker-h"></ul>
+                </div>
+              <!--/div>
+            </div>
+          </div-->
+          <div class="container">
+            <br>
+            <br>
+            <div class="row display:flex  grad_6">
+                <div class="col-sm-12 d-flex justify-content-center" style="font-family: 'Inter', League Spartan;font-size: 32px;color: #053757">
+                    <b>-- Refund/Cancellation POLICY --</b>
+                </div>
+                <div class="col-sm-12" style="text-align:center;font-family: 'Inter', League Spartan;font-size: 15px;color: #4a4b4e;">
+                    Request for cancellation of membership and refunds should be addressed to our official email id or through expert’s chat available in the App. Any request should be allowed after review on case to case basis any time before the commencement of the service. After commencing the services, no refund shall be allowed.                </div>                  
+            </div>    
+            <div class="row display:flex">
+                <div class="col-sm-12 d-flex justify-content-left underline-text" style="font-family: 'Inter', League Spartan;font-size: 15px;color: #053757;text-align: justify;">
+                        <b>Consent and Agreement::</b>
+                </div>
+                <div class="col-sm-12" style="font-family: 'Inter', League Spartan;font-size: 15px;color: #053757;text-align: left">
+                    <p align="justify">
+                        To avail of the services, users agree to provide us with necessary details (personal and business/profession related) or such other information as may be necessary or required by us to provide the services, at the time of sign-up or at any subsequent stage. It is the users’ responsibility to provide true, accurate and complete information and to not misrepresent any facts. In case the information provided by users is found to be false, inaccurate or outdated, we reserve the right to suspend or terminate users’ accounts and services.
+                    </p>                        
+                    <p align="justify">
+                        By availing of the services, users agree to use the App only for lawful purposes and they are solely responsible, liable and accountable for all activities that take place through the use of the App or availing the services. We exclude any liability arising out of the use of the App.
+                    </p>                        
+                    <p align="justify">
+                        Registered users acknowledge, agree and authorize the Company to collect, save, process your information and further transferring and sharing information (including personal information) with third parties including, payment gateways, banks, tax departments and other entities for the purpose of providing the services.
+                    </p>                            
+                    <p align="justify">
+                        Users agree and acknowledge that we may use external consultants or subcontractors and share your information with such consultants for providing you with the applicable services.
+                    </p>                        
+                    <p align="justify">
+                        By registering yourself as a paid member of the App and availing of the services, you expressly agree and authorize us to perform the services on your behalf, such as downloading Form 26AS and other required information, preparing and submitting your Income-tax return online, filing your GST returns etc., as applicable.
+                    </p>                            
+                    <p align="justify">
+                        All compliance/ service orders purchased through users’ accounts shall be deemed to have been given by users, and the Company will not be held responsible for any unauthorized usage of the user's account.
+                    </p>                            
+                    <p align="justify">
+                        In case any user does not agree to these terms, he/she should not use the App. By continuing to use the App or services, users expressly agree and undertake to be bound by our terms.
+                    </p>                        
+                </div>
+            </div>    
+            <!--Footer-->
+            <div style="padding-top: 2.5rem;"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12 border">
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-6 text-start">
+                            © <span id="copy">2022</span> JJ Fintax,&nbsp;<a href="privpolicy.html">Privacy Policy</a>                
+                        </div>
+                        <div class="col-sm-6 text-end">
+                            <a class="footer-link" href="aboutus.html">About Us</a>
+                            &nbsp;
+                            <a class="footer-link" href="cancel.html">Cancellation Policy</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>            
+        </body> 
+    </html>

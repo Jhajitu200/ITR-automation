@@ -1,0 +1,78 @@
+ .form-row {
+    font-family: League Spartan;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+}
+
+.parent {
+    text-align: center;
+}
+
+.center-text {
+    display: inline-block;
+}
+
+.info {
+    width: 95%;
+    margin: 0 auto;
+    text-align: left;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+.success-message {
+    display: none;
+    position: relative;
+    padding: 15px;
+    border: 1px solid green;
+    background-color: #d4edda;
+    color: green;
+    margin-bottom: 20px;
+}
+.success-message .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+body.loading #loading {
+    display: block;
+}
+body.loading #content {
+    filter: blur(1px);
+    pointer-events: none;
+}
+#loading {
+    display: none; 
+    position: fixed;
+    z-index: 9999;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9); /* Uncommented and adjusted the background color */
+    border-radius: 10px;
+    padding: 20px; /* Added padding for better appearance */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19); /* Adjusted shadow */
+}
+
+
+#loading .spinner {
+    border: 10pxpx solid #f3f3f3; /* Light grey */
+    border-top: 16px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 2s linear infinite;
+    margin: 0 auto 20px auto;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

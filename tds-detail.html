@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITR Form</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/htmlincludejs"></script>
+    <link href="public/img/JJTax-logo.png" rel="icon" type="image/png">
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+    <link rel="stylesheet" href="public/css/style_new.css?v=1.1.6">
+    <link rel="stylesheet" href="public/css/navbar.css">
+    <link href="public/css/financial_details.css" rel="stylesheet">
+    <link href="public/css/current_tab_indicator.css" rel="stylesheet">
+    <link rel="stylesheet" href="public/css/ticker.css">
+    <link rel="stylesheet" href="public/css/common.css">
+    <link rel="stylesheet" href="public/css/itr_book_call.css">
+    <style>
+        .form-control {
+            width: 90%;
+            padding: 10px;
+            margin: 0px 0;
+            box-sizing: border-box;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-control:focus {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            border-color: #66afe9;
+            outline: none;
+        }
+    </style>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            text-align: left;
+        }
+
+        .button-container {
+            margin: 20px 0;
+        }
+
+        button {
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 600px) {
+            table,
+            thead,
+            tbody,
+            th,
+            td,
+            tr {
+                display: block;
+            }
+
+            th,
+            td {
+                padding: 8px 10px;
+                text-align: left;
+            }
+
+            tr {
+                border: 1px solid #ddd;
+                margin-bottom: 10px;
+            }
+
+            thead {
+                display: none;
+            }
+
+            td {
+                display: flex;
+                justify-content: space-between;
+                padding: 10px;
+            }
+
+            td::before {
+                content: attr(data-label);
+                flex-basis: 50%;
+                text-align: left;
+                font-weight: bold;
+            }
+        }
+
+        .table-container {
+            overflow-x: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <include src="includes/header.html"></include>
+    <div class="ticker-wrap">
+        <ul class="ticker" id="tickers"></ul>
+    </div>
+    <div style="background: linear-gradient(180deg, rgba(17, 103, 175, 0.77) 0, rgba(17, 103, 175, 0.77) 277px, white 277px);padding-top: 8px;">
+        <div id="overlayText" style="text-align: center;">
+            <strong id="responsiveText" style="color: white;">Self file ITR within 15 minutes</strong>
+        </div>
+        <div class="container" style="background: #F4F6FC; max-width: 80%;padding-top: 1%;border-top-left-radius: 2%;border-top-right-radius: 2%;">
+            <include src="includes/current_tab_indicator.html"></include>
+            <p>SCHEDULE TDS1 - DETAILS OF TAX DEDUCTED AT SOURCE FROM SALARY AS PER FORM 16 ISSUED BY EMPLOYER(S) </p>
+            <div class="table-container">
+                <table id="deductorTable1">
+                    <thead>
+                        <tr>
+                            <th>Serial No.</th>
+                            <th>TAN of Deductor</th>
+                            <th>Name of Deductor</th>
+                            <th>Income Chargeable Under Salaries</th>
+                            <th>Total Tax Deducted</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Serial No.">1</td>
+                            <td data-label="TAN of Deductor"><input type="text" placeholder="Enter TAN"></td>
+                            <td data-label="Name of Deductor"><input type="text" placeholder="Enter Name"></td>
+                            <td data-label="Income Chargeable Under Salaries"><input type="text" placeholder="Enter Income"></td>
+                            <td data-label="Total Tax Deducted"><input type="text" placeholder="Enter Tax"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="button-container">
+                <button onclick="addRow1()">Add Company</button>
+            </div>
+            <p>SCHEDULE TDS2 - DETAILS OF TAX DEDUCTED AT SOURCE FROM OTHER THAN SALARY [AS PER FORM 16A ISSUED BY DEDUCTOR(S)] </p>
+            <div class="table-container">
+                <table id="deductorTable2">
+                    <thead>
+                        <tr>
+                            <th>Serial No.</th>
+                            <th>TAN of Deductor</th>
+                            <th>Name of Deductor</th>
+                            <th>Gross Receipt Subject to Tax Deduction</th>
+                            <th>Year of Tax Deduction</th>
+                            <th>Tax Deducted</th>
+                            <th>TDS Credit Claimed This Year</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td data-label="Serial No.">1</td>
+                            <td data-label="TAN of Deductor"><input type="text" placeholder="Enter TAN"></td>
+                            <td data-label="Name of Deductor"><input type="text" placeholder="Enter Name"></td>
+                            <td data-label="Gross Receipt Subject to Tax Deduction"><input type="text" placeholder="Enter Gross Receipt"></td>
+                            <td data-label="Year of Tax Deduction"><input type="text" placeholder="Enter Year"></td>
+                            <td data-label="Tax Deducted"><input type="text" placeholder="Enter Tax"></td>
+                            <td data-label="TDS Credit Claimed This Year"><input type="text" placeholder="Enter TDS Credit"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="button-container">
+                <button onclick="addRow2()">Add Company</button>
+            </div>
+        </div>
+    </div>
+    <include src="includes/ITR_book_call.html"></include>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="public/js/main.js"></script>
+    <script src="datas/dynamic-contents.js"></script>
+    <script src="public/js/ticker.js"></script>
+    <script src="public/js/data_filling.js"></script>
+    <script>
+        function addRow1() {
+            const table = document.getElementById('deductorTable1').getElementsByTagName('tbody')[0];
+            const rowCount = table.rows.length;
+            const newRow = table.insertRow(rowCount);
+
+            const cell0 = newRow.insertCell(0);
+            const cell1 = newRow.insertCell(1);
+            const cell2 = newRow.insertCell(2);
+            const cell3 = newRow.insertCell(3);
+            const cell4 = newRow.insertCell(4);
+
+            cell0.innerHTML = rowCount + 1;
+            cell0.setAttribute('data-label', 'Serial No.');
+            cell1.innerHTML = '<input type="text" placeholder="Enter TAN">';
+            cell1.setAttribute('data-label', 'TAN of Deductor');
+            cell2.innerHTML = '<input type="text" placeholder="Enter Name">';
+            cell2.setAttribute('data-label', 'Name of Deductor');
+            cell3.innerHTML = '<input type="text" placeholder="Enter Income">';
+            cell3.setAttribute('data-label', 'Income Chargeable Under Salaries');
+            cell4.innerHTML = '<input type="text" placeholder="Enter Tax">';
+            cell4.setAttribute('data-label', 'Total Tax Deducted');
+        }
+
+        function addRow2() {
+            const table = document.getElementById('deductorTable2').getElementsByTagName('tbody')[0];
+            const rowCount = table.rows.length;
+            const newRow = table.insertRow(rowCount);
+
+            const cell0 = newRow.insertCell(0);
+            const cell1 = newRow.insertCell(1);
+            const cell2 = newRow.insertCell(2);
+            const cell3 = newRow.insertCell(3);
+            const cell4 = newRow.insertCell(4);
+            const cell5 = newRow.insertCell(5);
+            const cell6 = newRow.insertCell(6);
+
+            cell0.innerHTML = rowCount + 1;
+            cell0.setAttribute('data-label', 'Serial No.');
+            cell1.innerHTML = '<input type="text" placeholder="Enter TAN">';
+            cell1.setAttribute('data-label', 'TAN of Deductor');
+            cell2.innerHTML = '<input type="text" placeholder="Enter Name">';
+            cell2.setAttribute('data-label', 'Name of Deductor');
+            cell3.innerHTML = '<input type="text" placeholder="Enter Gross Receipt">';
+            cell3.setAttribute('data-label', 'Gross Receipt Subject to Tax Deduction');
+            cell4.innerHTML = '<input type="text" placeholder="Enter Year">';
+            cell4.setAttribute('data-label', 'Year of Tax Deduction');
+            cell5.innerHTML = '<input type="text" placeholder="Enter Tax">';
+            cell5.setAttribute('data-label', 'Tax Deducted');
+            cell6.innerHTML = '<input type="text" placeholder="Enter TDS Credit">';
+            cell6.setAttribute('data-label', 'TDS Credit Claimed This Year');
+        }
+        function changeButtonClass() {
+                var $uploadForm16Btn = $('#tdsDetails');
+                $uploadForm16Btn.removeClass('btn-outline-primary');
+                $uploadForm16Btn.addClass('btn-primary');
+            }
+        setTimeout(changeButtonClass, 1000);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en" class="has-navbar-fixed-top">
+  <head>
+    <!-- <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+         })(window,document,'script','dataLayer','GTM-N42Z47F');
+    </script> -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Income Tax Calendar - Important dates for Financial year 2023-24</title>
+    <meta name="description" content="Income Tax Calendar - Refer to this income tax calendar to know all the important income tax due dates for financial year 2023-24. This comprehensive tax calendar by JJ Tax will help you keep track of important tax related dates and deadlines.">
+    <meta name="keywords" content="Income tax calendar, gst calendar, annual income tax calendar, annual gst compliance calendar, tax calendar 2023-24, 2024 personal finance dalendar, Financial calendar 2023-24, Financial calendar 2023-24 with due dates, yearly tax compliance calendar, yearly gst compliance calendar, Due dates for tax filing, due dates of GsT filings">
+    <link href="./public/img/new_logo.png" rel="icon" type="image/png">
+     <!-- Social Tags -->
+     <meta property="og:title" content="Income Tax Calendar - Important dates for Financial year 2023-24">
+     <meta property="og:type" content="website">
+     <meta property="og:url" content="https://jjfintax.com">
+     <meta property="og:image" content="./public/images/SEO-calculator.png">
+     <meta property="og:description" content="Income Tax Calendar - Refer to this income tax calendar to know all the important income tax due dates for financial year 2023-24. This comprehensive tax calendar by JJ Tax will help you keep track of important tax related dates and deadlines.">
+     <meta property="og:site_name" content="@jjtax">
+     <meta name="twitter:card" content="summary_large_image">
+     <meta name="twitter:site" content="@jjtax">
+     <meta name="twitter:title" content="Income Tax Calendar - Important dates for Financial year 2023-24">
+     <meta name="twitter:description" content="Income Tax Calendar - Refer to this income tax calendar to know all the important income tax due dates for financial year 2023-24. This comprehensive tax calendar by JJ Tax will help you keep track of important tax related dates and deadlines.">
+     <meta name="twitter:creator" content="@jjtax">
+     <meta name="twitter:url" content="https://jjfintax.com">
+     <meta name="twitter:image" content="./public/images/SEO-calculator.">
+
+    <link rel="stylesheet" href="./public/css/bootstrap.min.css">
+    <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=League Spartan:wght@300;400;500;600;700;800&display=swap"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="./public/css/scrmob.css">
+    <link rel="stylesheet" href="./public/css/navbar.css">
+    <link rel="stylesheet" href="./public/css/style.css?v=1.1">
+    <link rel="stylesheet" href="./public/css/style_new.css?v=1.1.4">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://ucarecdn.com/libs/widget/3.x/uploadcare.full.min.js"></script>
+    <script src="./public/js/main.js"></script>
+    <script src="https://unpkg.com/htmlincludejs"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.0.1/fullcalendar.min.css" defer/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.16.0/moment.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.0.1/fullcalendar.min.js" defer></script>
+    <!-- <script src="./datas/calendar.js"></script> -->
+<style>
+  .cal-year{    text-align: center;
+    padding-bottom: 20px;}
+  .cal-year h3{
+    margin: auto;
+    font-weight: 900;
+    font-size: 35px;
+  }
+  .cal-year h3 img{margin-top: -10px;}
+  .month-names{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }.h1 {font-size: 25px;}
+  .fc-toolbar {
+    margin-bottom: 0em;
+}
+h2 {
+    font-size: 1.6rem;
+}
+.fc table {
+    font-size: 0.7em;
+}
+</style>
+<script>
+$(function() {
+  var today = new Date();
+
+  $("#selectedDate").html(today.toLocaleString('default', { month: 'long' })+' '+today.toLocaleString('default', { day: '2-digit' })+', '+today.getFullYear());
+  var DayFormat = today.getFullYear()+'-'+today.toLocaleString('default', { month: 'long' })+'-'+today.toLocaleString('default', { day: '2-digit' });
+  
+    var eventDates = [];
+    for (let i = 0, len = eventsArray.length; i < len; i++) {
+      eventDates[i] = eventsArray[i].start;
+    }
+    eventDates = removeDuplicates(eventDates);
+    eventsCheck(today,eventsArray,DayFormat,eventDates);
+    $('#calendar').fullCalendar({
+      header: {
+        left: 'prev',
+        center: 'title',
+        right: 'next'
+      },
+      showNonCurrentDates: false,
+      initialDate: new Date(),
+      editable: true,
+      selectable: true,
+      businessHours: true,
+      dayMaxEvents: false,
+      className: 'eventDate',
+      dayRender: function (dayRenderInfo,cell) {
+        var month = dayRenderInfo._d.getMonth()+1;
+        var date = dayRenderInfo._d.getFullYear()+'-'+month+'-'+dayRenderInfo._d.getDate();
+        if (eventDates.includes(date)) {
+            cell.css("background-color", "#6AA9D5");
+            cell.css("color", "#fff");
+        }
+      },
+      events: eventsArray,
+      eventClick: function(info) {
+      },
+      dayClick: function(date, jsEvent, view) {   
+        $("#selectedDate").html(date.format('MMMM DD, YYYY'));     
+        var Day = date.format('YYYY-M-D');
+        eventsCheck(date, eventsArray, Day,eventDates);
+      }
+    });
+
+    $(".load-calendar").click(function(){
+      $('#calendar').fullCalendar('gotoDate', $(this).val());
+    })
+
+    function eventsCheck(date,eventsArray,Day,eventDates){
+      
+      var list = '';
+        var uplist = '';
+        var upcomingIndex = 0;
+        for (let i = 0, len = eventsArray.length; i < len; i++) {
+          if(Day == eventsArray[i].start){
+            list += '<li>'+eventsArray[i].title+'</li>';
+          }
+        }
+
+        if(list!=''){
+          $("#selectedDateEvents").html(list);
+        }else{
+          $("#selectedDateEvents").html('<li>No due date</li>');
+        }
+
+        /* Upcoming */
+       
+         function dayCheck(d) {
+            return Day == d;
+          }
+
+          var upComingDay = upComingDueDate(eventDates,Day);
+
+          for (let i = 0, len = eventsArray.length; i < len; i++) {
+            if(upComingDay == eventsArray[i].start){
+              uplist += '<li>'+eventsArray[i].title+'</li>';
+            }
+          }
+          
+          if(uplist!=''){
+            $("#selectedUpDateEvents").html(uplist);
+            var formatted = new Date(upComingDay);
+            const formattedDate = formatted.toLocaleString('default', { month: 'long' })+' '+formatted.toLocaleString('default', { day: '2-digit' })+', '+formatted.getFullYear();
+            $("#upCalSelectedDate").html(formattedDate);
+          }else{
+            $("#selectedUpDateEvents").html('<li>No due date</li>');
+          }
+    }
+
+    function upComingDueDate(array,element){
+
+      for(var i=0; i<=array.length; i++){
+        var date1 = new Date(array[i]);
+        var date2 = new Date(element);
+        if( date1 > date2)
+        return array[i];
+      }
+    }
+  }); 
+
+ 
+
+  function removeDuplicates(arr) {
+    return arr.filter((item,
+        index) => arr.indexOf(item) === index);
+  }
+</script>
+   
+    <!-- Google tag (gtag.js) -->
+ <script async src="https://www.googletagmanager.com/gtag/js?id=G-V1TQR97GVP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-V1TQR97GVP');
+</script> 
+    <script>
+      function disbtn() {InvestorsInvestors
+        document.getElementById("submit_btn").disabled = true;
+        document.getElementById("submit_btn").innerHTML = "Submitting ...";
+      }
+    </script>   
+     <!-- Meta Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '1155842502283697');
+  fbq('track', 'PageView');
+  </script>
+  <noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=1155842502283697&ev=PageView&noscript=1"
+  /></noscript>
+<!-- End Meta Pixel Code --> 
+    </head>
+    <body>
+        <!-- <noscript>
+            <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N42Z47F"
+                height="0" width="0" style="display:none;visibility:hidden">
+            </iframe>
+        </noscript> -->
+      <include src="includes/header.html"></include>
+      <div class="ticker-wrapper-h">
+        <div class="heading">JJ Tax News</div>
+        <ul class="news-ticker-h" id="news-ticker-h"></ul>
+      </div>
+      <div class="container mt-40">
+        <div class="row display:flex">
+          <div class="col-sm-3 col-lg-3 d-none d-md-none d-lg-block">
+            <div class="cal-year">
+              <h3><img src="./public/images/Calendar.svg" />2024</h3>
+            </div>            
+            <div class="month-names">
+              <ul>
+                  <li>
+                    <button class="load-calendar" value="2024-01-01"><span>January</span></button>
+                  </li>
+                  <li>
+                    <button class="load-calendar" value="2024-02-01"><span>February</span></button>
+                  </li>
+                  <li>
+                    <button class="load-calendar" value="2024-03-01"><span>March</span></button>
+                  </li>
+                  <li>
+                    <button class="load-calendar" value="2024-04-01"><span>April</span></button>
+                  </li>
+                  <li>
+                    <button class="load-calendar" value="2024-05-01"><span>May</span></button>
+                  </li>
+                  <li>
+                    <button class="load-calendar" value="2024-06-01"><span>June</span></button>
+                  </li>
+                </ul>
+                <ul>
+                  <li>
+                    <button class="load-calendar" value="2024-07-01"><span>July</span></button>
+                  </li>
+                  <li>
+                    <button class="load-calendar" value="2024-08-01"><span>August</span></button>
+                  </li>
+                  <li>
+                    <button class="load-calendar" value="2024-09-01"><span>September</span></button>
+                  </li>
+                  <li>
+                    <button class="load-calendar" value="2024-10-01"><span>October</span></button>
+                  </li>
+                  <li>
+                    <button class="load-calendar" value="2024-11-01"><span>November</span></button>
+                  </li>
+                  <li>
+                    <button class="load-calendar" value="2024-12-01"><span>December</span></button>
+                  </li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-9 col-md-12 col-lg-9 d-flex tex011t-center justify-content-top flex-column">
+            <div class="row">
+              <div class="col-sm-7 d-flex text-center justify-content-top flex-column">
+                <h1 class="h1" style="margin: 0px 0 30px 0 !important;">Tax and Compliance Calendar For FY 2023 -24</h1>
+                <div id='calendar'></div>
+              </div>
+              <div class="col-sm-5 d-flex justify-content-center">
+                <div class="cal-events-wrapper">
+                  <h3 id="selectedDate" class="cal-selected-date"></h3>
+                  <ul id="selectedDateEvents" class="selected-date-events">
+                  </ul>
+                  <h2 id="upcoming-heading" class="upcoming-heading">Upcoming Due Dates</h2>
+                  <h3 id="upCalSelectedDate" class="cal-selected-date"></h3>
+                  <ul id="selectedUpDateEvents" class="selected-date-events">
+                  </ul>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  
+  <include src="includes/statistics.html"></include>
+  <include src="includes/footer.html"></include>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="datas/dynamic-contents.js"></script>
+    <script>
+      $(document).ready(function () { 
+        $('.fc-other-month').html('');
+        $(".fc-other-month").addClass('fc-state-disabled');
+        var wrapper = $('#news-ticker-h').empty();
+        $.each(tickers, function (i, f) {
+          $('#news-ticker-h').append('<li>' + f.key + '</li>');
+        })
+      });       
+    </script>
+    <script src="./datas/calendar.js"></script>
+    </body>
+  </html>

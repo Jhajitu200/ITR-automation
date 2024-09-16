@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITR Form</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/htmlincludejs"></script>
+    <link href="public/img/JJTax-logo.png" rel="icon" type="image/png">
+    <link rel="stylesheet" href="public/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="public/css/style_new.css?v=1.1.6">
+    <link rel="stylesheet" href="public/css/navbar.css">
+    <link href="public/css/financial_details.css" rel="stylesheet">
+    <link href="public/css/current_tab_indicator.css" rel="stylesheet">
+    <link rel="stylesheet" href="public/css/ticker.css">
+    <link rel="stylesheet" href="public/css/common.css">
+    <link rel="stylesheet" href="public/css/itr_book_call.css">
+    <style>
+        .form-control {
+            width: 90%;
+            padding: 10px;
+            margin: 0px 0;
+            box-sizing: border-box;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .form-control:focus {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            border-color: #66afe9;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <include src="includes/header.html"></include>
+    <div class="ticker-wrap">
+        <ul class="ticker" id="tickers"></ul>
+    </div>
+    <div
+        style="background: linear-gradient(180deg, rgba(17, 103, 175, 0.77) 0, rgba(17, 103, 175, 0.77) 277px, white 277px);padding-top: 8px;">
+        <div id="overlayText" style="text-align: center;"><strong id="responsiveText" style="color: white;">Self file
+                ITR within 15 minutes</strong></div>
+        <div class="container " style="background: #F4F6FC; max-width: 80%;padding-top: 1%;border-top-left-radius: 2%;
+        border-top-right-radius: 2%;
+        ">
+            <include src="includes/current_tab_indicator.html"></include>
+            <h5 class="text-center mt-3" style="font-weight: 600;">Income Details</h5>
+            <p class="text-center" style="width: 80%;margin: auto;font-size: 14px;"><strong>Disclamer:</strong> Please
+                fill in correct details. Kindly note we are not responsible for any wrong information provided by the
+                user. We recommend to get in touch with our tax experts for further assistance.</p>
+            <div class="row mt-4"
+                style="background: #FFFFFF; margin: auto;width: 95%;border-radius: 1%;padding-left: 3%;padding-right: 3%;">
+                <div class="col-md-12">
+
+                    <form id="salaryForm">
+                        <div id="salarySection" class="salary-section" style="display: none;">
+                            <div class="form-row mt-2">
+                                <div class="form-group col-md-12">
+                                    <button type="button" class="btn btn-danger btn-sm float-right"
+                                        onclick="deleteEmployerSection(this)">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <strong style="font-weight: 600;">Part A: Income From Salary</strong>
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label for="employerName">Company Employer Name</label>
+                                    <input type="text" class="form-control" id="employerName" name="employerName"
+                                        pattern="[A-Za-z\s]+" title="Only alphabetic characters are allowed">
+
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="tdsDeductedByEmployer">TDS Deducted by Employer</label>
+                                    <input type="text" class="form-control" id="tdsDeductedByEmployer"
+                                        name="tdsDeductedByEmployer">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="deductorTAN">Deductor TAN</label>
+                                    <input type="text" class="form-control" id="deductorTAN" name="deductorTAN"
+                                        class="deductorTan">
+                                </div>
+                            </div>
+                            <div class="form-row align-items-center no-padding">
+                                <div class="col-md-5 ">
+                                    <label for="basicSalary">Basic Salary</label>
+                                </div>
+                                <div class="col-md-4 ">
+
+                                </div>
+                                <div class="col-md-3 ">
+                                    <input type="number" class="form-control" id="basicSalary" name="basicSalary" required
+                                        style="text-align: right;"
+                                        oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                                </div>
+                            </div>
+                            <div class="form-row align-items-center mt-2">
+                                <div class="col-md-5">
+                                    <label for="dearnessAllowance">Dearness Allowance (DA)</label>
+                                </div>
+                                <div class="col-md-4">
+
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="number" class="form-control" id="dearnessAllowance"
+                                        name="dearnessAllowance" required style="text-align: right;"
+                                        oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                                </div>
+                            </div>
+                            <div class="form-row align-items-center mt-2">
+                                <div class="col-md-5">
+                                    <label for="hra">House Rent Allowance (HRA)</label>
+                                </div>
+                                <div class="col-md-4">
+
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="number" class="form-control" id="hra" name="hra" required
+                                        style="text-align: right;"
+                                        oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                                </div>
+                            </div>
+                            <div class="form-row align-items-center mt-2">
+                                <div class="col-md-5">
+                                    <label for="perquisites">Other Perquisites</label>
+                                </div>
+                                <div class="col-md-4">
+
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="number" class="form-control" id="perquisites" name="perquisites" required
+                                        style="text-align: right;"
+                                        oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                                </div>
+                            </div>
+                            <div class="form-row align-items-center mt-2">
+                                <div class="col-md-5">
+                                    <label for="grossSalary">Gross Salary</label>
+                                </div>
+                                <div class="col-md-4">
+
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="number" class="form-control" id="grossSalary" name="grossSalary" required
+                                        style="text-align: right;"
+                                        oninput="this.value = this.value.replace(/[^0-9]/g, '');" readonly>
+                                </div>
+                            </div>
+                            <div class="form-row align-items-center mt-2">
+                                <div class="col-md-5">
+                                    <label for="totalRentPaid">Total rent paid </label>
+                                </div>
+                                <div class="col-md-4">
+
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="number" class="form-control" id="totalRentPaid" name="totalRentPaid"
+                                        required style="text-align: right;"
+                                        oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                                </div>
+                            </div>
+                            <div class="form-row align-items-center mt-2">
+                                <div class="col-md-5">
+                                    <label for="hraExemption">Less: Exemption fofr HRA</label>
+                                </div>
+                                <div class="col-md-4">
+
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="number" class="form-control" id="hraExemption" name="hraExemption"
+                                        required style="text-align: right;"
+                                        oninput="this.value = this.value.replace(/[^0-9]/g, '');" readonly>
+                                </div>
+                            </div>
+                            <div class="form-row align-items-center mt-2">
+                                <div class="col-md-5">
+                                    <label for="professionalTax">Less: Professional Tax</label>
+                                </div>
+                                <div class="col-md-4">
+
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="number" class="form-control" id="professionalTax" name="professionalTax"
+                                        required style="text-align: right;"
+                                        oninput="this.value = this.value.replace(/[^0-9]/g, '');">
+                                </div>
+                            </div>
+                            <div class="form-row align-items-center mt-2">
+                                <div class="col-md-5">
+                                    <label for="grossTaxableIncome">Gross Taxable Income</label>
+                                </div>
+                                <div class="col-md-4">
+
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="number" class="form-control" id="grossTaxableIncome"
+                                        name="grossTaxableIncome" required style="text-align: right;"
+                                        oninput="this.value = this.value.replace(/[^0-9]/g, '');" readonly>
+                                </div>
+                            </div>
+                            <div class="form-row align-items-center mt-2">
+                                <div class="col-md-5">
+                                    <label for="standardDeduction">Less: Standard Deduction</label>
+                                </div>
+                                <div class="col-md-4">
+
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="number" class="form-control" id="standardDeduction"
+                                        name="standardDeduction" value="50000" style="text-align: right;"
+                                        oninput="this.value = this.value.replace(/[^0-9]/g, '');" readonly>
+
+                                </div>
+                            </div>
+                            <div class="form-row align-items-center mt-2">
+                                <div class="col-md-5">
+                                    <label for="netSalary">Net Salary</label>
+                                </div>
+                                <div class="col-md-4">
+
+                                </div>
+                                <div class="col-md-3">
+                                    <input type="number" class="form-control" id="netSalary" name="netSalary" required
+                                        style="text-align: right;"
+                                        oninput="this.value = this.value.replace(/[^0-9]/g, '');" readonly>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="employerSections"></div>
+                        <div class="form-row mt-2">
+                            <div class="form-group col-md-3">
+                                <button type="button" class="btn btn-secondary btn-block" id="addHousePropertyBtn"
+                                    style="background: linear-gradient(180deg, rgba(17, 103, 175, 0.7) 33.5%, #1167AF 100%);width: 90%;"
+                                    onclick="addEmployerSection()">
+                                    ADD Employer
+                                </button>
+                            </div>
+                            <div class="form-group col-md-9">
+                            </div>
+                        </div>
+                        <div class="form-row mt-2">
+                            <div class="form-group col-md-3">
+                                <a href="persional_details_2.html">
+                                    <button type="button" class="btn btn-secondary btn-block" id="back"
+                                        style="background: linear-gradient(180deg, rgba(17, 103, 175, 0.7) 33.5%, #1167AF 100%);width:90%"
+                                        onclick="saveState(this)">
+                                        &lt;&lt; Back
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="form-group col-md-6">
+
+                            </div>
+                            <div class="form-group col-md-3">
+
+                                <button type="button" class="btn btn-primary btn-block" id="continue"
+                                    style="background: linear-gradient(180deg, rgba(17, 103, 175, 0.7) 33.5%, #1167AF 100%);width:90%"
+                                    onclick="saveState(this)">
+                                    Continue &gt;&gt;
+                                </button>
+
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <include src="includes/ITR_book_call.html"></include>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="public/js/main.js"></script>
+    <script src="datas/dynamic-contents.js"></script>
+    <script src="public/js/ticker.js"></script>
+    
+    <script src="public/js/data_filling.js"></script>
+
+
+    <script>
+        let totalForms = 0;
+        let employerCount = 0;
+        let deleteCount = 0;
+        $(document).ready(function () {
+            let formNumber = sessionStorage.getItem("totalNumberOfForms");
+            if (formNumber) {
+                for (let i = 0; i < formNumber; i++) {
+                    addEmployerSection();
+                }
+            } else {
+                document.getElementById('salarySection').style.display = 'block';
+                ++employerCount;
+                ++totalForms;
+                document.getElementById('salarySection').id = '0';
+                updateDeleteButtons();
+                sessionStorage.setItem('formWithId0', true);
+            }
+
+            // Load saved form data if available
+            if (formNumber) {
+                for (let i = 0; i < formNumber; i++) {
+                    if (sessionStorage.getItem('formWithId0')) {
+                        document.getElementById('0').id = 0;
+                    }
+                    const financialDetails = JSON.parse(sessionStorage.getItem(`formData${i}`));
+                    if (financialDetails) {
+                        $(`#${i}`).each(function (index) {
+                            $(this).find('#employerName').val(financialDetails.employerName);
+                            $(this).find('#tdsDeductedByEmployer').val(financialDetails.tdsDeductedByEmployer);
+                            $(this).find('#deductorTAN').val(financialDetails.deductorTAN);
+                            $(this).find('#basicSalary').val(financialDetails.basicSalary);
+                            $(this).find('#dearnessAllowance').val(financialDetails.dearnessAllowance);
+                            $(this).find('#hra').val(financialDetails.hra);
+                            $(this).find('#perquisites').val(financialDetails.perquisites);
+                            $(this).find('#grossSalary').val(financialDetails.grossSalary);
+                            $(this).find('#totalRentPaid').val(financialDetails.totalRentPaid);
+                            $(this).find('#hraExemption').val(financialDetails.hraExemption);
+                            $(this).find('#professionalTax').val(financialDetails.professionalTax);
+                            $(this).find('#grossTaxableIncome').val(financialDetails.grossTaxableIncome);
+                            $(this).find('#standardDeduction').val(financialDetails.standardDeduction);
+                            $(this).find('#netSalary').val(financialDetails.netSalary);
+                        });
+                    }
+                }
+            }
+        });
+
+        function addEmployerSection() {
+            let salarySection = document.getElementById('salarySection') || document.getElementById('0');
+            const newSection = salarySection.cloneNode(true);
+            newSection.style.display = "block";
+            const sectionId = `salarySection${++employerCount}`;
+            newSection.id = `${totalForms}`;
+            newSection.querySelectorAll('input').forEach(input => input.value = '');
+            document.getElementById('employerSections').appendChild(newSection);
+            updateDeleteButtons();
+            ++totalForms;
+        }
+
+        function deleteEmployerSection(button) {
+            let deleteForm = parseInt($(button).closest('.salary-section').attr('id'));
+            if (deleteForm == 0) {
+                sessionStorage.removeItem('formWithId0');
+            }
+            sessionStorage.removeItem(`formData${deleteForm}`);
+            for (let i = deleteForm + 1; i < totalForms; i++) {
+                let minimizeIdOfForm = document.getElementById(`${i}`);
+                minimizeIdOfForm.id = i - 1;
+            }
+            if (deleteCount < employerCount) {
+                const sectionId = button.closest('.salary-section').id;
+                button.closest('.salary-section').remove();
+                sessionStorage.removeItem(sectionId);
+                updateDeleteButtons();
+            }
+            --totalForms;
+        }
+
+        function saveState(button) {
+            sessionStorage.setItem('totalNumberOfForms', totalForms);
+            let userData = JSON.parse(sessionStorage.getItem('userData')) || {};
+            userData.basicSalary = 0.00;
+            userData.dearnessAllowance = 0.00;
+            userData.hra = 0.00;
+            userData.otherPerquisites = 0.00;
+            userData.grossSalary = 0.00;
+            userData.exemptionForHRA = 0.00;
+            userData.professionalTax = 0.00;
+            userData.grossTaxableIncome = 0.00;
+            userData.standardDeduction = 0.00;
+            userData.netSalary = 0.00;
+
+            for (let i = 0; i < totalForms; i++) {
+                // let formDataArray = [];
+                $(`#${i}`).each(function (index) {
+                    let formData = {
+                        employerName: $(this).find('#employerName').val(),
+                        tdsDeductedByEmployer: $(this).find('#tdsDeductedByEmployer').val(),
+                        deductorTAN: $(this).find('#deductorTAN').val(),
+                        basicSalary: $(this).find('#basicSalary').val(),
+                        dearnessAllowance: $(this).find('#dearnessAllowance').val(),
+                        hra: $(this).find('#hra').val(),
+                        perquisites: $(this).find('#perquisites').val(),
+                        grossSalary: $(this).find('#grossSalary').val(),
+                        totalRentPaid:$(this).find('#totalRentPaid').val(),
+                        hraExemption: $(this).find('#hraExemption').val(),
+                        professionalTax: $(this).find('#professionalTax').val(),
+                        grossTaxableIncome: $(this).find('#grossTaxableIncome').val(),
+                        standardDeduction: '50000',
+                        netSalary: $(this).find('#netSalary').val(),
+                    };
+
+                    userData.basicSalary = parseFloat($(this).find('#basicSalary').val()) || 0;
+                    userData.dearnessAllowance = parseFloat($(this).find('#dearnessAllowance').val()) || 0;
+                    userData.hra = parseFloat($(this).find('#hra').val()) || 0;
+                    userData.otherPerquisites = parseFloat($(this).find('#perquisites').val()) || 0;
+                    userData.grossSalary = parseFloat($(this).find('#grossSalary').val()) || 0;
+                    userData.totalRentPaid = parseFloat($(this).find('#totalRentPaid').val()) || 0;
+                    userData.exemptionForHRA = parseFloat($(this).find('#hraExemption').val()) || 0;
+                    userData.professionalTax = parseFloat($(this).find('#professionalTax').val()) || 0;
+                    userData.grossTaxableIncome = parseFloat($(this).find('#grossTaxableIncome').val()) || 0;
+                    userData.standardDeduction = parseFloat($(this).find('#standardDeduction').val()) || 0;
+                    userData.netSalary = parseFloat($(this).find('#netSalary').val()) || 0;
+                    sessionStorage.setItem(`formData${i}`, JSON.stringify(formData));
+
+                });
+
+                // sessionStorage.setItem(`formData${i}`, JSON.stringify(formDataArray));
+            }
+
+            sessionStorage.setItem('userData', JSON.stringify(userData));
+
+
+            if (button.id == 'continue') {
+                window.location.href = "financial_details_PART_B_C.html";
+            } else {
+                window.location.href = "persional_details_2.html";
+            }
+        }
+
+        function updateDeleteButtons() {
+            const deleteButtons = document.querySelectorAll('.btn-danger');
+            deleteButtons.forEach(button => {
+                button.disabled = deleteCount >= employerCount;
+            });
+        }
+
+
+        $(document).ready(function () {
+            function autoCalculation(section) {
+                let basicSalary = parseFloat(section.find('#basicSalary').val()) || 0;
+                let dearnessAllowance = parseFloat(section.find('#dearnessAllowance').val()) || 0;
+                let hra = parseFloat(section.find('#hra').val()) || 0;
+                let perquisites = parseFloat(section.find('#perquisites').val()) || 0;
+                // let hraExemption = parseFloat(section.find('#hraExemption').val()) || 0;
+                let totalRentPaid = parseFloat(section.find('#totalRentPaid').val()) || 0;
+                let userData=JSON.parse(sessionStorage.getItem('userData'));
+                let city="";
+                if(userData.state=='Delhi' || userData.district=='Chennai' || userData.district=='Mumbai' || userData.district==' Kolkata'){
+                    console.log("userstate",userData.state);
+                    console.log("userdistrict",userData.district);
+                    city=true;
+                    console.log(city);
+                }
+                else{
+                    city=false;
+                } 
+                let hraExemption = calculateHRA(basicSalary, dearnessAllowance, hra, totalRentPaid, city);
+                console.log("this is hraexemption",hraExemption);
+                let professionalTax = parseFloat(section.find('#professionalTax').val()) || 0;
+                let standardDeduction = parseFloat(section.find('#standardDeduction').val()) || 0;
+                // console.log(standardDeduction);
+                let grossSalary = basicSalary + dearnessAllowance + hra + perquisites;
+                let grossTaxableIncome = grossSalary - hraExemption - professionalTax;
+                let netSalary = grossTaxableIncome - standardDeduction;
+                section.find('#grossSalary').val(grossSalary.toFixed(2));
+                section.find('#hraExemption').val(hraExemption.toFixed(2));
+                section.find('#netSalary').val(netSalary.toFixed(2));
+                section.find('#grossTaxableIncome').val(grossTaxableIncome.toFixed(2));
+                // console.log('Net Salary:', netSalary);
+            }
+            $(document).on('input', 'input[type="number"]', function () {
+                // this.value = this.value.replace(/[^0-9.]/g, ''); 
+                const section = $(this).closest('.salary-section');
+                autoCalculation(section);
+            });
+
+            function changeButtonClass() {
+                var $uploadForm16Btn = $('#financialDetails');
+                $uploadForm16Btn.removeClass('btn-outline-primary');
+                $uploadForm16Btn.addClass('btn-primary');
+            }
+
+            setTimeout(changeButtonClass, 1000);
+        });
+    </script>
+    <script>
+        function calculateHRA (inputBasicSalary, inputDearnessAllowance, inputHRA, inputRentPaid, isMetroCity) {
+            // console.log( typeof inputBasicSalary);
+            // console.log(typeof inputDearnessAllowance);
+            // console.log(typeof inputHRA);
+            // console.log(typeof inputRentPaid);
+            // console.log(typeof isMetroCity);
+        let exemptedHRA = 0;
+        let taxableHRA = 0;
+        let rentPaidOver10PerOfSalary = parseInt(parseInt(inputRentPaid) - (parseInt(parseInt(inputBasicSalary) + parseInt(inputDearnessAllowance))/100)*10);
+        console.log("rentPaidOver10PerOfSalary",rentPaidOver10PerOfSalary)
+        if(isMetroCity == true)
+        {
+          exemptedHRA = parseInt((parseInt(inputBasicSalary) + parseInt(inputDearnessAllowance))/100) * 50;
+        }else if(isMetroCity == false){
+          exemptedHRA = parseInt((parseInt(inputBasicSalary) + parseInt(inputDearnessAllowance))/100) * 40;
+        }
+        
+        let finalRes = Math.min(exemptedHRA, inputHRA, rentPaidOver10PerOfSalary);
+        console.log("this is final response",finalRes);
+
+        if(finalRes < 0)
+        {
+          finalRes = 0;
+        }
+
+        // $("#hraExemption").html('<span>'+toIndianCurrency(finalRes)+'</span>')
+        // return finalRes;
+        // if(inputHRA!=''){
+        // taxableHRA = parseInt(parseInt(inputHRA) - finalRes)
+        // }
+        return finalRes;
+        // $("#Taxable_HRA").html('<span>'+toIndianCurrency(taxableHRA)+'</span>')        
+        
+      }
+        
+        // function calculateExemptedHRA(basicSalary, da, hraReceived, rentPaid, city) {
+        //     let hraSalaryExemption;
+        //     if (city === 'metro') {
+        //         hraSalaryExemption = 0.50 * (basicSalary + da);
+        //     } else {
+        //         hraSalaryExemption = 0.40 * (basicSalary + da);
+        //     }
+        //     let hraRentExemption = rentPaid - 0.10 * (basicSalary + da);
+        //     let exemptedHRA = Math.min(hraReceived, hraSalaryExemption, hraRentExemption);
+        //     return exemptedHRA;
+        // }
+    </script>
+
+</body>
+
+</html>
